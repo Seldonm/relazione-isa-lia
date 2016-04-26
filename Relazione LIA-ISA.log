@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.26)  26 APR 2016 19:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.26)  26 APR 2016 19:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -629,7 +629,7 @@ LaTeX Font Info:    Try loading font information for U+wasy on input line 66.
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-<images/poliba.jpg, id=132, 401.5pt x 401.5pt>
+<images/poliba.jpg, id=108, 401.5pt x 401.5pt>
 File: images/poliba.jpg Graphic file (type jpg)
  <use images/poliba.jpg>
 Package pdftex.def Info: images/poliba.jpg used on input line 69.
@@ -651,9 +651,8 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.106 I
-       l riferimento principale nello sviluppo di database distribuiti su Gr...
-[1] <images/agds.png, id=199, 1179.40625pt x 530.98375pt>
+l.107 
+       [1] <images/agds.png, id=168, 1179.40625pt x 530.98375pt>
 File: images/agds.png Graphic file (type png)
 
 <use images/agds.png>
@@ -664,7 +663,7 @@ Overfull \hbox (16.51004pt too wide) in paragraph at lines 114--115
  [][] 
  []
 
-<images/archgrid.png, id=203, 1232.605pt x 329.23pt>
+<images/archgrid.png, id=172, 1232.605pt x 329.23pt>
 File: images/archgrid.png Graphic file (type png)
  <use images/archgrid.png>
 Package pdftex.def Info: images/archgrid.png used on input line 124.
@@ -678,9 +677,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.128 
-       [2 <./images/agds.png (PNG copy)>] [3 <./images/archgrid.png (PNG copy)>
-]
+l.130 
+       [2 <./images/agds.png (PNG copy)> <./images/archgrid.png (PNG copy)>]
+[3]
 Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
@@ -771,7 +770,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 158--159
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
+Underfull \hbox (badness 10000) in paragraph at lines 162--164
 
  []
 
@@ -785,14 +784,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
 
-<images/datainteg.png, id=232, 594.22pt x 450.68375pt>
+<images/datainteg.png, id=202, 594.22pt x 450.68375pt>
 File: images/datainteg.png Graphic file (type png)
 
 <use images/datainteg.png>
 Package pdftex.def Info: images/datainteg.png used on input line 179.
 (pdftex.def)             Requested size: 297.10927pt x 225.34131pt.
  [5]
-<images/schemaimpl.png, id=245, 692.5875pt x 353.32pt>
+<images/schemaimpl.png, id=215, 692.5875pt x 353.32pt>
 File: images/schemaimpl.png Graphic file (type png)
 
 <use images/schemaimpl.png>
@@ -807,13 +806,13 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 197.
  [6 <./images/datainteg.png (PNG copy)> <./images/schemaimpl.png>]
-<images/dige.png, id=259, 779.91376pt x 363.60844pt>
+<images/dige.png, id=229, 779.91376pt x 363.60844pt>
 File: images/dige.png Graphic file (type png)
  <use images/dige.png>
 Package pdftex.def Info: images/dige.png used on input line 204.
 (pdftex.def)             Requested size: 389.95593pt x 181.80377pt.
 
-<images/qcon.png, id=263, 474.27188pt x 185.94469pt>
+<images/qcon.png, id=233, 474.27188pt x 185.94469pt>
 File: images/qcon.png Graphic file (type png)
  <use images/qcon.png>
 Package pdftex.def Info: images/qcon.png used on input line 214.
@@ -826,7 +825,7 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 229.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 ) [8]
-<images/admirearch.png, id=287, 700.11563pt x 362.10281pt>
+<images/admirearch.png, id=257, 700.11563pt x 362.10281pt>
 File: images/admirearch.png Graphic file (type png)
 
 <use images/admirearch.png>
@@ -852,7 +851,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 294--295
 
  []
 
-<images/wsresource.png, id=311, 193.72375pt x 140.525pt>
+<images/wsresource.png, id=280, 193.72375pt x 140.525pt>
 File: images/wsresource.png Graphic file (type png)
 
 <use images/wsresource.png>
@@ -876,35 +875,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 305--327
  []
 
 [11 <./images/wsresource.png>]
-<images/PerformDocument.png, id=336, 743.77875pt x 242.9075pt>
+<images/PerformDocument.png, id=305, 743.77875pt x 242.9075pt>
 File: images/PerformDocument.png Graphic file (type png)
 
 <use images/PerformDocument.png>
 Package pdftex.def Info: images/PerformDocument.png used on input line 355.
 (pdftex.def)             Requested size: 446.27069pt x 145.7456pt.
  [12 <./images/PerformDocument.png>]
-<images/guiservice.png, id=349, 480.29437pt x 359.84438pt>
+<images/guiservice.png, id=319, 480.29437pt x 359.84438pt>
 File: images/guiservice.png Graphic file (type png)
 
 <use images/guiservice.png>
 Package pdftex.def Info: images/guiservice.png used on input line 396.
 (pdftex.def)             Requested size: 432.26093pt x 323.85693pt.
  [13] [14 <./images/guiservice.png>]
-<images/guiresource.png, id=373, 481.04718pt x 360.59718pt>
+<images/guiresource.png, id=343, 481.04718pt x 360.59718pt>
 File: images/guiresource.png Graphic file (type png)
 
 <use images/guiresource.png>
 Package pdftex.def Info: images/guiresource.png used on input line 455.
 (pdftex.def)             Requested size: 432.93846pt x 324.53445pt.
  [15 <./images/guiresource.png>]
-<images/guiexpose.png, id=383, 481.8pt x 361.35pt>
+<images/guiexpose.png, id=353, 481.8pt x 361.35pt>
 File: images/guiexpose.png Graphic file (type png)
  <use images/guiexpose.png>
 Package pdftex.def Info: images/guiexpose.png used on input line 491.
 (pdftex.def)             Requested size: 433.61598pt x 325.21199pt.
 
 [16] [17 <./images/guiexpose.png>]
-<images/databrowser.png, id=406, 512.66531pt x 307.1475pt>
+<images/databrowser.png, id=376, 512.66531pt x 307.1475pt>
 File: images/databrowser.png Graphic file (type png)
 
 <use images/databrowser.png>
@@ -1025,7 +1024,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 761--762
 
  []
 
-[23] [24] <images/hadoop-architecture.jpg, id=617, 440.39531pt x 276.28218pt>
+[23] [24] <images/hadoop-architecture.jpg, id=587, 440.39531pt x 276.28218pt>
 File: images/hadoop-architecture.jpg Graphic file (type jpg)
 
 <use images/hadoop-architecture.jpg>
@@ -1033,7 +1032,7 @@ Package pdftex.def Info: images/hadoop-architecture.jpg used on input line 808.
 
 (pdftex.def)             Requested size: 409.5634pt x 256.93976pt.
  [25 <./images/hadoop-architecture.jpg>]
-[26] <images/CDH_diagram.png, id=643, 622.325pt x 395.4775pt>
+[26] <images/CDH_diagram.png, id=612, 622.325pt x 395.4775pt>
 File: images/CDH_diagram.png Graphic file (type png)
 
 <use images/CDH_diagram.png>
@@ -1129,14 +1128,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 886--887
 
  []
 
-[29] <images/gcube.png, id=681, 442.65375pt x 560.8453pt>
+[29] <images/gcube.png, id=651, 442.65375pt x 560.8453pt>
 File: images/gcube.png Graphic file (type png)
 
 <use images/gcube.png>
 Package pdftex.def Info: images/gcube.png used on input line 913.
 (pdftex.def)             Requested size: 265.59428pt x 336.50978pt.
  [30]
-<images/bighybridarch.png, id=698, 986.68625pt x 681.54625pt>
+<images/bighybridarch.png, id=668, 986.68625pt x 681.54625pt>
 File: images/bighybridarch.png Graphic file (type png)
 
 <use images/bighybridarch.png>
@@ -1164,17 +1163,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 971.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 971.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 971.
 Package rerunfilecheck Info: File `"Relazione LIA-ISA".out' has not changed.
-(rerunfilecheck)             Checksum: 42A3A26A458B85FC4322A3A230D90531;2439.
+(rerunfilecheck)             Checksum: 2D7C3C6A11B6E90727E31352FDD29EAF;1830.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 14520 strings out of 495000
- 205862 string characters out of 6181169
+ 14508 strings out of 495000
+ 205770 string characters out of 6181169
  476559 words of memory out of 5000000
- 17148 multiletter control sequences out of 15000+600000
+ 17142 multiletter control sequences out of 15000+600000
  21095 words of font info for 57 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  44i,17n,93p,1278b,1966s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1192,10 +1191,10 @@ c/ecbx1440.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx10
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/wasy2-ps/wasy10.pfb>
-Output written on "Relazione LIA-ISA.pdf" (37 pages, 1312931 bytes).
+Output written on "Relazione LIA-ISA.pdf" (37 pages, 1303405 bytes).
 PDF statistics:
- 1388 PDF objects out of 1440 (max. 8388607)
- 774 compressed objects within 8 object streams
- 333 named destinations out of 1000 (max. 500000)
- 347 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1333 PDF objects out of 1440 (max. 8388607)
+ 743 compressed objects within 8 object streams
+ 327 named destinations out of 1000 (max. 500000)
+ 299 words of extra memory for PDF output out of 10000 (max. 10000000)
 
