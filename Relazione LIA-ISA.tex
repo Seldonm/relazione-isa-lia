@@ -78,7 +78,7 @@
 \tableofcontents
 \newpage
 \setcounter{page}{1}
-\section{Test}
+section{Test}
 ''\emph{The Grid is a software infrastructure that enables flexible, secure, coordinated resource sharing among dynamic collections of individuals, institutions and resources.}'' (Foster e Kesselman, 1998).
 
 Lo sviluppo ed il progresso tecnologico avutosi attraverso la scienza e l'ingegneria, richiede ogni giorno un incremento della \emph{potenza computazionale}. Il Grid Computing oltre ad essere in grado di rispondere a tale necessità, fornisce un aumento della \emph{capacità di storage} per il calcolo scientifico.
@@ -95,7 +95,7 @@ In sintesi, gli obiettivi prefissati sono:
 \item Un metodo di accesso comune ed una gestione delle transazioni su database distribuiti per i differenti paradigmi dei database.
 \item Incremento dell'efficienza computazionale,produttività ed interoperabilità.
 \end{enumerate}
-\section{Database Eterogenei Distribuiti}
+section{Database Eterogenei Distribuiti}
 
 In questa sezione saranno evidenziati i punti cardine per l'implementazione di un database distribuito eterogeneo in una Griglia Computazionale.
 
@@ -159,7 +159,7 @@ Infine è utile citare altri possibili modi per implementare un Grid Database Sy
 \end{enumerate}
 \newpage
 
-\section{Stato dell'Arte}
+section{Stato dell'Arte}
 In questa sezione illustriamo alcune delle architetture sviluppate per l'integrazione di database eterogenei attraverso le Grid. Tra i progetti presi in considerazione abbiamo \textbf{GISE}, \textbf{OGSA-DQP} e \textbf{GDIS}, illustrati di seguito. \\
 
 \textbf{GISE (Grid Integration SErvice)} è un'architettura per l'accesso e l'integrazione di basi di dati sviluppata sull'infrastruttura Grid offerta da \textbf{\emph{Globus Toolkit 4}}. Originariamente progettata per il monitoraggio delle epidemie, utilizza un sistema basato sul \emph{Canonical Data Model} per l'esecuzione di query su database geograficamente distribuiti. Un layer chiamato \emph{Mediator} raccoglie le richieste per l'accesso ai dati integrati, convertendo le query a seconda della tecnologia del RDBMS sottostante. Questa tecnica è vantaggiosa dal punto di vista della scalabilità del sistema ma può creare \emph{bottleneck} a livello centrale del sistema \cite{archgrid}. \\
@@ -287,7 +287,7 @@ L'infrastruttura di ADMIRE, sarà in grado di comunicare con una serie di gatewa
 \newpage
 
 
-\section{Esempio pratico - OGSA-DAI WSRF}
+section{Esempio pratico - OGSA-DAI WSRF}
 \subsection{Web Service Resource Framework}
 Le interfacce dei servizi Web spesso hanno la necessità di fornire delle interazioni con stato con i relativi client del servizio (ad esempio, un'interfaccia del servizio Web come un carrello della spesa, dove il risultato di un'operazione, influenza l'esecuzione delle operazioni successive). \textbf{WSRF} (\emph{Web Services Resource Framework}) di \textbf{OASIS} definisce un generico framework per la creazione e l'accesso alle risorse con stato mediante l'utilizzo dei servizi Web, in modo che la definizione, l'implementazione, l'integrazione e la gestione del servizio stesso, risultino più semplici \cite{ogsadai}.\\
 
@@ -763,7 +763,7 @@ public class SimpleSQLQueryExample {
 \newpage
 
 
-\section{Implementazione dei Big Data nel Grid Computing}
+section{Implementazione dei Big Data nel Grid Computing}
 \textbf{Big Data} è un termine che definisce il concetto di dati, aventi 3 \emph{caratteristiche} fondamentali. 
 \begin{enumerate}
 	\item Grande quantità di dati
@@ -887,7 +887,7 @@ L'approccio di \emph{Oracle/Cloudera} oltre ad essere interessante, è un'ottima
 \newpage
 
 
-\section {Introduzione all'Hybrid Data Infrastructure}
+section {Introduzione all'Hybrid Data Infrastructure}
 Una \emph{Hybrid Data Infrastructure} (HDI) è una nuova tipologia di infrastruttura dati concepita per l'elaborazione di ingenti quantità di dati scientifici. In tale dominio, i dataset vengono distribuiti sia dal singolo laboratorio di ricerca e sia dai molteplici centri di ricerca e sviluppo. La gestione e l'elaborazione richiesta da tali dataset, va al di là delle capacità relative alle tecnologie tradizionali. Tali dati sono caratterizzati dalle 3 V:
 \begin{enumerate}
 	\item \emph{Volume} (\textbf{Volume}): Grandi dimensioni dei dati in termini di byte.
