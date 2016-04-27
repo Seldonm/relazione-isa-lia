@@ -1,28 +1,3 @@
 \select@language {italian}
 \select@language {italian}
-\contentsline {subsection}{\numberline {0.1}Questionario di Autovalutazione}{4}{subsection.0.1}
-\contentsline {subsection}{\numberline {0.2}Architettura per l'integrazione}{5}{subsection.0.2}
-\contentsline {subsection}{\numberline {0.3}DIGE Framework}{6}{subsection.0.3}
-\contentsline {subsubsection}{\numberline {0.3.1}QCON-G}{7}{subsubsection.0.3.1}
-\contentsline {subsection}{\numberline {0.4}FirstDIG}{8}{subsection.0.4}
-\contentsline {subsection}{\numberline {0.5}ADMIRE - Advanced Data Mining and Integration Research for Europe}{8}{subsection.0.5}
-\contentsline {subsection}{\numberline {0.6}Questionario di Autovalutazione}{10}{subsection.0.6}
-\contentsline {subsection}{\numberline {0.7}Web Service Resource Framework}{11}{subsection.0.7}
-\contentsline {subsection}{\numberline {0.8}Perform Document}{12}{subsection.0.8}
-\contentsline {subsection}{\numberline {0.9}Installazione di OGSA-DAI WSRF}{13}{subsection.0.9}
-\contentsline {subsection}{\numberline {0.10}Creazione di un Data Service}{13}{subsection.0.10}
-\contentsline {subsection}{\numberline {0.11}Creazione di un Data Service Resource}{14}{subsection.0.11}
-\contentsline {subsection}{\numberline {0.12}Esporre un Data Service Resource}{16}{subsection.0.12}
-\contentsline {subsection}{\numberline {0.13}End-to-End Client}{17}{subsection.0.13}
-\contentsline {subsection}{\numberline {0.14}Databrowser}{18}{subsection.0.14}
-\contentsline {subsection}{\numberline {0.15}Creazione di una Multiple Resource}{20}{subsection.0.15}
-\contentsline {subsection}{\numberline {0.16}Questionario di Autovalutazione}{23}{subsection.0.16}
-\contentsline {subsection}{\numberline {0.17}Cosa sono attualmente i Big Data}{24}{subsection.0.17}
-\contentsline {subsection}{\numberline {0.18}Come processare i Big Data}{25}{subsection.0.18}
-\contentsline {subsection}{\numberline {0.19}Implementare una piattaforma per i Big Data in un Grid Center}{26}{subsection.0.19}
-\contentsline {subsection}{\numberline {0.20}Conclusioni}{27}{subsection.0.20}
-\contentsline {subsection}{\numberline {0.21}Questionario di Autovalutazione}{29}{subsection.0.21}
-\contentsline {subsection}{\numberline {0.22}gCube Framework}{30}{subsection.0.22}
-\contentsline {subsection}{\numberline {0.23}BIGhybrid - Un Toolkit per simulare MapReduce su Hybrid Data Infrastructure}{31}{subsection.0.23}
-\contentsline {subsection}{\numberline {0.24}Questionario di Autovalutazione}{33}{subsection.0.24}
-\contentsline {section}{Bibliografia}{34}{Item.47}
+\contentsline {section}{Bibliografia}{1}{section*.1}
