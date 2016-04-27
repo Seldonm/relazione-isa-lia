@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.7)  27 APR 2016 07:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.26)  27 APR 2016 10:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -490,7 +490,11 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box32
 \enitdp@description=\count134
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 35.
+(/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count135
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 36.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
@@ -501,20 +505,20 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 (./Relazione LIA-ISA.aux)
 \openout1 = `"Relazione LIA-ISA.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 56.
-LaTeX Font Info:    ... okay on input line 56.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -550,8 +554,8 @@ LaTeX Font Info:    ... okay on input line 56.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \it@ocap on input line 56.
-LaTeX Info: Redefining \it@ccap on input line 56.
+LaTeX Info: Redefining \it@ocap on input line 57.
+LaTeX Info: Redefining \it@ccap on input line 57.
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
@@ -564,16 +568,16 @@ Package caption Info: End \AtBeginDocument code.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count135
+\scratchcounter=\count136
 \scratchdimen=\dimen166
 \scratchbox=\box33
-\nofMPsegments=\count136
-\nofMParguments=\count137
+\nofMPsegments=\count137
+\nofMParguments=\count138
 \everyMPshowfont=\toks31
-\MPscratchCnt=\count138
+\MPscratchCnt=\count139
 \MPscratchDim=\dimen167
-\MPnumerator=\count139
-\makeMPintoPDFobject=\count140
+\MPnumerator=\count140
+\makeMPintoPDFobject=\count141
 \everyMPtoPDFconversion=\toks32
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -590,9 +594,9 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count141
+\c@lstlisting=\count142
 \AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring ON on input line 56.
+Package hyperref Info: Link coloring ON on input line 57.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -600,35 +604,35 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count142
+\c@section@level=\count143
 )
-LaTeX Info: Redefining \ref on input line 56.
-LaTeX Info: Redefining \pageref on input line 56.
-LaTeX Info: Redefining \nameref on input line 56.
+LaTeX Info: Redefining \ref on input line 57.
+LaTeX Info: Redefining \pageref on input line 57.
+LaTeX Info: Redefining \nameref on input line 57.
 
 (./Relazione LIA-ISA.out) (./Relazione LIA-ISA.out)
 \@outlinefile=\write3
 \openout3 = `"Relazione LIA-ISA.out"'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 66.
+LaTeX Font Info:    Try loading font information for U+msa on input line 67.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 66.
+LaTeX Font Info:    Try loading font information for U+msb on input line 67.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 66.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 67.
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-<images/poliba.jpg, id=8, 401.5pt x 401.5pt>
+<images/poliba.jpg, id=111, 401.5pt x 401.5pt>
 File: images/poliba.jpg Graphic file (type jpg)
  <use images/poliba.jpg>
-Package pdftex.def Info: images/poliba.jpg used on input line 69.
+Package pdftex.def Info: images/poliba.jpg used on input line 70.
 (pdftex.def)             Requested size: 160.59715pt x 160.59715pt.
  [1
 
@@ -640,7 +644,12 @@ Package pdftex.def Info: images/poliba.jpg used on input line 69.
 
  [2
 
-] (./Relazione LIA-ISA.bbl
+]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.118 \clearpage
+                 [1] (./Relazione LIA-ISA.bbl
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
 File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
 )
@@ -651,48 +660,45 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
-)pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
+)pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.102 
-       [1
+       [2
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 94.
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.94 \end{document}
-                    [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 94.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 125.
+ [3]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 125.
  (./Relazione LIA-ISA.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 94.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 94.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 125.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 125.
 Package rerunfilecheck Info: File `"Relazione LIA-ISA".out' has not changed.
-(rerunfilecheck)             Checksum: 650D7AB0BF91C7DCE2C58F5C0DBFD28E;48.
+(rerunfilecheck)             Checksum: F14660FEAA2ECBAAD90EA5DC30A25E7C;1905.
  ) 
 Here is how much of TeX's memory you used:
- 12539 strings out of 495000
- 182119 string characters out of 6181170
- 312559 words of memory out of 5000000
- 15517 multiletter control sequences out of 15000+600000
- 18542 words of font info for 53 fonts, out of 8000000 for 9000
+ 12786 strings out of 495000
+ 185271 string characters out of 6181169
+ 413136 words of memory out of 5000000
+ 15732 multiletter control sequences out of 15000+600000
+ 19318 words of font info for 54 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 36i,7n,72p,812b,602s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/pietro/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/
-pietro/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/pietro/.te
-xmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/pietro/.texmf-var/fo
-nts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/pietro/.texmf-var/fonts/pk/ljf
-our/jknappen/ec/ecbx1440.600pk> </home/pietro/.texmf-var/fonts/pk/ljfour/jknapp
-en/ec/ecbx1095.600pk> </home/pietro/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm
-1200.600pk> </home/pietro/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk
-> </home/pietro/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk>
-Output written on "Relazione LIA-ISA.pdf" (4 pages, 119316 bytes).
+ 36i,7n,72p,812b,603s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </hom
+e/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/makave
+li/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/makaveli/.texm
+f-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/makaveli/.texmf-var/fo
+nts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/makaveli/.texmf-var/fonts/pk/l
+jfour/jknappen/ec/ecbx1440.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jk
+nappen/ec/ecbx1095.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/e
+c/ecrm1200.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti12
+00.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk
+>
+Output written on "Relazione LIA-ISA.pdf" (5 pages, 149205 bytes).
 PDF statistics:
- 348 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
- 21 named destinations out of 1000 (max. 500000)
- 14 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 572 PDF objects out of 1000 (max. 8388607)
+ 227 compressed objects within 3 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 222 words of extra memory for PDF output out of 10000 (max. 10000000)
 
