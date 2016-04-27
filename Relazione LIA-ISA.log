@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.26)  27 APR 2016 10:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.26)  27 APR 2016 13:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -644,12 +644,40 @@ Package pdftex.def Info: images/poliba.jpg used on input line 70.
 
  [2
 
-]pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
- been already used, duplicate ignored
+]
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+)
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+
+ []
+
+<images/cluster-overview.png, id=156, 598.235pt x 287.0725pt>
+File: images/cluster-overview.png Graphic file (type png)
+
+<use images/cluster-overview.png>
+Package pdftex.def Info: images/cluster-overview.png used on input line 109.
+(pdftex.def)             Requested size: 299.11676pt x 143.53589pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.118 \clearpage
-                 [1] (./Relazione LIA-ISA.bbl
+l.115 
+       [1 <./images/cluster-overview.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 118.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 118.
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.143 \clearpage
+                 [2] (./Relazione LIA-ISA.bbl
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
 File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
 )
@@ -660,45 +688,41 @@ File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-1.def
 File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
-)pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.102 
-       [2
+) [3
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 125.
- [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 125.
- (./Relazione LIA-ISA.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 125.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 125.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 150.
+ [4]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 150.
+
+(./Relazione LIA-ISA.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 150.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 150.
 Package rerunfilecheck Info: File `"Relazione LIA-ISA".out' has not changed.
 (rerunfilecheck)             Checksum: F14660FEAA2ECBAAD90EA5DC30A25E7C;1905.
  ) 
 Here is how much of TeX's memory you used:
- 12786 strings out of 495000
- 185271 string characters out of 6181169
+ 13310 strings out of 495000
+ 190936 string characters out of 6181169
  413136 words of memory out of 5000000
- 15732 multiletter control sequences out of 15000+600000
+ 16246 multiletter control sequences out of 15000+600000
  19318 words of font info for 54 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 36i,7n,72p,812b,603s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </hom
-e/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/makave
-li/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/makaveli/.texm
+ 36i,7n,75p,843b,603s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </hom
+e/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/makave
+li/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/makaveli/.texm
 f-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/makaveli/.texmf-var/fo
 nts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/makaveli/.texmf-var/fonts/pk/l
 jfour/jknappen/ec/ecbx1440.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jk
 nappen/ec/ecbx1095.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/e
 c/ecrm1200.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti12
 00.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk
->
-Output written on "Relazione LIA-ISA.pdf" (5 pages, 149205 bytes).
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "Relazione LIA-ISA.pdf" (6 pages, 187701 bytes).
 PDF statistics:
- 572 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
- 48 named destinations out of 1000 (max. 500000)
- 222 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 598 PDF objects out of 1000 (max. 8388607)
+ 237 compressed objects within 3 object streams
+ 50 named destinations out of 1000 (max. 500000)
+ 227 words of extra memory for PDF output out of 10000 (max. 10000000)
 
