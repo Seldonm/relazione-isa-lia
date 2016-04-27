@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.26)  26 APR 2016 19:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.7)  27 APR 2016 07:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -498,11 +498,7 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 )
-(./Relazione LIA-ISA.aux
-
-LaTeX Warning: Label `admirearch' multiply defined.
-
-)
+(./Relazione LIA-ISA.aux)
 \openout1 = `"Relazione LIA-ISA.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 56.
@@ -629,7 +625,7 @@ LaTeX Font Info:    Try loading font information for U+wasy on input line 66.
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-<images/poliba.jpg, id=108, 401.5pt x 401.5pt>
+<images/poliba.jpg, id=8, 401.5pt x 401.5pt>
 File: images/poliba.jpg Graphic file (type jpg)
  <use images/poliba.jpg>
 Package pdftex.def Info: images/poliba.jpg used on input line 69.
@@ -644,557 +640,59 @@ Package pdftex.def Info: images/poliba.jpg used on input line 69.
 
  [2
 
-]
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
-File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+] (./Relazione LIA-ISA.bbl
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
+File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
+)
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 6.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-1.def
+File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
 )pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
  been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.107 
-       [1] <images/agds.png, id=168, 1179.40625pt x 530.98375pt>
-File: images/agds.png Graphic file (type png)
+l.102 
+       [1
 
-<use images/agds.png>
-Package pdftex.def Info: images/agds.png used on input line 114.
-(pdftex.def)             Requested size: 471.75415pt x 212.38972pt.
-
-Overfull \hbox (16.51004pt too wide) in paragraph at lines 114--115
- [][] 
- []
-
-<images/archgrid.png, id=172, 1232.605pt x 329.23pt>
-File: images/archgrid.png Graphic file (type png)
- <use images/archgrid.png>
-Package pdftex.def Info: images/archgrid.png used on input line 124.
-(pdftex.def)             Requested size: 493.03326pt x 131.68965pt.
-
-Overfull \hbox (37.78915pt too wide) in paragraph at lines 124--125
- [][] 
- []
-
+])
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 94.
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.130 
-       [2 <./images/agds.png (PNG copy)> <./images/archgrid.png (PNG copy)>]
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 153--156
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 162--164
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 167--168
-
- []
-
-<images/datainteg.png, id=202, 594.22pt x 450.68375pt>
-File: images/datainteg.png Graphic file (type png)
-
-<use images/datainteg.png>
-Package pdftex.def Info: images/datainteg.png used on input line 179.
-(pdftex.def)             Requested size: 297.10927pt x 225.34131pt.
- [5]
-<images/schemaimpl.png, id=215, 692.5875pt x 353.32pt>
-File: images/schemaimpl.png Graphic file (type png)
-
-<use images/schemaimpl.png>
-Package pdftex.def Info: images/schemaimpl.png used on input line 188.
-(pdftex.def)             Requested size: 346.2929pt x 176.65956pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 197.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 197.
- [6 <./images/datainteg.png (PNG copy)> <./images/schemaimpl.png>]
-<images/dige.png, id=229, 779.91376pt x 363.60844pt>
-File: images/dige.png Graphic file (type png)
- <use images/dige.png>
-Package pdftex.def Info: images/dige.png used on input line 204.
-(pdftex.def)             Requested size: 389.95593pt x 181.80377pt.
-
-<images/qcon.png, id=233, 474.27188pt x 185.94469pt>
-File: images/qcon.png Graphic file (type png)
- <use images/qcon.png>
-Package pdftex.def Info: images/qcon.png used on input line 214.
-(pdftex.def)             Requested size: 237.13536pt x 92.9721pt.
-
-[7 <./images/dige.png> <./images/qcon.png>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 229.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [8]
-<images/admirearch.png, id=257, 700.11563pt x 362.10281pt>
-File: images/admirearch.png Graphic file (type png)
-
-<use images/admirearch.png>
-Package pdftex.def Info: images/admirearch.png used on input line 254.
-(pdftex.def)             Requested size: 455.06976pt x 235.36403pt.
- [9 <./images/admirearch.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 272--273
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 278--279
-
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 294--295
-
- []
-
-<images/wsresource.png, id=280, 193.72375pt x 140.525pt>
-File: images/wsresource.png Graphic file (type png)
-
-<use images/wsresource.png>
-Package pdftex.def Info: images/wsresource.png used on input line 300.
-(pdftex.def)             Requested size: 193.72327pt x 140.52464pt.
-
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
-File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-Underfull \hbox (badness 10000) in paragraph at lines 305--327
-
- []
-
-[11 <./images/wsresource.png>]
-<images/PerformDocument.png, id=305, 743.77875pt x 242.9075pt>
-File: images/PerformDocument.png Graphic file (type png)
-
-<use images/PerformDocument.png>
-Package pdftex.def Info: images/PerformDocument.png used on input line 355.
-(pdftex.def)             Requested size: 446.27069pt x 145.7456pt.
- [12 <./images/PerformDocument.png>]
-<images/guiservice.png, id=319, 480.29437pt x 359.84438pt>
-File: images/guiservice.png Graphic file (type png)
-
-<use images/guiservice.png>
-Package pdftex.def Info: images/guiservice.png used on input line 396.
-(pdftex.def)             Requested size: 432.26093pt x 323.85693pt.
- [13] [14 <./images/guiservice.png>]
-<images/guiresource.png, id=343, 481.04718pt x 360.59718pt>
-File: images/guiresource.png Graphic file (type png)
-
-<use images/guiresource.png>
-Package pdftex.def Info: images/guiresource.png used on input line 455.
-(pdftex.def)             Requested size: 432.93846pt x 324.53445pt.
- [15 <./images/guiresource.png>]
-<images/guiexpose.png, id=353, 481.8pt x 361.35pt>
-File: images/guiexpose.png Graphic file (type png)
- <use images/guiexpose.png>
-Package pdftex.def Info: images/guiexpose.png used on input line 491.
-(pdftex.def)             Requested size: 433.61598pt x 325.21199pt.
-
-[16] [17 <./images/guiexpose.png>]
-<images/databrowser.png, id=376, 512.66531pt x 307.1475pt>
-File: images/databrowser.png Graphic file (type png)
-
-<use images/databrowser.png>
-Package pdftex.def Info: images/databrowser.png used on input line 573.
-(pdftex.def)             Requested size: 461.3945pt x 276.43019pt.
-
-Overfull \hbox (6.15039pt too wide) in paragraph at lines 573--574
- [][] 
- []
-
-[18] [19 <./images/databrowser.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 583--584
-
- []
-
-
-Overfull \hbox (11.16267pt too wide) in paragraph at lines 585--586
-[]\T1/cmr/m/n/10.95 Presentiamo la strut-tura dei database us-ati (\T1/cmr/m/it
-/10.95 ma-tri-co-la, nome-ing,cognomeing,tipoing,universita\T1/cmr/m/n/10.95 ),
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 585--586
-
- []
-
-[20] [21] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2015/06/04 1.6 listings language file
-)
-[22]
-Underfull \hbox (badness 10000) in paragraph at lines 745--759
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 745--759
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 745--759
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 745--759
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 745--759
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 745--759
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 745--759
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 745--759
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 745--759
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 745--759
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 745--759
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 745--759
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 745--759
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 745--759
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 745--759
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 745--759
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 745--759
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 761--762
-
- []
-
-[23] [24] <images/hadoop-architecture.jpg, id=587, 440.39531pt x 276.28218pt>
-File: images/hadoop-architecture.jpg Graphic file (type jpg)
-
-<use images/hadoop-architecture.jpg>
-Package pdftex.def Info: images/hadoop-architecture.jpg used on input line 808.
-
-(pdftex.def)             Requested size: 409.5634pt x 256.93976pt.
- [25 <./images/hadoop-architecture.jpg>]
-[26] <images/CDH_diagram.png, id=612, 622.325pt x 395.4775pt>
-File: images/CDH_diagram.png Graphic file (type png)
-
-<use images/CDH_diagram.png>
-Package pdftex.def Info: images/CDH_diagram.png used on input line 843.
-(pdftex.def)             Requested size: 404.50645pt x 257.05733pt.
- [27 <./images/CDH_diagram.png>] [28]
-Underfull \hbox (badness 10000) in paragraph at lines 884--885
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 886--887
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 886--887
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 886--887
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 886--887
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 886--887
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 886--887
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 886--887
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 886--887
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 886--887
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 886--887
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 886--887
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 886--887
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 886--887
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 886--887
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 886--887
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 886--887
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 886--887
-
- []
-
-[29] <images/gcube.png, id=651, 442.65375pt x 560.8453pt>
-File: images/gcube.png Graphic file (type png)
-
-<use images/gcube.png>
-Package pdftex.def Info: images/gcube.png used on input line 913.
-(pdftex.def)             Requested size: 265.59428pt x 336.50978pt.
- [30]
-<images/bighybridarch.png, id=668, 986.68625pt x 681.54625pt>
-File: images/bighybridarch.png Graphic file (type png)
-
-<use images/bighybridarch.png>
-Package pdftex.def Info: images/bighybridarch.png used on input line 929.
-(pdftex.def)             Requested size: 394.66751pt x 272.61366pt.
- [31 <./images/gcube.png>] [32 <./images/bighybridarch.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 946--947
-
- []
-
-[33] (./Relazione LIA-ISA.bbl
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
-File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
-)
-(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-1.def
-File: uni-1.def 2013/05/13 UCS: Unicode data U+0100..U+01FF
-) [34
-
-])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 971.
- [35]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 971.
-
-(./Relazione LIA-ISA.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 971.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 971.
+l.94 \end{document}
+                    [2]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 94.
+ (./Relazione LIA-ISA.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 94.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 94.
 Package rerunfilecheck Info: File `"Relazione LIA-ISA".out' has not changed.
-(rerunfilecheck)             Checksum: 2D7C3C6A11B6E90727E31352FDD29EAF;1830.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
+(rerunfilecheck)             Checksum: 650D7AB0BF91C7DCE2C58F5C0DBFD28E;48.
  ) 
 Here is how much of TeX's memory you used:
- 14508 strings out of 495000
- 205770 string characters out of 6181169
- 476559 words of memory out of 5000000
- 17142 multiletter control sequences out of 15000+600000
- 21095 words of font info for 57 fonts, out of 8000000 for 9000
+ 12539 strings out of 495000
+ 182119 string characters out of 6181170
+ 312559 words of memory out of 5000000
+ 15517 multiletter control sequences out of 15000+600000
+ 18542 words of font info for 53 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 44i,17n,93p,1278b,1966s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </hom
-e/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/makave
-li/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/makaveli/.texm
-f-var/fonts/pk/ljfour/jknappen/ec/ecbi1095.600pk> </home/makaveli/.texmf-var/fo
-nts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/makaveli/.texmf-var/fonts/pk/l
-jfour/jknappen/ec/ecti1095.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jk
-nappen/ec/ecrm1095.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/e
-c/ecbx1440.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx10
-95.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk
-> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home
-/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/wasy2-ps/wasy10.pfb>
-Output written on "Relazione LIA-ISA.pdf" (37 pages, 1303405 bytes).
+ 36i,7n,72p,812b,602s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/pietro/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/
+pietro/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/pietro/.te
+xmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/pietro/.texmf-var/fo
+nts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/pietro/.texmf-var/fonts/pk/ljf
+our/jknappen/ec/ecbx1440.600pk> </home/pietro/.texmf-var/fonts/pk/ljfour/jknapp
+en/ec/ecbx1095.600pk> </home/pietro/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm
+1200.600pk> </home/pietro/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk
+> </home/pietro/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk>
+Output written on "Relazione LIA-ISA.pdf" (4 pages, 119316 bytes).
 PDF statistics:
- 1333 PDF objects out of 1440 (max. 8388607)
- 743 compressed objects within 8 object streams
- 327 named destinations out of 1000 (max. 500000)
- 299 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 348 PDF objects out of 1000 (max. 8388607)
+ 84 compressed objects within 1 object stream
+ 21 named destinations out of 1000 (max. 500000)
+ 14 words of extra memory for PDF output out of 10000 (max. 10000000)
 
