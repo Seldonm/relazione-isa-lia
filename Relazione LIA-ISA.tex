@@ -119,6 +119,320 @@ I contributi relativi ai sistemi CEP, arrivano da diverse comunità, a partire d
 Come possiamo vedere dalla Figura \ref{funcep}, viene associata una semantica dettagliata agli elementi informativi da processare. Da una parte abbiamo gli \textbf{Event Observer}, i quali rappresentano la sorgente dei dati e degli eventi da notificare; in seguito abbiamo il \textbf{CEP Engine}, responsabile del filtraggio e della notifica degli eventi ai nodi \textit{sink}, identificati come \textbf{Event Consumers} \cite{Cugola:2012:PFI:2187671.2187677,fulop2010survey}.
 
 \subsection{Sistemi di Raccomandazione}
+Recommender Systems (RSs) collect information on the prefer-
+ences of its users for a set of items (e.g., movies, songs, books, jokes,
+gadgets, applications, websites, travel destinations and e-learning
+material). The information can be acquired explicitly (typically
+by collecting users’ ratings) or implicitly [134,60,164] (typically
+by monitoring users’ behavior, such as songs heard, applications
+downloaded, web sites visited and books read). RS may use demo-
+graphic features of users (like age, nationality, gender). Social
+information, like followers, followed, twits, and posts, is commonly
+used in Web 2.0. There is a growing tend towards the use of infor-
+mation from Internet of things (e.g., GPS locations, RFID, real-time
+health signals).
+RS make use of different sources of information for providing
+users with predictions and recommendations of items. They try
+to balance factors like accuracy, novelty, dispersity and stability
+in the recommendations. Collaborative Filtering (CF) methods play
+an important role in the recommendation, although they are often
+used along with other filterning techniques like content-based,
+knowledge-based or social ones.
+CF is based on the way in which humans have made decisions
+throughout history: besides on our own experiences, we also base
+our decisions on the experiences and knowledge that reach each of
+us from a relatively large group of acquaintances.
+Recently, RS implementation in the Internet has increased,
+which has facilitated its use in diverse areas [171]. The most com-
+mon research papers are focused on movie recommendation stud-
+ies [53,230]; however, a great volume of literature for RS is
+centered on different topics, such as music [134,162,216], televi-
+sion [238,18], books [164,88], documents [206,184,183,185], e-
+learning [241,30], e-commerce [104,54], applications in markets
+[67] and web search [154], among others.
+The kinds of filtering most used at the beginning of the RS (col-
+laborative, content-based and demographic) were described in
+[177]. Breese et al. [43] evaluated the predictive accuracy of differ-
+ent algorithms for CF; later, the classical paper [94] describes the
+base for evaluating the Collaborative Filtering RS.
+The evolution of RS has shown the importance of hybrid tech-
+niques of RS, which merge different techniques in order to get
+the advantages of each of them. A survey focused on the hybrid
+RS has been presented in [47]. However, it does not deal with
+the role of social-filtering, a technique which has become more
+popular in the recent years through social networks.
+The neighborhood-based CF has been the recommendation
+method most popular at the beginning of the RS; Herlocker et al.
+[93] provides a set of guidelines for designing neighborhood-based
+prediction systems. Adomavicius and Tuzhilin [3] present an over-
+view on the RS field standing out the most complex areas on which researchers in RS should focus in the ‘‘next generation of RS’’: lim-
+ited content analysis and overspecialization in content-based
+methods, cold-start and sparsity in CF methods, model-based tech-
+niques, nonintrusiveness, flexibility (real-time customization), etc.
+While researchers have been developing RS, different survey
+papers have been published summarizing the most important is-
+sues in this field. In view of the impossibility of showing every de-
+tail of all these techniques in just a paper, this publication selects
+those issues the authors have felt most suitable to understand
+the evolution of RS.
+While the existing surveys focus on the most relevant methods
+and algorithms of the RS field, our survey instead tries to enhance
+the evolution of the RS: from a first phase based on the tradi-
+tional Web to the present second phase based on social Web,
+which is presently progressing to a third phase (Internet of
+things). With the purpose of being useful to the new readers of
+RS field, we have included in this survey some traditional topics:
+RS foundations, k-Nearest Neighbors algorithm, cold-start issues,
+similarity measures, and evaluation of RS. The rest of the paper
+deals with novel topics that existing surveys do not consider.
+Through this survey, advanced readers in RS will study in depth
+concepts, classifications and approaches related to social informa-
+tion (social filtering: followers, followed, trust, reputation, credi-
+bility, content-based filtering of social data; social tagging and
+taxonomies), recommending to groups of users and explaining
+recommendations. Readers interested in brand new and future
+applications will find this survey useful since it informs about
+the most recent works in location-aware RS trends and bio-in-
+spired approaches. They will also discover some important issues,
+such as privacy, security, P2P information and Internet of things
+use (RFID data, health parameters, surveillance data, teleopera-
+tion, telepresence, etc.).
+According to the idea that RS tend to make use of different
+sources of information (collaborative, social, demographic, content,
+knowledge-based, geographic, sensors, tags, implicit and explicit
+data acquisition, etc.), this survey emphasizes hybrid architectures,
+based on making recommendations through different known tech-
+nologies (each one designed on behalf of a specific source of
+information).
+he process for generating an RS recommendation is based on a
+combination of the following considerations:
+ The type of data available in its database (e.g., ratings, user reg-
+istration information, features and content for items that can be
+ranked, social relationships among users and location-aware
+information).
+ The filtering algorithm used (e.g., demographic, content-based,
+collaborative, social-based, context-aware and hybrid).
+ The model chosen (e.g., based on direct use of data: ‘‘memory-
+based,’’ or a model generated using such data: ‘‘model-based’’).
+ The employed techniques are also considered: probabilistic
+approaches, Bayesian networks, nearest neighbors algorithm;
+bio-inspired algorithms such as neural networks and genetic
+algorithms; fuzzy models, singular value decomposition tech-
+niques to reduce sparsity levels, etc.
+ Sparsity level of the database and the desired scalability.
+ Performance of the system (time and memory consuming).
+ The objective sought is considered (e.g., predictions and top N
+recommendations) as well as
+ The desired quality of the results (e.g., novelty, coverage and
+precision).
+Research in RS requires using a representative set of public dat-
+abases to facilitate investigations on the techniques, methods and
+algorithms developed by researchers in the field. Through these
+databases, the scientific community can replicate experiments to
+validate and improve their techniques. Table 1 lists the current
+public databases referenced most often in the literature. Last.Fm
+and Delicious incorporate implicit ratings and social information;
+their data were generated from the versions released in the HetRec,
+2011 data sets, hosted by the GroupLens research Group.
+The internal functions for RS are characterized by the filtering
+algorithm. The most widely used classification divides the filtering
+algorithms into [3,51,203]: (a) collaborative filtering, (b) demo-
+graphic filtering, (c) content-based filtering and (d) hybrid filtering. Content-based filtering [131,11,158] makes recommendations
+based on user choices made in the past (e.g. in a web-based e-com-
+merce RS, if the user purchased some fiction films in the past, the
+RS will probably recommend a recent fiction film that he has not
+yet purchased on this website). Content-based filtering also gener-
+ates recommendations using the content from objects intended for
+recommendation; therefore, certain content can be analyzed, like
+text, images and sound. From this analysis, a similarity can be
+established between objects as the basis for recommending items
+similar to items that a user has bought, visited, heard, viewed
+and ranked positively.
+Demographic filtering [177,126,185] is justified on the principle
+that individuals with certain common personal attributes (sex,
+age, country, etc.) will also have common preferences.
+Collaborative Filtering [3,94,92,51,212] allows users to give rat-
+ings about a set of elements (e.g. videos, songs, films, etc. in a CF
+based website) in such a way that when enough information is
+stored on the system, we can make recommendations to each user
+based on information provided by those users we consider to have
+the most in common with them. CF is an interesting open research
+field [232,34,32]. As noted earlier, user ratings can also be implicitly acquired (e.g., number of times a song is heard, informa-
+tion consulted and access to a resource).
+The most widely used algorithm for collaborative filtering is the
+k Nearest Neighbors (kNN) [3,203,32]. In the user to user version,
+kNN executes the following three tasks to generate recommenda-
+tions for an active user: (1) determine k users neighbors (neighbor-
+hood) for the active user a; (2) implement an aggregation approach
+with the ratings for the neighborhood in items not rated by a; and
+(3) extract the predictions from in step 2 then select the top N
+recommendations.
+Hybrid filtering [47,185]. Commonly uses a combination of CF
+with demographic filtering [224] or CF with content-based filtering
+[18,60] to exploit merits of each one of these techniques. Hybrid
+filtering is usually based on bioinspired or probabilistic methods
+such as genetic algorithms [76,99], fuzzy genetic [7], neural net-
+works [133,62,192], Bayesian networks [50], clustering [209] and
+latent features [199].
+A widely accepted taxonomy divides recommendation methods
+into memory-based and model-based method categories:
+Memory-based methods [3,51,123,214]. Memory-based methods
+can be defined as methods that (a) act only on the matrix of user
+ratings for items and (b) use any rating generated before the refer-
+ral process (i.e., its results are always updated). Memory-based
+methods usually use similarity metrics to obtain the distance be-
+tween two users, or two items, based on each of their ratios.
+Model-based methods [3,212]. Use RS information to create a
+model that generates the recommendations. Herein, we consider
+a method model-based if new information from any user outdates
+the model. Among the most widely used models we have Bayesian
+classifiers [59], neural networks [107], fuzzy systems [234], genetic
+algorithms [76,99], latent features [251] and matrix factorization
+[142], among others.
+To reduce the problems from high levels of sparsity in RS dat-
+abases, certain studies have used dimensionality reduction tech-
+niques [202]. The reduction methods are based on Matrix
+Factorization [124,142,143]. Matrix factorization is especially ade-
+quate for processing large RS databases and providing scalable ap-
+proaches [215]. The model-based technique Latent Semantic Index
+(LSI) and the reduction method Singular Value Decomposition
+(SVD) are typically combined [224,244,48]. SVD methods provide
+good prediction results but are computationally very expensive;
+they can only be deployed in static off-line settings where the
+known preference information does not change with time.
+RS can use clustering techniques to improve the prediction qual-
+ity and reduce the cold-start problem when applied to hybrid fil-
+tering. It is typical to form clusters of items in hybrid RS
+[209,237]. A different common approach uses clustering both for
+items and users (bi-clustering) [252,85]. RS comprising social infor-
+mation have been clustered to improve the following areas: tagging
+[208], explicit social links [179] and explicit trust information
+[181,70].
+The graph in Fig. 3 shows the most significant traditional meth-
+ods, techniques and algorithms for the recommendation process as
+well as their relationships and groupings. Different sections of this
+paper provide more detail on the most important aspects involved
+in the recommendation process.
+As may be seen in Fig. 3, we can use some of the traditional fil-
+tering methods (content-based, demographic and collaborative)
+applied to databases. Model-based technologies (genetic algo-
+rithms, neural networks, etc.) make use of this kind of information.
+Typical memory-based approaches are: item to item; user to user;
+and hybrids of the two previous. The main purpose of both mem-
+ory-based and model-based approaches is to get the most accurate
+predictions in the tastes of users. The accuracy of these predictions
+may be evaluated through the classical information retrieval mea-
+sures, like MAE, precision, and recall.
+
+VALUTAZIONE DEI SISTEMI DI RACCOMANDAZIONE
+Since RS research began, evaluation of predictions and recom-
+mendations has become important [94,201]. Research in the RS
+field requires quality measures and evaluation metrics [90] to know
+the quality of the techniques, methods, and algorithms for predic-
+tions and recommendations. Evaluation metrics [94,95] and evalua-
+tion frameworks [92,32] facilitate comparisons of several solutions
+for the same problem and selection from different promising lines
+of research that generate better results.
+Because of evaluation measures, RS recommendations have
+gradually been tested and improved [48]. A representative set of
+existing evaluation measures has standard formulations, and a
+group of open RS public databases has been generated. These two
+advances have facilitated quality comparisons for new proposed
+recommendation methods and previously published methods; thus,
+RS methods and algorithms research has progressed continuously.
+The most commonly used quality measures are the following
+[90,95]: (1) prediction evaluations, (2) evaluations for recommen-
+dation as sets, and (3) evaluations for recommendations as ranked
+lists. Fig. 5 shows results from applying several evaluation mea-
+sures to a set of representative similarity measures.
+Evaluation metrics [12] can be classified as [94,95] (a) predic-
+tion metrics: such as the accuracy ones: Mean Absolute Error
+(MAE), Root of Mean Square Error (RMSE), Normalized Mean Average
+Error (NMAE); and the coverage (b) set recommendation metrics:
+such as Precision, Recall and Receiver Operating Characteristic
+(ROC) [204] (c) rank recommendation metrics: such as the half-life
+[43] and the discounted cumulative gain [17] and (d) diversity met-
+rics: such as the diversity and the novelty of the recommended
+items [105]. The validation process is performed by employing
+the most common cross validation techniques (random sub-sam-
+pling and k-fold cross validation) [21]; for cold-start situations,
+due to the limited number of users (or items) votes involved, the
+usual method chosen to carry out the experiments is leave-one-
+out cross validation [36].
+Hernández and Gaudioso [95] propose an evaluation process
+based on the distinction between interactive and non-interactive subsystems. General publications and reviews also exist which in-
+clude the most commonly accepted evaluation measures: mean
+absolute error, coverage, precision, recall and derivatives of these:
+mean squared error, normalized mean absolute error, ROC and fallout;
+Goldberg et al. [87] focuses on the aspects not related to the eval-
+uation, Breese et al. [43] compare the predictive accuracy of vari-
+ous methods in a set of representative problem domains.
+The majority of articles discuss attempted improvements to the
+accuracy of RS results (RMSE, MAE, etc.). It is also common to at-
+tempt an improvement in recommendations (precision, recall,
+ROC, etc.). However, additional objectives should be considered
+for generating greater user satisfaction [253], such as topic diversi-
+fication and coverage serendipity.
+Currently, the field has a growing interest in generating algo-
+rithms with diverse and innovative recommendations, even at
+the expense of accuracy and precision. To evaluate these aspects,
+various metrics have been proposed to measure recommendation
+novelty and diversity [105,220].
+The frameworks aid in defining and standardizing the methods
+and algorithms employed by RS as well as the mechanisms to eval-
+uate the quality of the results. Among the most significant papers
+that propose CF frameworks are Herlocker et al. [92] which
+evaluates the following: similarity weight, significance weighting,
+variance weighting, selecting neighborhood and rating normaliza-
+tion; Hernández and Gaudioso [95] proposes a framework in which
+any RS is formed by two different subsystems, one of them to
+guide the user and the other to provide useful/interesting items.
+Koutrika et al. [125] is a framework which introduces levels of
+abstraction in CF process, making the modifications in the RS more
+flexible. Antunes et al. [12] presents an evaluation framework
+assuming that evaluation is an evolving process during the system
+lifecicle.
+The majority of RS evaluation frameworks proposed until now
+present two deficiencies: the first of these is the lack of formal-
+ization. Although the evaluation metrics are well defined, there
+are a variety of details in the implementation of the methods
+which, in the event they are not specified, can lead to the
+generation of different results in similar experiments. The
+second deficiency is the absence of standardization of the evalu-
+ation measures in aspects such as novelty and trust of the
+recommendations.
+Bobadilla et al. [32] provides a complete series of mathematical
+formalizations based on sets theory. Authors provide a set of eval-
+uation measures, which include the quality analysis of the follow-
+ing aspects: predictions, recommendations, novelty and trust.
+Presented next is a representative selection of the RS evaluation
+quality measures most often used in the bibliography. In order to measure the accuracy of the results of an RS, it is
+usual to use the calculation of some of the most common predic-
+tion error metrics, amongst which the Mean Absolute Error
+(MAE) and its related metrics: mean squared error, root mean
+squared error, and normalized mean absolute error stand out.
+
+We define U as the set of the RS users, I as the set of the RS
+items, r u,i the rating of user u on item i,  the lack of rating (r u,i = 
+means user u has not rated item i), p u,i the prediction of item i on
+user u.
+Let O u = {i 2 Ijp u,i –  ^ r u,i – }, set of items rated by user u hav-
+ing prediction values. We define the MAE and RMSE of the system
+as the average of the user’s MAE. We remark that the absolute dif-
+ference between prediction and real value, jp u,i  r u,i j, informs
+about the error in the prediction. RMSE 1⁄4
+ðp  r u;i Þ 2
+#U u2U #O u i2O u;i
+MAE 1⁄4
+ð1Þ
+ð2Þ
+u
+The coverage could be defined as the capacity of predicting from
+a metric applied to a specific RS. In short, it calculates the percent-
+age of situations in which at least one k-neighbor of each active
+user can rate an item that has not been rated yet by that active
+user. We defined K u,i as the set of neighbors of u which have rated
+the item i.
 \subsubsection{Filtro collaborativo}
 \subsection{Introduzione allo Stream Processing}
 \subsubsection{Il paradigma Publish-Subscribe}
