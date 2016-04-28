@@ -3,10 +3,13 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Relazione LIA-ISA.aux
 The style file: plain.bst
 Database file #1: biblib.bib
+Warning--I didn't find a database entry for "cepimage"
+Warning--I didn't find a database entry for "Cugola:2012:PFI:2187671.2187677"
+Warning--I didn't find a database entry for "fulop2010survey"
 Warning--empty year in Tohsato_h:heterogeneous
 You've used 16 entries,
             2118 wiz_defined-function locations,
-            583 strings with 6972 characters,
+            587 strings with 7057 characters,
 and the built_in function-call counts, 5568 in all, are:
 = -- 535
 > -- 266
@@ -45,4 +48,4 @@ warning$ -- 1
 while$ -- 48
 width$ -- 18
 write$ -- 179
-(There was 1 warning)
+(There were 4 warnings)
