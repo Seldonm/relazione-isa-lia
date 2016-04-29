@@ -150,7 +150,16 @@ Il \textbf{Content-Based Filtering} consente di creare raccomandazioni basate su
 
 Il \textbf{Demographic Filtering} si basa sul principio che gli individui con caratteristiche personali comuni, quali età, sesso, luogo di residenza e così via, avranno le stesse preferenze.
 
-Il \textbf{Collaborative Filtering} consente agli utenti di attribuire un voto ad un insieme di elementi (filmati, canzoni, film, libri, all'interno di una piattaforma web) salvando le proprie preferenze all'interno di un database, e consentendo di creare una raccomandazione specifica per ogni utente. I voti degli utenti possono essere anche acquisiti in maniera implicita (ad esempio il numero delle che viene ascoltata una canzone, il numero delle consultazioni relative ad una risorsa). The most widely used algorithm for collaborative filtering is the k Nearest Neighbors (kNN) [3,203,32]. In the user to user version, kNN executes the following three tasks to generate recommendations for an active user: (1) determine k users neighbors (neighbor-hood) for the active user a; (2) implement an aggregation approach with the ratings for the neighborhood in items not rated by a; and (3) extract the predictions from in step 2 then select the top N
+Il \textbf{Collaborative Filtering} consente agli utenti di attribuire un voto ad un insieme di elementi (filmati, canzoni, film, libri, all'interno di una piattaforma web) salvando le proprie preferenze all'interno di un database, e consentendo di creare una raccomandazione specifica per ogni utente. I voti degli utenti possono essere anche acquisiti in maniera implicita (ad esempio il numero delle che viene ascoltata una canzone, il numero delle consultazioni relative ad una risorsa). L'algoritmo utilizzato maggiormente per il Collaborative Filtering è il $k$ Nearest Neighbors ($k$NN). 
+
+Nella versione "\textit{user to user}", il KNN esegue i seguenti task per generare la raccomandazione:
+\begin{enumerate}
+\item Determinare i $k$ utenti vicini, per l'utente corrente.
+\item Implementare un approccio 
+\item Estrarre le predizioni dal passo 2 e selezionare le $N$ raccomandazioni.
+\end{enumerate}
+
+(1) determine k users neighbors (neighbor-hood) for the active user a; (2) implement an aggregation approach with the ratings for the neighborhood in items not rated by a; and (3) extract the predictions from in step 2 then select the top N
 recommendations.
 
 Hybrid filtering [47,185]. Commonly uses a combination of CF with demographic filtering [224] or CF with content-based filtering [18,60] to exploit merits of each one of these techniques. Hybrid filtering is usually based on bioinspired or probabilistic methods
