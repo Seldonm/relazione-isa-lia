@@ -121,97 +121,21 @@ Come possiamo vedere dalla Figura \ref{funcep}, viene associata una semantica de
 \subsection{Sistemi di Raccomandazione}
 I sistemi di raccomandazione, raccolgono informazioni sulle preferenze di utente in corrispondenza di un insieme di elementi (ad esempio, film, musica, libri, giochi, viaggi, siti web, applicazioni, gadget). L'informazione può essere acquisita in maniera esplicita (tipicamente ciò viene fatto acquisendo il voto di un utente) o implicitamente (analizzando il comportamento dell'utente, ad esempio musica ascoltata, applicazioni scaricate, siti web visitati, libri letti). Inoltre i sistemi di raccomandazione, possono tener conto anche delle caratteristiche demografiche dell'utente (ad esempio età, nazionalità, sesso); dei contenuti informativi presenti nel mondo del Web 2.0, ad esempio all'interno delle piattaforme di Social Networking, quali follower, followed, twit, like, post; dei dati provenienti dai dispositivi caratterizzanti l'Internet of Things (ad esempio, coordinate GPS, RFID, segnali medici inviati in real-time). 
 
-I sistemi di raccomandazione utilizzano diverse sorgenti informative al fine di fornire all'utente finale una migliore Quality of Experience relativa alla predizione ed alla raccomandazione degli elementi che potrebbero interessargli. La tecnica del Collaborative Filtering (CF), ha un ruolo fondamentale nella raccomandazione, sebbene viene spesso usata anche con altre tecniche di filtraggio basate sul contenuto, basate sulla conoscenza methods play
-an important role in the recommendation, although they are often
-used along with other filterning techniques like content-based,
-knowledge-based or social ones.
-CF is based on the way in which humans have made decisions
-throughout history: besides on our own experiences, we also base
-our decisions on the experiences and knowledge that reach each of
-us from a relatively large group of acquaintances.
-Recently, RS implementation in the Internet has increased,
-which has facilitated its use in diverse areas [171]. The most com-
-mon research papers are focused on movie recommendation stud-
-ies [53,230]; however, a great volume of literature for RS is
-centered on different topics, such as music [134,162,216], televi-
-sion [238,18], books [164,88], documents [206,184,183,185], e-
-learning [241,30], e-commerce [104,54], applications in markets
-[67] and web search [154], among others.
-The kinds of filtering most used at the beginning of the RS (col-
-laborative, content-based and demographic) were described in
-[177]. Breese et al. [43] evaluated the predictive accuracy of differ-
-ent algorithms for CF; later, the classical paper [94] describes the
-base for evaluating the Collaborative Filtering RS.
-The evolution of RS has shown the importance of hybrid tech-
-niques of RS, which merge different techniques in order to get
-the advantages of each of them. A survey focused on the hybrid
-RS has been presented in [47]. However, it does not deal with
-the role of social-filtering, a technique which has become more
-popular in the recent years through social networks.
-The neighborhood-based CF has been the recommendation
-method most popular at the beginning of the RS; Herlocker et al.
-[93] provides a set of guidelines for designing neighborhood-based
-prediction systems. Adomavicius and Tuzhilin [3] present an over-
-view on the RS field standing out the most complex areas on which researchers in RS should focus in the ‘‘next generation of RS’’: lim-
-ited content analysis and overspecialization in content-based
-methods, cold-start and sparsity in CF methods, model-based tech-
-niques, nonintrusiveness, flexibility (real-time customization), etc.
-While researchers have been developing RS, different survey
-papers have been published summarizing the most important is-
-sues in this field. In view of the impossibility of showing every de-
-tail of all these techniques in just a paper, this publication selects
-those issues the authors have felt most suitable to understand
-the evolution of RS.
-While the existing surveys focus on the most relevant methods
-and algorithms of the RS field, our survey instead tries to enhance
-the evolution of the RS: from a first phase based on the tradi-
-tional Web to the present second phase based on social Web,
-which is presently progressing to a third phase (Internet of
-things). With the purpose of being useful to the new readers of
-RS field, we have included in this survey some traditional topics:
-RS foundations, k-Nearest Neighbors algorithm, cold-start issues,
-similarity measures, and evaluation of RS. The rest of the paper
-deals with novel topics that existing surveys do not consider.
-Through this survey, advanced readers in RS will study in depth
-concepts, classifications and approaches related to social informa-
-tion (social filtering: followers, followed, trust, reputation, credi-
-bility, content-based filtering of social data; social tagging and
-taxonomies), recommending to groups of users and explaining
-recommendations. Readers interested in brand new and future
-applications will find this survey useful since it informs about
-the most recent works in location-aware RS trends and bio-in-
-spired approaches. They will also discover some important issues,
-such as privacy, security, P2P information and Internet of things
-use (RFID data, health parameters, surveillance data, teleopera-
-tion, telepresence, etc.).
-According to the idea that RS tend to make use of different
-sources of information (collaborative, social, demographic, content,
-knowledge-based, geographic, sensors, tags, implicit and explicit
-data acquisition, etc.), this survey emphasizes hybrid architectures,
-based on making recommendations through different known tech-
-nologies (each one designed on behalf of a specific source of
-information).
-he process for generating an RS recommendation is based on a
-combination of the following considerations:
- The type of data available in its database (e.g., ratings, user reg-
-istration information, features and content for items that can be
-ranked, social relationships among users and location-aware
-information).
- The filtering algorithm used (e.g., demographic, content-based,
-collaborative, social-based, context-aware and hybrid).
- The model chosen (e.g., based on direct use of data: ‘‘memory-
-based,’’ or a model generated using such data: ‘‘model-based’’).
- The employed techniques are also considered: probabilistic
-approaches, Bayesian networks, nearest neighbors algorithm;
-bio-inspired algorithms such as neural networks and genetic
-algorithms; fuzzy models, singular value decomposition tech-
-niques to reduce sparsity levels, etc.
- Sparsity level of the database and the desired scalability.
- Performance of the system (time and memory consuming).
- The objective sought is considered (e.g., predictions and top N
-recommendations) as well as
- The desired quality of the results (e.g., novelty, coverage and
-precision).
+I sistemi di raccomandazione utilizzano diverse sorgenti informative al fine di fornire all'utente finale una migliore Quality of Experience relativa alla predizione ed alla raccomandazione degli elementi che potrebbero interessargli. La tecnica del Collaborative Filtering (CF), ha un ruolo fondamentale nella raccomandazione, sebbene viene spesso usata anche con altre tecniche di filtraggio basate sul contenuto o basate sulla conoscenza. Il CF si basa sulla cronologia decisionale dell'utente: oltre alle nostre esperienze, facciamo le nostre decisioni anche in base alla conoscenza che ci circonda.
+
+Il processo con cui un sistema di raccomandazione generi una raccomandazione, è basato sulla combinazione delle seguenti considerazioni:
+
+\begin{enumerate}
+\item La tipologia di dati disponibili nel databse (votazioni, informazioni di registrazione dell'utente, caratteristiche peculiari del contenuto informativo, relazioni sociali)
+\item L'algoritmo di filtraggio usato (demografico, basato sul contenuto, collaborativo, basato sulle relazioni sociali, dipendente dal contesto e ibrido).
+\item Il modello scelto (basato sull'uso diretto dei dati: 'memory-based', oppure un modello generato usando tali dati: 'model-based').
+\item Le tecniche impiegate: approccio probabilistico, reti Bayesiane, algoritmi di tipo nearest neighbors, algoritmi genetici, reti neurali, logica fuzzy.
+\item Livello di dispersione del database e scalabilità desiderata.
+\item Capacità di elaborazione del sistema (tempo di elaborazione e consumi di memoria).
+\item L'obiettivo da raggiungere (predizioni e raccomandazioni)
+\item La qualità del risultato desiderata (ad esempio la precisione).
+\end{enumerate}
+
 Research in RS requires using a representative set of public dat-
 abases to facilitate investigations on the techniques, methods and
 algorithms developed by researchers in the field. Through these
