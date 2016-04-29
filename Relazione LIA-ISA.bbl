@@ -1,103 +1,20 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{1}
 
-\bibitem{hadoop}
-Apache™.
-\newblock {H}adoop {O}fficial {W}ebsite.
-\newblock \url{https://hadoop.apache.org/}, 2015.
-\newblock [Online; Ultimo accesso 10 Ottobre 2015].
+\bibitem{Cugola:2012:PFI:2187671.2187677}
+Gianpaolo Cugola and Alessandro Margara.
+\newblock Processing flows of information: From data stream to complex event
+  processing.
+\newblock {\em ACM Comput. Surv.}, 44(3):15:1--15:62, June 2012.
 
-\bibitem{archgrid}
-Fernando Kakugawa{,} Liria Sato{,}~Mathias Brito.
-\newblock Architecture to integrating heterogeneous databases using grid
-  computing.
-\newblock In {\em 21st International Conference on Systems Engineering}, 2011.
+\bibitem{fulop2010survey}
+Lajos~Jeno F{\"u}l{\"o}p, Gabriella T{\'o}th, R{\'o}bert R{\'a}cz, J{\'a}nos
+  P{\'a}ncz{\'e}l, Tam{\'a}s Gergely, Arp{\'a}d Besz{\'e}des, and
+  L{\'o}r{\'a}nt Farkas.
+\newblock Survey on complex event processing and predictive analytics.
+\newblock {\em Nokia Siemens Networks}, 2010.
 
-\bibitem{candela2008gcube}
-Leonardo Candela, Donatella Castelli, and Pasquale Pagano.
-\newblock g{C}ube: a service-oriented application framework on the grid.
-\newblock {\em ERCIM News}, 72:48--49, 2008.
-
-\bibitem{candela2012managing}
-Leonardo Candela, Donatella Castelli, and Pasquale Pagano.
-\newblock Managing big data through hybrid data infrastructures.
-\newblock {\em ERCIM News}, 89:37--38, 2012.
-
-\bibitem{comito2004gdis}
-Carmela Comito and Domenico Talia.
-\newblock {GDIS}: {A} service-based architecture for data integration on grids.
-\newblock In {\em On the Move to Meaningful Internet Systems 2004: OTM 2004
-  Workshops}, pages 88--98. Springer, 2004.
-
-\bibitem{6972028}
-J.C.S. Dos~Anjos, G.~Fedak, and C.F.R. Geyer.
-\newblock Bighybrid -- a toolkit for simulating mapreduce in hybrid
-  infrastructures.
-\newblock In {\em Computer Architecture and High Performance Computing Workshop
-  (SBAC-PADW), 2014 International Symposium on}, pages 132--137, Oct 2014.
-
-\bibitem{6511732}
-D.~Garlasu, V.~Sandulescu, I.~Halcu, G.~Neculoiu, O.~Grigoriu, M.~Marinescu,
-  and V.~Marinescu.
-\newblock A big data implementation based on grid computing.
-\newblock In {\em Roedunet International Conference (RoEduNet), 2013 11th},
-  pages 1--4, Jan 2013.
-
-\bibitem{6020018}
-L.~Hluchy, O.~Habala, V.~Tran, P.~Krammer, and B.~Simo.
-\newblock Using {ADMIRE} framework and language for data mining and integration
-  in environmental application scenarios.
-\newblock In {\em Fuzzy Systems and Knowledge Discovery (FSKD), 2011 Eighth
-  International Conference on}, volume~4, pages 2437--2441, July 2011.
-
-\bibitem{toolkit}
-University of~Chicago.
-\newblock {Globus Toolkit Home Page}.
-\newblock \url{http://toolkit.globus.org/toolkit/}, 2015.
-\newblock [Online; Ultimo accesso 10 Ottobre 2015].
-
-\bibitem{ogsadai}
-The~University of~Edinburgh.
-\newblock {OGSA}-{DAI} {O}fficial {W}ebsite.
-\newblock \url{http://www.ogsadai.org.uk/}, 2015.
-\newblock [Online; Ultimo accesso 10 Ottobre 2015].
-
-\bibitem{3}
-Tapio Niemi{,} Marko Niinimaki{,}~Vesa Sivunen.
-\newblock Integrating distributed heterogenous databases and distributed grid
-  computing.
-\newblock In {\em ICEIS 5th International Conference on Enterprise Information
-  Systems}, 2003.
-
-\bibitem{Sloan_firstdata}
-T.~M. Sloan, A.~Carter, P.~J. Graham, D.~Unwin, and I.~Gregory.
-\newblock First data investigation on the grid: Firstdig.
-
-\bibitem{fuse}
-Sourceforge.
-\newblock {FUSE} : {F}ile system in userspace.
-\newblock \url{http://fuse.sourceforge.net/}, 2015.
-\newblock [Online; Ultimo accesso 10 Ottobre 2015].
-
-\bibitem{Tohsato_h:heterogeneous}
-Yukako Tohsato, Takahiro Kosaka, Susumu Date, Shinji Shimojo, and Hideo
-  Matsuda.
-\newblock H: Heterogeneous database federation using grid technology for drug
-  discovery process.
-\newblock In {\em In Grid Computing in Life Science (LSGRID2004) Edited by:
-  Konagaya A, Satou K}. Springer.
-
-\bibitem{Viennot:2015:SMA:2741948.2741975}
-Nicolas Viennot, Mathias L{\'e}cuyer, Jonathan Bell, Roxana Geambasu, and Jason
-  Nieh.
-\newblock Synapse: A microservices architecture for heterogeneous-database web
-  applications.
-\newblock In {\em Proceedings of the Tenth European Conference on Computer
-  Systems}, EuroSys '15, pages 21:1--21:16, New York, NY, USA, 2015. ACM.
-
-\bibitem{2}
-Ǧorgi Kakaševski{,} Anastas Mišev{,} Boro~Jakimovski.
-\newblock Heterogeneous distributed databases and distributed query processing
-  in grid computing.
-\newblock {\em ICT Innovations Web Proceedings ISSN 1857-7288}, 2011.
+\bibitem{cepimage}
+Patrick Gantet~Patrick Gantet.
+\newblock Complex event processing.
 
 \end{thebibliography}
