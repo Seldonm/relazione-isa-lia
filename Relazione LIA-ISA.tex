@@ -169,10 +169,10 @@ I \textbf{Memory Based} conservano in memoria le informazioni associate ad ogni 
 La matrice \textit{Utenti/Item} definita all'interno del sistema di raccomandazione contiene entry $i,j$ che rappresentano un voto dell'utente \textit{i-esimo} per l'elemento \textit{j-esimo}; nel caso in cui dovesse mancare una preferenza per un determinato item, il valore viene posto a $0$.
 
 $$\bordermatrix{\text{corner}&c_1&c_2&\ldots &c_n\cr
-	r_1&a_{11} &  0  & \ldots & a_{1n}\cr
-	r_2& 0  &  a_{22} & \ldots & a_{2n}\cr
-	r_3& \vdots & \vdots & \ddots & \vdots\cr
-	r_4& 0  &   0       &\ldots & a_{nn}}$$
+	r_1&a_{11}&0&\ldots&a_{1n}\cr
+	r_2&0&a_{22}&\ldots&a_{2n}\cr
+	r_3&\vdots&\vdots&\ddots&\vdots\cr
+	r_4&0&0&ldots&a_{nn}}$$
 
 Poiché i sistemi di raccomandazione sono caratterizzati da una elevata dimensione dello spazio degli utenti e degli item, il funzionamento degli algoritmi \textit{memory-based} è stato definito sull'ipotesi di determinare un grado di similarità tra gli utenti, che permetta di estrapolare dalla matrice dei voti, le informazioni associate ai soli utenti simili all'utente attivo.
 
