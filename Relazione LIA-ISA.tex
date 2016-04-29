@@ -168,11 +168,7 @@ I \textbf{Memory Based} conservano in memoria le informazioni associate ad ogni 
 
 La matrice \textit{Utenti/Item} definita all'interno del sistema di raccomandazione contiene entry $i,j$ che rappresentano un voto dell'utente \textit{i-esimo} per l'elemento \textit{j-esimo}; nel caso in cui dovesse mancare una preferenza per un determinato item, il valore viene posto a $0$.
 
-$$\bordermatrix{\text{corner}&c_1&c_2&\ldots &c_n\cr
-	r_1&a_{11}&0&\ldots&a_{1n}\cr
-	r_2&0&a_{22}&\ldots&a_{2n}\cr
-	r_3&\vdots&\vdots&\ddots&\vdots\cr
-	r_4&0&0&ldots&a_{nn}}$$
+
 
 Poiché i sistemi di raccomandazione sono caratterizzati da una elevata dimensione dello spazio degli utenti e degli item, il funzionamento degli algoritmi \textit{memory-based} è stato definito sull'ipotesi di determinare un grado di similarità tra gli utenti, che permetta di estrapolare dalla matrice dei voti, le informazioni associate ai soli utenti simili all'utente attivo.
 
@@ -185,7 +181,156 @@ I \textbf{Model Based}, utilizzano l'insieme dei voti espressi dagli utenti per 
 	\label{model-rec}
 \end{figure}
 
+To reduce the problems from high levels of sparsity in RS dat-
+abases, certain studies have used dimensionality reduction tech-
+niques [202]. The reduction methods are based on Matrix
+Factorization [124,142,143]. Matrix factorization is especially ade-
+quate for processing large RS databases and providing scalable ap-
+proaches [215]. The model-based technique Latent Semantic Index
+(LSI) and the reduction method Singular Value Decomposition
+(SVD) are typically combined [224,244,48]. SVD methods provide
+good prediction results but are computationally very expensive;
+they can only be deployed in static off-line settings where the
+known preference information does not change with time.
 
+RS can use clustering techniques to improve the prediction qual-
+ity and reduce the cold-start problem when applied to hybrid fil-
+tering. It is typical to form clusters of items in hybrid RS
+[209,237]. A different common approach uses clustering both for
+items and users (bi-clustering) [252,85]. RS comprising social infor-
+mation have been clustered to improve the following areas: tagging
+[208], explicit social links [179] and explicit trust information
+[181,70].
+
+The graph in Fig. 3 shows the most significant traditional meth-
+ods, techniques and algorithms for the recommendation process as
+well as their relationships and groupings. Different sections of this
+paper provide more detail on the most important aspects involved
+in the recommendation process \cite{Bobadilla:2013:RSS:2483330.2483573}.
+
+\subsubsection{Metriche di Valutazione}
+The quality of a recommender system can be decided on
+the result of evaluation. The type of metrics used depends
+on the type of CF applications. According to Herlocker
+et al. [60], metrics evaluating recommendation systems can
+13
+be broadly classified into the following broad categories:
+predictive accuracy metrics, such as Mean Absolute Error
+(MAE) and its variations; classification accuracy metrics, such
+as precision, recall, F1-measure, and ROC sensitivity; rank
+accuracy metrics, such as Pearson’s product-moment correla-
+tion, Kendall’s Tau, Mean Average Precision (MAP), half-life
+utility [9], and normalized distance-based performance metric
+(NDPM) [128].
+We only introduce the commonly-used CF metrics
+MAE, NMAE, RMSE, and ROC sensitivity here. For other
+CF performance metrics of recommendation quality, see
+[60]. There are other evaluations of recommender systems
+including usability evaluation [129] and so forth.
+6.1. Mean Absolute Error (MAE) and Normalized Mean
+Absolute Error (NMAE). Instead of classification accuracy
+or classification error, the most widely used metric in CF
+research literature is Mean Absolute Error (MAE) [3, 60],
+which computes the average of the absolute difference
+between the predictions and true ratings
+
+MAE =
+
+
+{ i, j } 	 p i, j
+
+
+− r i, j 	
+n
+,
+(14)
+where n is the total number of ratings over all users, p i, j is
+the predicted rating for user i on item j, and r i, j is the actual
+rating. The lower the MAE, the better the prediction.
+Different recommender systems may use different
+numerical rating scales. Normalized Mean Absolute Error
+(NMAE) normalizes MAE to express errors as percentages
+of full scale [3]:
+NMAE =
+MAE
+,
+r max − r min
+(15)
+where r max and r min are the upper and lower bounds of the
+ratings.
+6.2. Root Mean Squared Error (RMSE). Root Mean Squared
+Error (RMSE) is becoming popular partly because it is
+the Netflix prize [20] metric for movie recommendation
+performance:
+
+1  
+
+RMSE = 
+
+n { i, j }
+ 2
+p i, j − r i, j ,
+(16)
+where n is the total number of ratings over all users, p i, j
+is the predicted rating for user i on item j, and r i, j is the
+actual rating again. RMSE amplifies the contributions of the
+absolute errors between the predictions and the true values.
+Although accuracy metrics have greatly helped the field
+of recommender systems, the recommendations that are
+most accurate are sometimes not the ones that are most
+useful to users, for example, users might prefer to be
+recommended with items that are unfamiliar with them,
+rather than the old favorites they do not likely want again
+[130]. We therefore need to explore other evaluation metrics.14
+Advances in Artificial Intelligence
+Table 6: Confusion matrix.
+Actual
+Predicted
+Positive
+TruePositive
+FalsePositive
+Positive
+Negative
+Negative
+FalseNegative
+TureNegative
+6.3. ROC Sensitivity. An ROC (Receiver Operating Charac-
+teristic) curve is a two-dimensional depiction of classifier
+performance, on which TPR (true positive rate) is plotted
+on the Y -axis and FPR (false positive rate) is plotted on
+the X-axis. For the confusion matrix in Table 6, we have
+TPR = TruePositive/(TotalPositive), and FPR = FalsePosi-
+tive/(TotalNegative). By tuning a threshold value, all the items
+ranked above it are deemed observed by the user, and below
+unobserved, thus the system will get different prediction
+values for different threshold values to draw the ROC curve
+of { FPR, TPR } points [60].
+Generally, if one ROC curve is consistently dominant
+over another, the system represented by the former curve has
+better prediction performance. But in actual situations, ROC
+curves may intersect with each other.
+Variations of the ROC metric include GROC (global
+ROC) and CROC (customer ROC) [29].
+ROC sensitivity is a measure of the diagnostic power of
+a CF system. Operationally, it is given by the Area Under the
+ROC Curve (AUC). The calculation of AUC can be the actual
+area under the ROC curve for binary class problems. We can
+also use the strategy from [131] to estimate AUC:
+AUC =
+S 0 − n 0 (n 0 + 1)/2
+n 0 n 1
+(17)
+where n 0 and n 1 are the numbers of negative and positive
+examples respectively, and S 0 = Σ r i , where r i is the rank of ith
+positive example in the ranked list. From the above equation,
+the AUC is essentially a measure of the quality of a ranking.
+For multiclass problems, we can use estimated AUC,
+which can be the weighted average of the AUCs obtained by
+taking each class as the reference class in turn (i.e., making
+it class 0 and all other classes class 1). The weight of a class’s
+AUC is the class’s frequency in the data [129, 132].
+The performance of the recommender system with a
+bigger AUC value is better \cite{Su:2009:SCF:1592474.1722966}.
 \subsubsection{Filtro collaborativo}
 
 \subsubsection{L'algoritmo ALS}
