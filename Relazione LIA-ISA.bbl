@@ -1,5 +1,10 @@
 \begin{thebibliography}{1}
 
+\bibitem{Bobadilla:2013:RSS:2483330.2483573}
+J.~Bobadilla, F.~Ortega, A.~Hernando, and A.~Guti{\'e}Rrez.
+\newblock Recommender systems survey.
+\newblock {\em Know.-Based Syst.}, 46:109--132, July 2013.
+
 \bibitem{Cugola:2012:PFI:2187671.2187677}
 Gianpaolo Cugola and Alessandro Margara.
 \newblock Processing flows of information: From data stream to complex event
@@ -16,5 +21,10 @@ Lajos~Jeno F{\"u}l{\"o}p, Gabriella T{\'o}th, R{\'o}bert R{\'a}cz, J{\'a}nos
 \bibitem{cepimage}
 Patrick Gantet~Patrick Gantet.
 \newblock Complex event processing.
+
+\bibitem{Su:2009:SCF:1592474.1722966}
+Xiaoyuan Su and Taghi~M. Khoshgoftaar.
+\newblock A survey of collaborative filtering techniques.
+\newblock {\em Adv. in Artif. Intell.}, 2009:4:2--4:2, January 2009.
 
 \end{thebibliography}
