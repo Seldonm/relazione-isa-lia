@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.7)  28 APR 2016 12:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.26)  29 APR 2016 11:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -629,7 +629,7 @@ LaTeX Font Info:    Try loading font information for U+wasy on input line 67.
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-<images/poliba.jpg, id=111, 401.5pt x 401.5pt>
+<images/poliba.jpg, id=107, 401.5pt x 401.5pt>
 File: images/poliba.jpg Graphic file (type jpg)
  <use images/poliba.jpg>
 Package pdftex.def Info: images/poliba.jpg used on input line 70.
@@ -648,7 +648,7 @@ Package pdftex.def Info: images/poliba.jpg used on input line 70.
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-<images/CEP2.jpg, id=155, 719.68875pt x 474.27188pt>
+<images/CEP2.jpg, id=150, 719.68875pt x 474.27188pt>
 File: images/CEP2.jpg Graphic file (type jpg)
  <use images/CEP2.jpg>
 Package pdftex.def Info: images/CEP2.jpg used on input line 95.
@@ -659,7 +659,7 @@ been already used, duplicate ignored
                    \relax 
 l.107 
        [1 <./images/CEP2.jpg>]
-<images/CEP.png, id=165, 761.84625pt x 292.09125pt>
+<images/CEP.png, id=160, 761.84625pt x 292.09125pt>
 File: images/CEP.png Graphic file (type png)
  <use images/CEP.png>
 Package pdftex.def Info: images/CEP.png used on input line 114.
@@ -675,7 +675,7 @@ been already used, duplicate ignored
                    \relax 
 l.137 
        [2 <./images/CEP.png>]
-<images/cluster-overview.png, id=179, 598.235pt x 287.0725pt>
+<images/cluster-overview.png, id=174, 598.235pt x 287.0725pt>
 File: images/cluster-overview.png Graphic file (type png)
 
 <use images/cluster-overview.png>
@@ -695,52 +695,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--157
  []
 
 [3 <./images/cluster-overview.png>]
-<images/streaming-arch.png, id=189, 564.6696pt x 211.0284pt>
+<images/streaming-arch.png, id=184, 564.6696pt x 211.0284pt>
 File: images/streaming-arch.png Graphic file (type png)
 
 <use images/streaming-arch.png>
 Package pdftex.def Info: images/streaming-arch.png used on input line 166.
 (pdftex.def)             Requested size: 282.3341pt x 105.51393pt.
 
-<images/streaming-flow.png, id=191, 516.0078pt x 115.1502pt>
+<images/streaming-flow.png, id=186, 516.0078pt x 115.1502pt>
 File: images/streaming-flow.png Graphic file (type png)
 
 <use images/streaming-flow.png>
 Package pdftex.def Info: images/streaming-flow.png used on input line 175.
 (pdftex.def)             Requested size: 258.00327pt x 57.57495pt.
- [4 <./images/streaming-arch.png> <./images/streaming-flow.png>] [5] (./Relazio
-ne LIA-ISA.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 204.
- [6
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
+
+ []
+
+[4 <./images/streaming-arch.png> <./images/streaming-flow.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
+
+ []
+
+<images/kafka.png, id=196, 258.9675pt x 180.675pt>
+File: images/kafka.png Graphic file (type png)
+ <use images/kafka.png>
+Package pdftex.def Info: images/kafka.png used on input line 210.
+(pdftex.def)             Requested size: 207.17426pt x 144.54018pt.
+
+<images/log_anatomy.png, id=198, 417.56pt x 268.00125pt>
+File: images/log_anatomy.png Graphic file (type png)
+
+<use images/log_anatomy.png>
+Package pdftex.def Info: images/log_anatomy.png used on input line 220.
+(pdftex.def)             Requested size: 334.04843pt x 214.40128pt.
+ [5 <./images/kafka.png>] [6 <./images/log_anatomy.png>] (./Relazione LIA-ISA.b
+bl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 247.
+ [7
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 204.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 247.
  (./Relazione LIA-ISA.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 204.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 204.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 247.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 247.
 Package rerunfilecheck Info: File `"Relazione LIA-ISA".out' has not changed.
-(rerunfilecheck)             Checksum: 7C85747CF6F43FE70111FDF3858281A2;1905.
+(rerunfilecheck)             Checksum: 4AED2830BD0D0A6EC138E9C4577B88B7;1835.
  ) 
 Here is how much of TeX's memory you used:
- 12479 strings out of 495000
- 182031 string characters out of 6181170
+ 12492 strings out of 495000
+ 182263 string characters out of 6181169
  412136 words of memory out of 5000000
- 15429 multiletter control sequences out of 15000+600000
+ 15438 multiletter control sequences out of 15000+600000
  18240 words of font info for 52 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  36i,8n,75p,857b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/pietro/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/
-pietro/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/pietro/.te
-xmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/pietro/.texmf-var/fo
-nts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/pietro/.texmf-var/fonts/pk/ljf
-our/jknappen/ec/ecbx1095.600pk> </home/pietro/.texmf-var/fonts/pk/ljfour/jknapp
-en/ec/ecrm1200.600pk> </home/pietro/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti
-1200.600pk> </home/pietro/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Relazione LIA-ISA.pdf" (8 pages, 328891 bytes).
+ </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1095.600pk> </hom
+e/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/makave
+li/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/makaveli/.texm
+f-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/makaveli/.texmf-var/fo
+nts/pk/ljfour/jknappen/ec/ecbx1095.600pk> </home/makaveli/.texmf-var/fonts/pk/l
+jfour/jknappen/ec/ecrm1200.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jk
+nappen/ec/ecti1200.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/e
+c/ecbx1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmsy10.pfb>
+Output written on "Relazione LIA-ISA.pdf" (9 pages, 363711 bytes).
 PDF statistics:
- 562 PDF objects out of 1000 (max. 8388607)
- 229 compressed objects within 3 object streams
- 43 named destinations out of 1000 (max. 500000)
- 247 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 571 PDF objects out of 1000 (max. 8388607)
+ 231 compressed objects within 3 object streams
+ 45 named destinations out of 1000 (max. 500000)
+ 249 words of extra memory for PDF output out of 10000 (max. 10000000)
 
