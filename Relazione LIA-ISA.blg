@@ -3,46 +3,47 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Relazione LIA-ISA.aux
 The style file: plain.bst
 Database file #1: biblib.bib
-Warning--empty year in Tohsato_h:heterogeneous
-You've used 16 entries,
+Warning--entry type for "cepimage" isn't style-file defined
+--line 57 of file biblib.bib
+You've used 3 entries,
             2118 wiz_defined-function locations,
-            583 strings with 6972 characters,
-and the built_in function-call counts, 5568 in all, are:
-= -- 535
-> -- 266
-< -- 6
-+ -- 107
-- -- 90
-* -- 336
-:= -- 895
-add.period$ -- 54
-call.type$ -- 16
-change.case$ -- 93
+            516 strings with 4599 characters,
+and the built_in function-call counts, 970 in all, are:
+= -- 87
+> -- 58
+< -- 0
++ -- 23
+- -- 20
+* -- 71
+:= -- 173
+add.period$ -- 8
+call.type$ -- 3
+change.case$ -- 19
 chr.to.int$ -- 0
-cite$ -- 17
-duplicate$ -- 222
-empty$ -- 461
-format.name$ -- 90
-if$ -- 1210
+cite$ -- 3
+duplicate$ -- 28
+empty$ -- 70
+format.name$ -- 20
+if$ -- 190
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 11
-newline$ -- 86
-num.names$ -- 32
-pop$ -- 133
+int.to.str$ -- 3
+missing$ -- 2
+newline$ -- 17
+num.names$ -- 6
+pop$ -- 21
 preamble$ -- 1
-purify$ -- 77
+purify$ -- 16
 quote$ -- 0
-skip$ -- 169
+skip$ -- 25
 stack$ -- 0
-substring$ -- 262
-swap$ -- 67
-text.length$ -- 6
+substring$ -- 49
+swap$ -- 3
+text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 64
-warning$ -- 1
-while$ -- 48
-width$ -- 18
-write$ -- 179
+type$ -- 12
+warning$ -- 0
+while$ -- 8
+width$ -- 4
+write$ -- 30
 (There was 1 warning)
