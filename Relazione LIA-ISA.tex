@@ -154,16 +154,12 @@ Il \textbf{Collaborative Filtering} consente agli utenti di attribuire un voto a
 
 Nella versione "\textit{user to user}", il KNN esegue i seguenti task per generare la raccomandazione:
 \begin{enumerate}
-\item Determinare i $k$ utenti vicini, per l'utente corrente.
-\item Implementare un approccio 
-\item Estrarre le predizioni dal passo 2 e selezionare le $N$ raccomandazioni.
+\item Determinare i $k$ utenti vicini all'utente corrente.
+\item Implementare un approccio che tenga conto degli elementi "\textit{vicini}" non ancora votati dall'utente corrente.
+\item Estrarre le predizioni dal passo $2$ e selezionare le $N$ raccomandazioni.
 \end{enumerate}
 
-(1) determine k users neighbors (neighbor-hood) for the active user a; (2) implement an aggregation approach with the ratings for the neighborhood in items not rated by a; and (3) extract the predictions from in step 2 then select the top N
-recommendations.
-
-Hybrid filtering [47,185]. Commonly uses a combination of CF with demographic filtering [224] or CF with content-based filtering [18,60] to exploit merits of each one of these techniques. Hybrid filtering is usually based on bioinspired or probabilistic methods
-such as genetic algorithms [76,99], fuzzy genetic [7], neural networks [133,62,192], Bayesian networks [50], clustering [209] and latent features [199].
+L'\textbf{Hybrid Filtering} è una combinazione di Collaborative Filtering e Demographic Filtering, oppure una combinazione tra Collaborative Filtering e Contenet-Based Filtering che sfrutta i pregi di ciascuna di queste tecniche. Il metodo è basato su metodi probabilistici come gli algoritmi genetici, genetica fuzzy, reti neurali, reti Bayesiane, clustering.
 
 A widely accepted taxonomy divides recommendation methods into memory-based and model-based method categories:
 Memory-based methods [3,51,123,214]. Memory-based methods
