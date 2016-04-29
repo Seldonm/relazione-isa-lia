@@ -170,7 +170,7 @@ I \textbf{Memory Based} conservano in memoria le informazioni associate ad ogni 
 
 La matrice \textit{Utenti/Item} definita all'interno del sistema di raccomandazione contiene entry $i,j$ che rappresentano un voto dell'utente \textit{i-esimo} per l'elemento \textit{j-esimo}; nel caso in cui dovesse mancare una preferenza per un determinato item, il valore viene posto a $0$.
 
-
+INSERIRE MATRICE !!!!
 
 Poiché i sistemi di raccomandazione sono caratterizzati da una elevata dimensione dello spazio degli utenti e degli item, il funzionamento degli algoritmi \textit{memory-based} è stato definito sull'ipotesi di determinare un grado di similarità tra gli utenti, che permetta di estrapolare dalla matrice dei voti, le informazioni associate ai soli utenti simili all'utente attivo.
 
@@ -183,52 +183,20 @@ I \textbf{Model Based}, utilizzano l'insieme dei voti espressi dagli utenti per 
 	\label{model-rec}
 \end{figure}
 
-To reduce the problems from high levels of sparsity in RS dat-
-abases, certain studies have used dimensionality reduction tech-
-niques [202]. The reduction methods are based on Matrix
-Factorization [124,142,143]. Matrix factorization is especially ade-
-quate for processing large RS databases and providing scalable ap-
-proaches [215]. The model-based technique Latent Semantic Index
-(LSI) and the reduction method Singular Value Decomposition
-(SVD) are typically combined [224,244,48]. SVD methods provide
-good prediction results but are computationally very expensive;
-they can only be deployed in static off-line settings where the
-known preference information does not change with time.
+E' utile citare i metodi di riduzione basati sulla Matrix Factorization, la tecnica model-based Latent Semantic Index (LSI), il metodo di riduzione Singular Value Decomposition
+(SVD) e le tecniche di clustering.
 
-RS can use clustering techniques to improve the prediction qual-
-ity and reduce the cold-start problem when applied to hybrid fil-
-tering. It is typical to form clusters of items in hybrid RS
-[209,237]. A different common approach uses clustering both for
-items and users (bi-clustering) [252,85]. RS comprising social infor-
-mation have been clustered to improve the following areas: tagging
-[208], explicit social links [179] and explicit trust information
-[181,70].
-
-The graph in Fig. 3 shows the most significant traditional meth-
-ods, techniques and algorithms for the recommendation process as
-well as their relationships and groupings. Different sections of this
-paper provide more detail on the most important aspects involved
-in the recommendation process \cite{Bobadilla:2013:RSS:2483330.2483573}.
+Nella Figura \ref{model-rec} viene illustrato un diagramma con le tecniche principali e gli algoritmi di raccomandazione maggiormente utilizzati in letteratura \cite{Bobadilla:2013:RSS:2483330.2483573}.
 
 \subsubsection{Metriche di Valutazione}
 La qualità di un sistema di raccomandazione può essere valutata dai risultati forniti in output. Le tipologie di metriche usate, dipendono dal tipo di CF usato. Le metriche possono essere categorizzate in:
 Predictive Accuracy, come ad esempio il Mean Absolute Error
-(MAE) e sue varianti; Classification Accuracy metrics, come la precision, recall, F1-measure, e sensibilità ROC; Rank Accuracy, come il Mean Average Precision (MAP),e così via.
-Desideriamo concentrarci sulla metrica Root Mean Squared Error (RMSE). Infatti la radice quadrata dell'errore quadratico medio, è una metrica molto utilizzata per la raccomandazione di film.
+(MAE) e sue varianti; Classification Accuracy metrics, come la precision, recall, F1-measure, e sensibilità ROC; Rank Accuracy, come il Mean Average Precision (MAP), e così via.
+Desideriamo concentrarci sulla metrica \textbf{Root Mean Squared Error} (RMSE). Infatti la radice quadrata dell'errore quadratico medio, è una metrica molto utilizzata per la raccomandazione di film.
 
 \[ RMSE=\sqrt{\frac{1}{n}\sum_{{i,j}}(p_{i,j}-r_{i,j})^2} \]
 
-where n is the total number of ratings over all users, p i, j
-is the predicted rating for user i on item j, and r i, j is the
-actual rating again. RMSE amplifies the contributions of the
-absolute errors between the predictions and the true values.
-Although accuracy metrics have greatly helped the field
-of recommender systems, the recommendations that are
-most accurate are sometimes not the ones that are most
-useful to users, for example, users might prefer to be
-recommended with items that are unfamiliar with them,
-rather than the old favorites they do not likely want again
-[130] \cite{Su:2009:SCF:1592474.1722966}.
+dove $n$ è il numero totale dei voti assegnati dagli utenti,$p_{i,j}$ è il voto predetto per l'utente $i$ sull'elemento $j$, ed $r_{i,j}$ è il voto attuale. L'RMSE consente di valutare in maniera precisa i contributi degli errori assoluti tra i valori predetti ed i valori reali \cite{Su:2009:SCF:1592474.1722966}.
 \subsubsection{Filtro collaborativo}
 
 \subsubsection{L'algoritmo ALS}
