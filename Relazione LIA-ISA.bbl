@@ -6,6 +6,16 @@ Gianpaolo Cugola and Alessandro Margara.
   processing.
 \newblock {\em ACM Comput. Surv.}, 44(3):15:1--15:62, June 2012.
 
+\bibitem{kafka}
+Apache™~Software Foundation.
+\newblock {K}afka {O}fficial 0.9.0 {D}ocumentation.
+\newblock \url{http://kafka.apache.org/documentation.html}, 2016.
+
+\bibitem{spark}
+Apache™~Software Foundation.
+\newblock {S}park {O}fficial 1.6.1 {D}ocumentation.
+\newblock \url{http://spark.apache.org/docs/latest/}, 2016.
+
 \bibitem{fulop2010survey}
 Lajos~Jeno F{\"u}l{\"o}p, Gabriella T{\'o}th, R{\'o}bert R{\'a}cz, J{\'a}nos
   P{\'a}ncz{\'e}l, Tam{\'a}s Gergely, Arp{\'a}d Besz{\'e}des, and
