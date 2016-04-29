@@ -161,8 +161,11 @@ Nella versione "\textit{user to user}", il KNN esegue i seguenti task per genera
 
 L'\textbf{Hybrid Filtering} è una combinazione di Collaborative Filtering e Demographic Filtering, oppure una combinazione tra Collaborative Filtering e Contenet-Based Filtering che sfrutta i pregi di ciascuna di queste tecniche. Il metodo è basato su metodi probabilistici come gli algoritmi genetici, genetica fuzzy, reti neurali, reti Bayesiane, clustering.
 
-A widely accepted taxonomy divides recommendation methods into memory-based and model-based method categories:
-Memory-based methods [3,51,123,214]. Memory-based methods
+Inoltre possiamo suddividere i metodi in Memory-Based e Model-Based:
+\begin{enumerate}
+\item I metodi Memory Based possono essere definiti come quei metodi che lavorano solo sulla matrice 
+\end{enumerate}
+
 can be defined as methods that (a) act only on the matrix of user
 ratings for items and (b) use any rating generated before the refer-
 ral process (i.e., its results are always updated). Memory-based
@@ -203,126 +206,129 @@ well as their relationships and groupings. Different sections of this
 paper provide more detail on the most important aspects involved
 in the recommendation process.
 
-As may be seen in Fig. 3, we can use some of the traditional fil-
-tering methods (content-based, demographic and collaborative)
-applied to databases. Model-based technologies (genetic algo-
-rithms, neural networks, etc.) make use of this kind of information.
-Typical memory-based approaches are: item to item; user to user;
-and hybrids of the two previous. The main purpose of both mem-
-ory-based and model-based approaches is to get the most accurate
-predictions in the tastes of users. The accuracy of these predictions
-may be evaluated through the classical information retrieval mea-
-sures, like MAE, precision, and recall.
+\subsection{Metriche di Valutazione}
+The quality of a recommender system can be decided on
+the result of evaluation. The type of metrics used depends
+on the type of CF applications. According to Herlocker
+et al. [60], metrics evaluating recommendation systems can
+13
+be broadly classified into the following broad categories:
+predictive accuracy metrics, such as Mean Absolute Error
+(MAE) and its variations; classification accuracy metrics, such
+as precision, recall, F1-measure, and ROC sensitivity; rank
+accuracy metrics, such as Pearson’s product-moment correla-
+tion, Kendall’s Tau, Mean Average Precision (MAP), half-life
+utility [9], and normalized distance-based performance metric
+(NDPM) [128].
+We only introduce the commonly-used CF metrics
+MAE, NMAE, RMSE, and ROC sensitivity here. For other
+CF performance metrics of recommendation quality, see
+[60]. There are other evaluations of recommender systems
+including usability evaluation [129] and so forth.
+6.1. Mean Absolute Error (MAE) and Normalized Mean
+Absolute Error (NMAE). Instead of classification accuracy
+or classification error, the most widely used metric in CF
+research literature is Mean Absolute Error (MAE) [3, 60],
+which computes the average of the absolute difference
+between the predictions and true ratings
+
+MAE =
 
-VALUTAZIONE DEI SISTEMI DI RACCOMANDAZIONE
-Since RS research began, evaluation of predictions and recom-
-mendations has become important [94,201]. Research in the RS
-field requires quality measures and evaluation metrics [90] to know
-the quality of the techniques, methods, and algorithms for predic-
-tions and recommendations. Evaluation metrics [94,95] and evalua-
-tion frameworks [92,32] facilitate comparisons of several solutions
-for the same problem and selection from different promising lines
-of research that generate better results.
-Because of evaluation measures, RS recommendations have
-gradually been tested and improved [48]. A representative set of
-existing evaluation measures has standard formulations, and a
-group of open RS public databases has been generated. These two
-advances have facilitated quality comparisons for new proposed
-recommendation methods and previously published methods; thus,
-RS methods and algorithms research has progressed continuously.
-The most commonly used quality measures are the following
-[90,95]: (1) prediction evaluations, (2) evaluations for recommen-
-dation as sets, and (3) evaluations for recommendations as ranked
-lists. Fig. 5 shows results from applying several evaluation mea-
-sures to a set of representative similarity measures.
-Evaluation metrics [12] can be classified as [94,95] (a) predic-
-tion metrics: such as the accuracy ones: Mean Absolute Error
-(MAE), Root of Mean Square Error (RMSE), Normalized Mean Average
-Error (NMAE); and the coverage (b) set recommendation metrics:
-such as Precision, Recall and Receiver Operating Characteristic
-(ROC) [204] (c) rank recommendation metrics: such as the half-life
-[43] and the discounted cumulative gain [17] and (d) diversity met-
-rics: such as the diversity and the novelty of the recommended
-items [105]. The validation process is performed by employing
-the most common cross validation techniques (random sub-sam-
-pling and k-fold cross validation) [21]; for cold-start situations,
-due to the limited number of users (or items) votes involved, the
-usual method chosen to carry out the experiments is leave-one-
-out cross validation [36].
-Hernández and Gaudioso [95] propose an evaluation process
-based on the distinction between interactive and non-interactive subsystems. General publications and reviews also exist which in-
-clude the most commonly accepted evaluation measures: mean
-absolute error, coverage, precision, recall and derivatives of these:
-mean squared error, normalized mean absolute error, ROC and fallout;
-Goldberg et al. [87] focuses on the aspects not related to the eval-
-uation, Breese et al. [43] compare the predictive accuracy of vari-
-ous methods in a set of representative problem domains.
-The majority of articles discuss attempted improvements to the
-accuracy of RS results (RMSE, MAE, etc.). It is also common to at-
-tempt an improvement in recommendations (precision, recall,
-ROC, etc.). However, additional objectives should be considered
-for generating greater user satisfaction [253], such as topic diversi-
-fication and coverage serendipity.
-Currently, the field has a growing interest in generating algo-
-rithms with diverse and innovative recommendations, even at
-the expense of accuracy and precision. To evaluate these aspects,
-various metrics have been proposed to measure recommendation
-novelty and diversity [105,220].
-The frameworks aid in defining and standardizing the methods
-and algorithms employed by RS as well as the mechanisms to eval-
-uate the quality of the results. Among the most significant papers
-that propose CF frameworks are Herlocker et al. [92] which
-evaluates the following: similarity weight, significance weighting,
-variance weighting, selecting neighborhood and rating normaliza-
-tion; Hernández and Gaudioso [95] proposes a framework in which
-any RS is formed by two different subsystems, one of them to
-guide the user and the other to provide useful/interesting items.
-Koutrika et al. [125] is a framework which introduces levels of
-abstraction in CF process, making the modifications in the RS more
-flexible. Antunes et al. [12] presents an evaluation framework
-assuming that evaluation is an evolving process during the system
-lifecicle.
-The majority of RS evaluation frameworks proposed until now
-present two deficiencies: the first of these is the lack of formal-
-ization. Although the evaluation metrics are well defined, there
-are a variety of details in the implementation of the methods
-which, in the event they are not specified, can lead to the
-generation of different results in similar experiments. The
-second deficiency is the absence of standardization of the evalu-
-ation measures in aspects such as novelty and trust of the
-recommendations.
-Bobadilla et al. [32] provides a complete series of mathematical
-formalizations based on sets theory. Authors provide a set of eval-
-uation measures, which include the quality analysis of the follow-
-ing aspects: predictions, recommendations, novelty and trust.
-Presented next is a representative selection of the RS evaluation
-quality measures most often used in the bibliography. In order to measure the accuracy of the results of an RS, it is
-usual to use the calculation of some of the most common predic-
-tion error metrics, amongst which the Mean Absolute Error
-(MAE) and its related metrics: mean squared error, root mean
-squared error, and normalized mean absolute error stand out.
 
-We define U as the set of the RS users, I as the set of the RS
-items, r u,i the rating of user u on item i,  the lack of rating (r u,i = 
-means user u has not rated item i), p u,i the prediction of item i on
-user u.
-Let O u = {i 2 Ijp u,i –  ^ r u,i – }, set of items rated by user u hav-
-ing prediction values. We define the MAE and RMSE of the system
-as the average of the user’s MAE. We remark that the absolute dif-
-ference between prediction and real value, jp u,i  r u,i j, informs
-about the error in the prediction. RMSE 1⁄4
-ðp  r u;i Þ 2
-#U u2U #O u i2O u;i
-MAE 1⁄4
-ð1Þ
-ð2Þ
-u
-The coverage could be defined as the capacity of predicting from
-a metric applied to a specific RS. In short, it calculates the percent-
-age of situations in which at least one k-neighbor of each active
-user can rate an item that has not been rated yet by that active
-user. We defined K u,i as the set of neighbors of u which have rated
-the item i.
+{ i, j } 	 p i, j
+
+
+− r i, j 	
+n
+,
+(14)
+where n is the total number of ratings over all users, p i, j is
+the predicted rating for user i on item j, and r i, j is the actual
+rating. The lower the MAE, the better the prediction.
+Different recommender systems may use different
+numerical rating scales. Normalized Mean Absolute Error
+(NMAE) normalizes MAE to express errors as percentages
+of full scale [3]:
+NMAE =
+MAE
+,
+r max − r min
+(15)
+where r max and r min are the upper and lower bounds of the
+ratings.
+6.2. Root Mean Squared Error (RMSE). Root Mean Squared
+Error (RMSE) is becoming popular partly because it is
+the Netflix prize [20] metric for movie recommendation
+performance:
+
+1  
+
+RMSE = 
+
+n { i, j }
+ 2
+p i, j − r i, j ,
+(16)
+where n is the total number of ratings over all users, p i, j
+is the predicted rating for user i on item j, and r i, j is the
+actual rating again. RMSE amplifies the contributions of the
+absolute errors between the predictions and the true values.
+Although accuracy metrics have greatly helped the field
+of recommender systems, the recommendations that are
+most accurate are sometimes not the ones that are most
+useful to users, for example, users might prefer to be
+recommended with items that are unfamiliar with them,
+rather than the old favorites they do not likely want again
+[130]. We therefore need to explore other evaluation metrics.14
+Advances in Artificial Intelligence
+Table 6: Confusion matrix.
+Actual
+Predicted
+Positive
+TruePositive
+FalsePositive
+Positive
+Negative
+Negative
+FalseNegative
+TureNegative
+6.3. ROC Sensitivity. An ROC (Receiver Operating Charac-
+teristic) curve is a two-dimensional depiction of classifier
+performance, on which TPR (true positive rate) is plotted
+on the Y -axis and FPR (false positive rate) is plotted on
+the X-axis. For the confusion matrix in Table 6, we have
+TPR = TruePositive/(TotalPositive), and FPR = FalsePosi-
+tive/(TotalNegative). By tuning a threshold value, all the items
+ranked above it are deemed observed by the user, and below
+unobserved, thus the system will get different prediction
+values for different threshold values to draw the ROC curve
+of { FPR, TPR } points [60].
+Generally, if one ROC curve is consistently dominant
+over another, the system represented by the former curve has
+better prediction performance. But in actual situations, ROC
+curves may intersect with each other.
+Variations of the ROC metric include GROC (global
+ROC) and CROC (customer ROC) [29].
+ROC sensitivity is a measure of the diagnostic power of
+a CF system. Operationally, it is given by the Area Under the
+ROC Curve (AUC). The calculation of AUC can be the actual
+area under the ROC curve for binary class problems. We can
+also use the strategy from [131] to estimate AUC:
+AUC =
+S 0 − n 0 (n 0 + 1)/2
+n 0 n 1
+(17)
+where n 0 and n 1 are the numbers of negative and positive
+examples respectively, and S 0 = Σ r i , where r i is the rank of ith
+positive example in the ranked list. From the above equation,
+the AUC is essentially a measure of the quality of a ranking.
+For multiclass problems, we can use estimated AUC,
+which can be the weighted average of the AUCs obtained by
+taking each class as the reference class in turn (i.e., making
+it class 0 and all other classes class 1). The weight of a class’s
+AUC is the class’s frequency in the data [129, 132].
+The performance of the recommender system with a
+bigger AUC value is better.
 \subsubsection{Filtro collaborativo}
 \subsection{Introduzione allo Stream Processing}
 \subsubsection{Il paradigma Publish-Subscribe}
