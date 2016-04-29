@@ -171,13 +171,13 @@ I \textbf{Memory Based} conservano in memoria le informazioni associate ad ogni 
 \textit{Utenti/Item}.
 
 La matrice \textit{Utenti/Item} definita all'interno del sistema di raccomandazione contiene entry $i,j$ che rappresentano un voto dell'utente \textit{i-esimo} per l'elemento \textit{j-esimo}; nel caso in cui dovesse mancare una preferenza per un determinato item, il valore viene posto a $0$.
-
-$M=\kbordermatrix{%
+\begin{math}
+M=\kbordermatrix{%
 	& A &        & B & C \\
 	1 & 1 & \vrule & 2 & 3 \\
 	2 & 4 & \vrule & 5 & 6
-}$
-
+}
+\end{math}
 Poiché i sistemi di raccomandazione sono caratterizzati da una elevata dimensione dello spazio degli utenti e degli item, il funzionamento degli algoritmi \textit{memory-based} è stato definito sull'ipotesi di determinare un grado di similarità tra gli utenti, che permetta di estrapolare dalla matrice dei voti, le informazioni associate ai soli utenti simili all'utente attivo.
 
 I \textbf{Model Based}, utilizzano l'insieme dei voti espressi dagli utenti per costruire un modello statistico di preferenze su cui generare le predizioni. 
