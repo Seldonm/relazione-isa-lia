@@ -25,6 +25,7 @@
 \usepackage{wasysym}
 \usepackage{enumitem}
 \usepackage{lipsum}
+\usepackage[titletoc]{appendix}
 
 \newcommand{\voceU}[1]{%
 	\item #1\dotfill\Square%
@@ -40,18 +41,27 @@
 \renewcommand{\lstlistingname}{Listato}
 
 
-\lstset{
-    language=C,
-    basicstyle=\ttfamily,
-    breaklines=true,
-    frame=single, % draw a frame at the top and bottom of the code block
-    tabsize=2, % tab space width
-    showstringspaces=false, % don't mark spaces in strings
-    numbers=left, % display line numbers on the left
-    captionpos=b,
-    commentstyle=\color{green}, % comment color
-    keywordstyle=\color{blue}, % keyword color
-    stringstyle=\color{red} % string color
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstdefinestyle{scalacode}{
+	frame=tb,
+	language=scala,
+	aboveskip=3mm,
+	belowskip=3mm,
+	showstringspaces=false,
+	columns=flexible,
+	basicstyle={\small\ttfamily},
+	numbers=none,
+	numberstyle=\tiny\color{gray},
+	keywordstyle=\color{blue},
+	commentstyle=\color{dkgreen},
+	stringstyle=\color{mauve},
+	frame=single,
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
 }
 
 \begin{document}
@@ -229,6 +239,17 @@ Il cluster di Kafka conserva in memoria tutti i messaggi pubblicati, letti o non
 
 \subsubsection{Integrazione con Spark Streaming}
 
+Le API di Spark Streaming offrono la possibilità di configurare Kafka come sorgente di data stream, attraverso due possibili approcci \cite{spark}. 
+
+Il primo approccio è detto \textbf{Receiver-based}, e consiste nell'implementazione di un Receiver tramite le API di Kafka. I dati ricevuti attraverso tale oggetto vengono memorizzati e processati nei worker node. Tuttavia, tale approccio potrebbe non garantire la consistenza in caso di data loss, ed è dunque necessario abilitare un meccanismo di integrità chiamato \textit{Ahead Logs} \cite{spark}. \\
+
+Il secondo approccio, detto \textit{Direct Approch} o \textit{Receivers less}, non prevede l'uso di Receivers ma interroga periodicamente il server Kafka per rilevare il topic e la partizione aggiornata di recente, definendo in automatico la dimensione del batch di dati da processare. I vantaggi di questa tecnica sono: 
+\begin{itemize}
+	\item \textit{Parallelismo semplificato: } Non è necessario creare ed unificare stream multipli di Kafka. Tramite la funzione \textit{directStream}, Spark Streaming effettua un mapping tra le partizioni di Kafka in RDD, semplificandone l'elaborazione in parallelo;
+	\item \textit{Efficienza: } Il meccanismo Write Ahead Logs potrebbe generare problemi di duplicazione dei dati e relativi conflitti, nel momento in cui entrambe le istanze di Spark e Kafka tentino di risolvere una perdita di informazioni. Con un approccio diretto senza Receivers tale problema non sussiste \cite{spark}.
+\end{itemize}
+
+
 \subsection{Il framework Node.js}
 \subsubsection{Panoramica}
 \subsubsection{Kafka Client per Node.js}
@@ -242,6 +263,282 @@ Il cluster di Kafka conserva in memoria tutti i messaggi pubblicati, letti o non
 \nocite{*}
 \bibliographystyle{plain}
 \bibliography{biblib}
+
+\newpage
+\section{Sorgenti}
+\begin{appendices}
+	\section{Sorgenti Spark}
+	\begin{lstlisting}[style=scalacode, caption=Main.scala]
+package ml
+
+import cep.CEP
+import commons.{FileParser, KafkaCommons, SparkCommons}
+import org.apache.log4j.{Level, Logger}
+
+/**
+*
+* @authors Mauro Losciale and Pietro Tedeschi.
+*/
+object Main {
+
+def main(args: Array[String]): Unit ={
+
+Logger.getLogger("org.apache.spark").setLevel(Level.ERROR)
+Logger.getLogger("org.eclipse.jetty.server").setLevel(Level.OFF)
+
+val ratings = FileParser.parseRatings()
+val movies = FileParser.parseMovies()
+
+val numRatings = ratings.count()
+val numUsers = ratings.map(_._2.user).distinct().count()
+val numMovies = ratings.map(_._2.product).distinct().count()
+
+println("Got " + numRatings + " ratings from "
++ numUsers + " users on " + numMovies + " movies.")
+
+val messages = KafkaCommons.kafkaDirectStreaming()
+
+messages.foreachRDD { rdd =>
+val votes = rdd.map(_._2)
+val tableVotes = SparkCommons.sqlContext.read.option("header","true")
+	.option("inferSchema","true")
+	.json(votes).toDF().na.drop()
+
+if (tableVotes.count() > 0) {
+
+tableVotes.show()
+tableVotes.registerTempTable("tableVotes")
+
+val query = SparkCommons.sqlContext.sql("SELECT * FROM tableVotes WHERE rating > 3")
+CEP.hasEnoughVotes(query, tableVotes, ratings, movies)
+
+} else println("Nessun voto ricevuto")
+
+
+}
+
+SparkCommons.ssc.start()
+SparkCommons.ssc.awaitTermination()
+
+}
+
+}
+	\end{lstlisting}
+	\begin{lstlisting}[style=scalacode, caption=SparkCommons.scala]
+		package commons
+		
+		import org.apache.spark.sql.SQLContext
+		import org.apache.spark.streaming._
+		import org.apache.spark.{SparkConf, SparkContext}
+		
+		/**
+		* Handles configuration, context and so
+		*
+		* @authors Mauro Losciale and Pietro Tedeschi.
+		*/
+		object SparkCommons {
+		//build the SparkConf  object at once
+		lazy val conf = {
+		new SparkConf(false)
+		.setMaster("local[*]")
+		.setAppName("Collaborative Filtering with Kafka")
+		.set("spark.logConf", "true")
+		}
+		
+		lazy val sc = SparkContext.getOrCreate(conf)
+		lazy val ssc = new StreamingContext(sc, Seconds(30))
+		lazy val sqlContext = new SQLContext(sc)
+		
+		sc.addJar("target/scala-2.10/mlspark-assembly-1.0.jar")
+		}
+	\end{lstlisting}
+	
+	\begin{lstlisting}[style=scalacode, caption=KafkaCommons.scala]
+		package commons
+		
+		import java.util.Properties
+		
+		import kafka.producer.{Producer, ProducerConfig}
+		import kafka.serializer.StringDecoder
+		import org.apache.spark.streaming.Seconds
+		import org.apache.spark.streaming.kafka.{KafkaUtils, OffsetRange}
+		
+		/**
+		*
+		* @authors Mauro Losciale and Pietro Tedeschi.
+		*/
+		object KafkaCommons {
+		
+		val kafkaTopics = "votes"    // command separated list of topics
+		val kafkaBrokers = "makaveli-desktop:9092"
+		var offsetRanges = Array[OffsetRange]()
+		val kafkaParams = Map[String, String]("metadata.broker.list" -> kafkaBrokers
+		)
+		val topicsSet = kafkaTopics.split(",").toSet
+		val messages = KafkaUtils.createDirectStream[String, String, StringDecoder, StringDecoder](
+		SparkCommons.ssc, kafkaParams, topicsSet)
+		
+		val props:Properties = new Properties()
+		props.put("metadata.broker.list", "192.168.0.4:9092")
+		props.put("serializer.class", "kafka.serializer.StringEncoder")
+		
+		val config = new ProducerConfig(props)
+		val producer = new Producer[String, String](config)
+		
+		def kafkaDirectStreaming() = {
+		
+		KafkaUtils.createDirectStream[String, String, StringDecoder, StringDecoder](
+		SparkCommons.ssc, kafkaParams, topicsSet).window(Seconds(60), Seconds(30))
+		}
+		
+		}
+		
+	\end{lstlisting}
+	\begin{lstlisting}[style=scalacode, caption=CollaborativeFiltering.scala]
+		package ml
+		
+		import commons.{KafkaCommons, SparkCommons}
+		import kafka.producer.{KeyedMessage, Producer}
+		import org.apache.spark.mllib.recommendation.{ALS, MatrixFactorizationModel, Rating}
+		import org.apache.spark.rdd._
+		import org.json4s.JsonDSL._
+		import org.json4s.jackson.JsonMethods._
+		
+		/**
+		*
+		* @authors Mauro Losciale and Pietro Tedeschi.
+		*/
+		object CollaborativeFiltering {
+		
+		def userCF(rdd: RDD[Rating], ratings: RDD[(Long, Rating)], movies: Map[Int, String]) = {
+		
+		val myRatingsRDD = rdd
+		
+		// split ratings into train (60%), validation (20%), and test (20%) based on the
+		// last digit of the timestamp, add myRatings to train, and cache them
+		
+		val numPartitions = 4
+		
+		val training = ratings.filter(x => x._1 < 6)
+		.values
+		.union(myRatingsRDD)
+		.repartition(numPartitions)
+		.cache()
+		
+		val validation = ratings.filter(x => x._1 >= 6 && x._1 < 8)
+		.values
+		.repartition(numPartitions)
+		.cache()
+		
+		val test = ratings.filter(x => x._1 >= 8).values.cache()
+		
+		val numTraining = training.count()
+		val numValidation = validation.count()
+		val numTest = test.count()
+		
+		println("Training: " + numTraining + ", validation: " + numValidation + ", test: " + numTest)
+		
+		// train models and evaluate them on the validation set
+		
+		val ranks = List(8, 12)
+		val lambdas = List(0.1, 10.0)
+		val numIters = List(10, 20)
+		var bestModel: Option[MatrixFactorizationModel] = None
+		var bestValidationRmse = Double.MaxValue
+		var bestRank = 0
+		var bestLambda = -1.0
+		var bestNumIter = -1
+		for (rank <- ranks; lambda <- lambdas; numIter <- numIters) {
+		val model = ALS.train(training, rank, numIter, lambda)
+		val validationRmse = computeRmse(model, validation, numValidation)
+		println("RMSE (validation) = " + validationRmse + " for the model trained with rank = "
+		+ rank + ", lambda = " + lambda + ", and numIter = " + numIter + ".")
+		if (validationRmse < bestValidationRmse) {
+		bestModel = Some(model)
+		bestValidationRmse = validationRmse
+		bestRank = rank
+		bestLambda = lambda
+		bestNumIter = numIter
+		}
+		}
+		
+		// evaluate the best model on the test set
+		
+		val testRmse = computeRmse(bestModel.get, test, numTest)
+		
+		println("The best model was trained with rank = " + bestRank + " and lambda = " + bestLambda
+		+ ", and numIter = " + bestNumIter + ", and its RMSE on the test set is " + testRmse + ".")
+		
+		// make personalized recommendations
+		
+		val myRatedMovieIds = myRatingsRDD.map(_.product).collect().toSet
+		val candidates = SparkCommons.sc.parallelize(
+			movies.keys.filter(!myRatedMovieIds.contains(_)).toSeq)
+		val recommendations = bestModel.get
+		.predict(candidates.map((0, _)))
+		.collect()
+		.sortBy(-_.rating)
+		.take(9)
+		
+		out(recommendations, movies, KafkaCommons.producer)
+		
+		}
+		
+		/** Compute RMSE (Root Mean Squared Error). */
+		def computeRmse(model: MatrixFactorizationModel, data: RDD[Rating], n: Long): Double = {
+		val predictions: RDD[Rating] = model.predict(data.map(x => (x.user, x.product)))
+		val predictionsAndRatings = predictions.map(x => ((x.user, x.product), x.rating))
+		.join(data.map(x => ((x.user, x.product), x.rating)))
+		.values
+		math.sqrt(predictionsAndRatings.map(x => (x._1 - x._2) * (x._1 - x._2)).reduce(_ + _) / n)
+		}
+		
+		/** Write recommendations array to a JSON file **/
+		def out(data: Array[Rating], film: Map[Int, String], producer: Producer[String, String]) = {
+		
+		println("Movies recommended for you:")
+		
+		data.foreach { r =>
+		
+		val jsonVote = ("movieid", r.product) ~("rating", r.rating.toInt) ~("title", film(r.product))
+		producer.send(new KeyedMessage[String, String]("result", compact(render(jsonVote)).toString))
+		}
+		}
+		}
+		
+	\end{lstlisting}
+	\begin{lstlisting}[style=scalacode, caption=CEP.scala]
+		package cep
+		
+		import ml.CollaborativeFiltering
+		import org.apache.spark.mllib.recommendation.Rating
+		import org.apache.spark.rdd.RDD
+		import org.apache.spark.sql.DataFrame
+		
+		/**
+		*
+		* @authors Mauro Losciale and Pietro Tedeschi.
+		*/
+		object CEP {
+		
+		def hasEnoughVotes(query: DataFrame, table: DataFrame, ratings: RDD[(Long,Rating)], movies: Map[Int, String]) = {
+		
+		query.count() match {
+		
+			case c if c == 0 => println("Nessun voto valido")
+			case c if c > 3 =>
+				val votesRating = table.map(v => Rating(0, v(0).toString.toInt, v(1).toString.toDouble))
+				println("Make CF")
+				CollaborativeFiltering.userCF(votesRating, ratings, movies)
+			case c if c <= 3 => println("Voti validi inferiori a 4")
+				}
+			}
+		
+		}
+		
+	\end{lstlisting}
+	\section{Sorgenti Node.js}
+\end{appendices}
 
 
 \end{document}
