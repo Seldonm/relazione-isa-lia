@@ -161,23 +161,21 @@ Nella versione "\textit{user to user}", il KNN esegue i seguenti task per genera
 
 L'\textbf{Hybrid Filtering} è una combinazione di Collaborative Filtering e Demographic Filtering, oppure una combinazione tra Collaborative Filtering e Contenet-Based Filtering che sfrutta i pregi di ciascuna di queste tecniche. Il metodo è basato su metodi probabilistici come gli algoritmi genetici, genetica fuzzy, reti neurali, reti Bayesiane, clustering.
 
-Inoltre possiamo suddividere i metodi in Memory-Based e Model-Based:
-\begin{enumerate}
-\item I metodi Memory Based possono essere definiti come quei metodi che lavorano solo sulla matrice 
-\end{enumerate}
+Inoltre possiamo suddividere i metodi in \textit{Memory-Based} e \textit{Model-Based}:
 
-can be defined as methods that (a) act only on the matrix of user
-ratings for items and (b) use any rating generated before the refer-
-ral process (i.e., its results are always updated). Memory-based
-methods usually use similarity metrics to obtain the distance be-
-tween two users, or two items, based on each of their ratios.
-Model-based methods [3,212]. Use RS information to create a
-model that generates the recommendations. Herein, we consider
-a method model-based if new information from any user outdates
-the model. Among the most widely used models we have Bayesian
-classifiers [59], neural networks [107], fuzzy systems [234], genetic
-algorithms [76,99], latent features [251] and matrix factorization
-[142], among others.
+I \textbf{Memory Based} conservano in memoria le informazioni associate ad ogni utente, item o voto all'interno del sistema. Queste informazioni costituiscono la \textit{Knowledge Base} sulla quale lavora l’algoritmo di predizione. Idealmente i sistemi di tipo memory based devono essere in grado di generare l’insieme di predizioni in maniera efficiente, processando tutte le informazioni contenute nella matrice
+\textit{utenti/item}.
+
+Poiché i sistemi di raccomandazione sono caratterizzati da una elevata dimensione dello spazio degli utenti e degli item, il funzionamento degli algoritmi \textit{memory-based} è stato definito sull'ipotesi di determinare un grado di similarità tra gli utenti, che permetta di estrapolare dalla matrice dei voti, le informazioni associate ai soli utenti simili all'utente attivo.
+
+I \textbf{Model Based}, utilizzano l'insieme dei voti espressi dagli utenti per costruire un modello statistico di preferenze su cui generare le predizioni. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.40]{images/model-recomm.png}
+	\caption{Modelli di Raccomandazione \cite{Bobadilla:2013:RSS:2483330.2483573}}
+	\label{model-rec}
+\end{figure}
 
 To reduce the problems from high levels of sparsity in RS dat-
 abases, certain studies have used dimensionality reduction tech-
@@ -204,7 +202,7 @@ The graph in Fig. 3 shows the most significant traditional meth-
 ods, techniques and algorithms for the recommendation process as
 well as their relationships and groupings. Different sections of this
 paper provide more detail on the most important aspects involved
-in the recommendation process.\cite{Bobadilla:2013:RSS:2483330.2483573}
+in the recommendation process \cite{Bobadilla:2013:RSS:2483330.2483573}.
 
 \subsubsection{Metriche di Valutazione}
 The quality of a recommender system can be decided on
@@ -330,6 +328,9 @@ AUC is the class’s frequency in the data [129, 132].
 The performance of the recommender system with a
 bigger AUC value is better \cite{Su:2009:SCF:1592474.1722966}.
 \subsubsection{Filtro collaborativo}
+
+\subsubsection{L'algoritmo ALS}
+
 \subsection{Introduzione allo Stream Processing}
 \subsubsection{Il paradigma Publish-Subscribe}
 \subsection{Il pattern Facade}
