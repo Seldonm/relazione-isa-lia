@@ -1,5 +1,12 @@
 \begin{thebibliography}{1}
 
+\bibitem{Babcock:2002:MID:543613.543615}
+Brian Babcock, Shivnath Babu, Mayur Datar, Rajeev Motwani, and Jennifer Widom.
+\newblock Models and issues in data stream systems.
+\newblock In {\em Proceedings of the Twenty-first ACM SIGMOD-SIGACT-SIGART
+  Symposium on Principles of Database Systems}, PODS '02, pages 1--16, New
+  York, NY, USA, 2002. ACM.
+
 \bibitem{Bobadilla:2013:RSS:2483330.2483573}
 J.~Bobadilla, F.~Ortega, A.~Hernando, and A.~Guti{\'e}Rrez.
 \newblock Recommender systems survey.
