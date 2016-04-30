@@ -3,13 +3,13 @@
 \BOOKMARK [2][-]{subsection.2.1}{Introduzione ai sistemi CEP}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Sistemi di Raccomandazione}{section.2}% 4
 \BOOKMARK [3][-]{subsubsection.2.2.1}{Metriche di Valutazione}{subsection.2.2}% 5
-\BOOKMARK [2][-]{subsection.2.3}{Introduzione alla Matrix Factorization}{section.2}% 6
-\BOOKMARK [2][-]{subsection.2.4}{Introduzione al Data Stream Processing}{section.2}% 7
-\BOOKMARK [2][-]{subsection.2.5}{Il paradigma Publish-Subscribe}{section.2}% 8
-\BOOKMARK [2][-]{subsection.2.6}{Il pattern Facade}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.7}{Il pattern Singleton}{section.2}% 10
-\BOOKMARK [2][-]{subsection.2.8}{Il pattern Model-View-Controller \(MVC\)}{section.2}% 11
-\BOOKMARK [2][-]{subsection.2.9}{La tecnologia WebSocket}{section.2}% 12
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Introduzione alla Matrix Factorization}{subsection.2.2}% 6
+\BOOKMARK [2][-]{subsection.2.3}{Introduzione al Data Stream Processing}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.4}{Il paradigma Publish-Subscribe}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.5}{Il pattern Facade}{section.2}% 9
+\BOOKMARK [2][-]{subsection.2.6}{Il pattern Singleton}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.7}{Il pattern Model-View-Controller \(MVC\)}{section.2}% 11
+\BOOKMARK [2][-]{subsection.2.8}{La tecnologia WebSocket}{section.2}% 12
 \BOOKMARK [1][-]{section.3}{Analisi del progetto}{}% 13
 \BOOKMARK [1][-]{section.4}{Soluzione proposta}{}% 14
 \BOOKMARK [2][-]{subsection.4.1}{La libreria Spark}{section.4}% 15
