@@ -222,7 +222,7 @@ Analizziamo la tecnica dal punto di vista matematico. Sia $U$ l'insieme degli ut
 
 Quindi un modo per ovviare a questo problema consiste nell'inizializzare le due matrici con alcuni valori, e calcolare la differenza tra i valori stimati ed i valori reali, e infine minimizzare questa differenza in maniera iterativa. Un metodo per minimizzare l'errore calcolato può essere l'algoritmo di discesa del gradiente stocastico oppure l'algoritmo Alternating Least Squares (ALS) \cite{Takacs:2008:MFN:1454008.1454049}.
 
-In generale, mentre l'algoritmo della discesa del gradiente stocastico è più semplice e più veloce di ALS, ALS risulta essere preferibile in vari casi tra cui troviamo il parallelismo. In ALS infatti, il sistema calcola ogni vettore $d_j$ indipendentemente dagli altri elementi, così come accade per $u_i$. Ciò comporta un incremento della parallelismo a livello computazionale.
+In generale, mentre l'algoritmo della discesa del gradiente stocastico è più semplice e più veloce di ALS, ALS risulta essere preferibile in molteplici casi, tra cui la parallelizzazione computazionale. In ALS infatti, il sistema calcola ogni vettore $d_j$ indipendentemente dagli altri elementi, così come accade per $u_i$. Ciò comporta un incremento della parallelismo a livello computazionale.
 
 \subsection{Introduzione allo Stream Processing}
 
