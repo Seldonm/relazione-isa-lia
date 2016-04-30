@@ -229,6 +229,13 @@ Di recente, è nata una nuova classe di applicazioni \textit{data-intensive}, ne
 
 Nei vari scenari applicativi sopra citati, non è efficiente e ne tanto meno semplice gestire i dati in arrivo all'interno di un Database Management System (DBMS) tradizionale. Infatti, i DBMS tradizionali non sono progettati per trattare in maniera rapida un flusso di dati contiguo. Di conseguenza sono nati i Data Stream Management System (DSMS) in grado di gestire un flusso dati continuo. I DSMS sono in grado di offrire un'elevata flessibilità nell'eseguire query continue sullo stream dati. Poichè i DSMS sono data-driven, ogni qualvolta viene eseguita una query, essa produrrà nuovi risultati non appena arrivano nuovi dati da processare.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.50]{images/dsms.jpg}
+	\caption{Architettura DSMS}
+	\label{dsms}
+\end{figure}
+
 I dati presenti all'interno di uno stream, arrivano online. Il sistema che elabora lo stream, non gestisce l'ordine di arrivo degli elementi da processare. Gli stream inoltre hanno la peculiarità di non avere una dimensione massima prefissata, ma sono altamente variabili. Dopo che il dato è stato processato, o viene scartato, oppure viene archiviato all'interno di uno spazio di storage \cite{Babcock:2002:MID:543613.543615}.
 
 \subsection{Il paradigma Publish-Subscribe}
