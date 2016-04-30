@@ -27,4 +27,12 @@ Xiaoyuan Su and Taghi~M. Khoshgoftaar.
 \newblock A survey of collaborative filtering techniques.
 \newblock {\em Adv. in Artif. Intell.}, 2009:4:2--4:2, January 2009.
 
+\bibitem{Takacs:2008:MFN:1454008.1454049}
+G\'{a}bor Tak\'{a}cs, Istv\'{a}n Pil\'{a}szy, Botty\'{a}n N{\'e}meth, and
+  Domonkos Tikk.
+\newblock Matrix factorization and neighbor based algorithms for the netflix
+  prize problem.
+\newblock In {\em Proceedings of the 2008 ACM Conference on Recommender
+  Systems}, RecSys '08, pages 267--274, New York, NY, USA, 2008. ACM.
+
 \end{thebibliography}

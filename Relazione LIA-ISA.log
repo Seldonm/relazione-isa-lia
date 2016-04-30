@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.7)  29 APR 2016 18:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.7)  30 APR 2016 12:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -700,7 +700,7 @@ LaTeX Font Info:    Try loading font information for U+wasy on input line 71.
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-<images/poliba.jpg, id=119, 401.5pt x 401.5pt>
+<images/poliba.jpg, id=115, 401.5pt x 401.5pt>
 File: images/poliba.jpg Graphic file (type jpg)
  <use images/poliba.jpg>
 Package pdftex.def Info: images/poliba.jpg used on input line 74.
@@ -719,7 +719,7 @@ Package pdftex.def Info: images/poliba.jpg used on input line 74.
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-<images/CEP2.jpg, id=162, 719.68875pt x 474.27188pt>
+<images/CEP2.jpg, id=157, 719.68875pt x 474.27188pt>
 File: images/CEP2.jpg Graphic file (type jpg)
  <use images/CEP2.jpg>
 Package pdftex.def Info: images/CEP2.jpg used on input line 99.
@@ -730,7 +730,7 @@ been already used, duplicate ignored
                    \relax 
 l.111 
        [1 <./images/CEP2.jpg>]
-<images/CEP.png, id=171, 761.84625pt x 292.09125pt>
+<images/CEP.png, id=165, 761.84625pt x 292.09125pt>
 File: images/CEP.png Graphic file (type png)
  <use images/CEP.png>
 Package pdftex.def Info: images/CEP.png used on input line 118.
@@ -741,68 +741,68 @@ been already used, duplicate ignored
                    \relax 
 l.134 \item L
              'algoritmo di filtraggio usato (demografico, basato sul contenu...
-[2 <./images/CEP.png>] [3]
-<images/model-recomm.png, id=202, 628.3475pt x 826.08624pt>
-File: images/model-recomm.png Graphic file (type png)
-
-<use images/model-recomm.png>
-Package pdftex.def Info: images/model-recomm.png used on input line 193.
-(pdftex.def)             Requested size: 251.33455pt x 330.42863pt.
- [4]
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
-
- []
-
-[5 <./images/model-recomm.png>]
-<images/cluster-overview.png, id=229, 598.235pt x 287.0725pt>
-File: images/cluster-overview.png Graphic file (type png)
-
-<use images/cluster-overview.png>
-Package pdftex.def Info: images/cluster-overview.png used on input line 235.
-(pdftex.def)             Requested size: 299.11676pt x 143.53589pt.
- [6 <./images/cluster-overview.png>]
-LaTeX Font Info:    Try loading font information for OMS+bch on input line 244.
+[2 <./images/CEP.png>]
+LaTeX Font Info:    Try loading font information for OMS+bch on input line 147.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsbch.fd
 File: omsbch.fd 
 )
 LaTeX Font Info:    Font shape `OMS/bch/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 244.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 147.
+ [3]
+<images/model-recomm.png, id=194, 628.3475pt x 826.08624pt>
+File: images/model-recomm.png Graphic file (type png)
 
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
+<use images/model-recomm.png>
+Package pdftex.def Info: images/model-recomm.png used on input line 197.
+(pdftex.def)             Requested size: 251.33455pt x 330.42863pt.
+ [4] [5 <./images/model-recomm.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 245--246
 
  []
 
-<images/streaming-arch.png, id=238, 564.6696pt x 211.0284pt>
+[6] <images/cluster-overview.png, id=226, 598.235pt x 287.0725pt>
+File: images/cluster-overview.png Graphic file (type png)
+
+<use images/cluster-overview.png>
+Package pdftex.def Info: images/cluster-overview.png used on input line 251.
+(pdftex.def)             Requested size: 299.11676pt x 143.53589pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
+
+ []
+
+[7 <./images/cluster-overview.png>]
+<images/streaming-arch.png, id=235, 564.6696pt x 211.0284pt>
 File: images/streaming-arch.png Graphic file (type png)
 
 <use images/streaming-arch.png>
-Package pdftex.def Info: images/streaming-arch.png used on input line 259.
+Package pdftex.def Info: images/streaming-arch.png used on input line 275.
 (pdftex.def)             Requested size: 282.3341pt x 105.51393pt.
 
-<images/streaming-flow.png, id=240, 516.0078pt x 115.1502pt>
+<images/streaming-flow.png, id=237, 516.0078pt x 115.1502pt>
 File: images/streaming-flow.png Graphic file (type png)
 
 <use images/streaming-flow.png>
-Package pdftex.def Info: images/streaming-flow.png used on input line 268.
+Package pdftex.def Info: images/streaming-flow.png used on input line 284.
 (pdftex.def)             Requested size: 258.00327pt x 57.57495pt.
- [7 <./images/streaming-arch.png>] [8 <./images/streaming-flow.png>] (./Relazio
+ [8 <./images/streaming-arch.png> <./images/streaming-flow.png>] [9] (./Relazio
 ne LIA-ISA.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 297.
- [9
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 313.
+ [10
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 297.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 313.
  (./Relazione LIA-ISA.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 297.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 297.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 313.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 313.
 Package rerunfilecheck Info: File `"Relazione LIA-ISA".out' has not changed.
-(rerunfilecheck)             Checksum: 26C22F52789B09E4180DB0C1CEA100E5;2063.
+(rerunfilecheck)             Checksum: 5B2E76048BF9EA416298B3C934DDB827;1996.
  ) 
 Here is how much of TeX's memory you used:
- 13141 strings out of 495000
- 190053 string characters out of 6181170
+ 13138 strings out of 495000
+ 190051 string characters out of 6181170
  424891 words of memory out of 5000000
  16038 multiletter control sequences out of 15000+600000
  38992 words of font info for 61 fonts, out of 8000000 for 9000
@@ -819,10 +819,10 @@ m/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Relazione LIA-ISA.pdf" (11 pages, 519802 bytes).
+Output written on "Relazione LIA-ISA.pdf" (12 pages, 526997 bytes).
 PDF statistics:
- 312 PDF objects out of 1000 (max. 8388607)
- 272 compressed objects within 3 object streams
- 66 named destinations out of 1000 (max. 500000)
- 268 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 309 PDF objects out of 1000 (max. 8388607)
+ 268 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 260 words of extra memory for PDF output out of 10000 (max. 10000000)
 
