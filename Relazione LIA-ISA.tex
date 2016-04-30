@@ -64,6 +64,38 @@
 	tabsize=3,
 }
 
+\lstdefinelanguage{JavaScript}{
+	keywords={typeof, new, true, false, catch, function, return, null, catch, switch, var, if, in, while, do, else, case, break},
+	keywordstyle=\color{blue}\bfseries,
+	ndkeywords={class, export, boolean, throw, implements, import, this, Controller, },
+	ndkeywordstyle=\color{orange}\bfseries,
+	identifierstyle=\color{black},
+	sensitive=false,
+	comment=[l]{//},
+	morecomment=[s]{/*}{*/},
+	commentstyle=\color{purple}\ttfamily,
+	stringstyle=\color{red}\ttfamily,
+	morestring=[b]',
+	morestring=[b]"
+}
+
+\lstset{
+	frame=tb,
+	language=JavaScript,
+	extendedchars=true,
+	basicstyle=\footnotesize\ttfamily,
+	%showstringspaces=false,
+	showspaces=false,
+	numbers=none,
+	%numberstyle=\footnotesize,
+	numbersep=9pt,
+	tabsize=2,
+	frame=single,
+	breaklines=true,
+	breakatwhitespace=true,
+	tabsize=3,
+}
+
 \begin{document}
 
 \title{\textbf{Definizione ed Implementazione di un Sistema di Raccomandazione Distribuito per film
@@ -249,11 +281,38 @@ Il secondo approccio, detto \textit{Direct Approch} o \textit{Receivers less}, n
 	\item \textit{Efficienza: } Il meccanismo Write Ahead Logs potrebbe generare problemi di duplicazione dei dati e relativi conflitti, nel momento in cui entrambe le istanze di Spark e Kafka tentino di risolvere una perdita di informazioni. Con un approccio diretto senza Receivers tale problema non sussiste \cite{spark}.
 \end{itemize}
 
-
 \subsection{Il framework Node.js}
-\subsubsection{Panoramica}
-\subsubsection{Kafka Client per Node.js}
-\subsubsection{Il framework Angular.js}
+
+Node.js è un framework per la realizzazione di applicazioni web in Javascript lato server. La piattaforma è basata sul \textbf{Javascript Engine V8}, il runtime di Google utilizzato anche in Chrome, disponibile per le principali piattaforme, anche se maggiormente performante su sistemi operativi UNIX-like.\\
+
+A differenza dei classici web server, che sfruttano un modello a processi concorrenti, Node.js utilizza una modalità di tipo \textit{event-driven} per l'accesso alle risorse. Scrivere un'applicazione in Node.js dunque consiste nel definire una serie di eventi che il sistema operativo deve monitorare, e all'attivazione degli stessi eseguire una funzione associata a tale evento, detta \textbf{callback}. Tale approccio definisce processi non bloccanti, evita il verificarsi di deadlocks, e in generale le operazioni di I/O non avvengono in maniera diretta. Ciò garantisce una maggiore \textbf{scalabilità} e \textbf{flessibilità} dell'architettura web. \\
+
+All'interno del framework si ha a disposizione il package manager \textbf{npm}, tramite il quale è possibile installare moduli e librerie, gestire le diverse release, gli update e le dipendenze.\\
+
+Il modulo \textbf{kafka.node} (\href{https://www.npmjs.com/package/kafka-node}{https://www.npmjs.com/package/kafka-node}) mette a disposizione un client in Node.js per la connessione ad un server Kafka. \`E possibile implementare sia il Producer che il Consumer, gestire gli eventi, creare topics, etc.
+
+\subsubsection{Angular.js}
+
+L'interfaccia dell'applicazione è stata realizzata attraverso il framework AngularJS, creando un modello MVC che sfrutta il two-way data binding di AngularJS. Il front end è costruito grazie alla libreria Bootstrap, un framework che mira alla creazione di pagine web dinamiche, fluide e adattabili a qualsiasi dispositivo con differenti grandezze e risoluzione, che contiene una serie di modelli CSS, HTML e Javascript dei componenti web maggiormente utilizzati. Altre librerie utilizzate sono: 
+\begin{itemize}
+	\item \textbf{Angular Route} Una libreria che gestisce le view ed il routing in una macchina a stati.
+\end{itemize}
+
+Il layout contiene le seguenti directory: 
+\begin{itemize}
+	\item \textbf{/css} Fogli di stile per le pagine HTML;
+	\item \textbf{/fonts} Web font;
+	\item \textbf{/img} Logo e immagini;
+	\item \textbf{/vendor} Librerie utilizzate dall'applicazione;
+	\item \textbf{/js} File Javascript della dashboard;
+	\begin{itemize}
+		\item \textbf{/controllers} Script dei controller di AngularJS;
+		\item \textbf{views} File HTML relativi alle view di AngularJS;
+		\item \textbf{/services} Direttive di AngularJS per gli eventi associati al websocket.
+	\end{itemize}
+	\item \textbf{app.js} Script principale dell'applicazione. Al suo interno sono definiti gli stati con le relative view, le transizioni e le direttive associate ad ogni view per i relativi dati da visualizzare.
+\end{itemize}
+
 \subsection{La libreria socket.IO}
 
 \section{Conclusioni e sviluppi futuri}
@@ -538,6 +597,71 @@ SparkCommons.ssc.awaitTermination()
 		
 	\end{lstlisting}
 	\section{Sorgenti Node.js}
+	
+	\begin{lstlisting}[language=Javascript, caption=app.js]
+		var vote_server = require('./lib/vote_server');
+		var kafka_consumer = require('./lib/kafka_consumer');
+		var kafka_producer = require('./lib/kafka_producer');
+		var http = require('http');
+		var express = require('express');
+		var path = require('path');
+		var argv = require('minimist')(process.argv.slice(2));
+		
+		var favicon = require('serve-favicon');
+		var logger = require('morgan');
+		var methodOverride = require('method-override');
+		var bodyParser = require('body-parser');
+		var multer = require('multer');
+		var errorHandler = require('errorhandler');
+		
+		var app = express();
+		
+		// all environments
+		app.set('port', process.env.PORT || 3000);
+		app.use(favicon(__dirname + '/public/favicon.ico'));
+		app.use(logger('dev'));
+		app.use(methodOverride());
+		app.use(bodyParser.json());
+		app.use(bodyParser.urlencoded({ extended: true }));
+		app.use(multer());
+		app.use(express.static(path.join(__dirname, 'public')));
+		
+		app.get('/', function (req, res) {
+		res.sendfile(__dirname + '/public/index.html');
+		});
+		
+		if ('development' == app.get('env')) {
+		app.use(errorHandler());
+		}
+		
+		var server = http.createServer(app);
+		var port = (argv.port) ? argv.port : 3000;
+		
+		server.listen(port);
+		voteServer = vote_server(server);
+		
+		var groupId = (argv.groupid) ? argv.groupid : 'vote-server-group';
+		kafkaConsumer = kafka_consumer(voteServer, groupId);
+		kafkaProducer = kafka_producer(voteServer);
+		
+		if (process.platform === "win32") {
+		var rl = require("readline").createInterface({
+		input: process.stdin,
+		output: process.stdout
+		});
+		
+		rl.on("SIGINT", function () {
+		process.emit("SIGINT");
+		});
+		}
+		
+		process.on("SIGINT", function () {
+		console.log('Shutting down');
+		kafkaConsumer.close();
+		kafkaProducer.close();
+		process.exit();
+		});
+	\end{lstlisting}
 \end{appendices}
 
 

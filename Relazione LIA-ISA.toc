@@ -20,12 +20,10 @@
 \contentsline {subsection}{\numberline {4.2}Apache Kafka}{5}{subsection.4.2}
 \contentsline {subsubsection}{\numberline {4.2.1}Integrazione con Spark Streaming}{6}{subsubsection.4.2.1}
 \contentsline {subsection}{\numberline {4.3}Il framework Node.js}{7}{subsection.4.3}
-\contentsline {subsubsection}{\numberline {4.3.1}Panoramica}{7}{subsubsection.4.3.1}
-\contentsline {subsubsection}{\numberline {4.3.2}Kafka Client per Node.js}{7}{subsubsection.4.3.2}
-\contentsline {subsubsection}{\numberline {4.3.3}Il framework Angular.js}{7}{subsubsection.4.3.3}
-\contentsline {subsection}{\numberline {4.4}La libreria socket.IO}{7}{subsection.4.4}
-\contentsline {section}{\numberline {5}Conclusioni e sviluppi futuri}{7}{section.5}
-\contentsline {section}{Bibliografia}{8}{section.5}
-\contentsline {section}{\numberline {6}Sorgenti}{9}{section.6}
-\contentsline {section}{Appendice \numberline {A}Sorgenti Spark}{9}{Appendice.1.Alph1}
-\contentsline {section}{Appendice \numberline {B}Sorgenti Node.js}{14}{Appendice.1.Alph2}
+\contentsline {subsubsection}{\numberline {4.3.1}Angular.js}{7}{subsubsection.4.3.1}
+\contentsline {subsection}{\numberline {4.4}La libreria socket.IO}{8}{subsection.4.4}
+\contentsline {section}{\numberline {5}Conclusioni e sviluppi futuri}{8}{section.5}
+\contentsline {section}{Bibliografia}{9}{section.5}
+\contentsline {section}{\numberline {6}Sorgenti}{10}{section.6}
+\contentsline {section}{Appendice \numberline {A}Sorgenti Spark}{10}{Appendice.1.Alph1}
+\contentsline {section}{Appendice \numberline {B}Sorgenti Node.js}{15}{Appendice.1.Alph2}
