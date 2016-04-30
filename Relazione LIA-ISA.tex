@@ -215,59 +215,7 @@ Desideriamo concentrarci sulla metrica \textbf{Root Mean Squared Error} (RMSE). 
 dove $n$ è il numero totale dei voti assegnati dagli utenti,$p_{i,j}$ è il voto predetto per l'utente $i$ sull'elemento $j$, ed $r_{i,j}$ è il voto attuale. L'RMSE consente di valutare in maniera precisa i contributi degli errori assoluti tra i valori predetti ed i valori reali \cite{Su:2009:SCF:1592474.1722966}.
  
  \subsection{Introduzione alla Matrix Factorization}
-I modelli di Matrix Factorization mappano gli utenti e gli elementi in un spazio di fattori latenti di dimensione $f$, tale che le interazioni user-item siano modellate come prodotti interni nello spazio. Ogni elemento $i$ è associato ad un vettore $q_i\in\mathbb{R}^f$, ed ogni utente $u$ è associato ad un vettore $p_u\in\mathbb{R}^f$. Dato un elemento $i$, gli elementi di $q_i$ the elements of qi measure the extent to
- which the item possesses those factors, positive or negative. For a given user u,
- the elements of pu measure the extent of interest the user has in items that are high
- on the corresponding factors, again, positive or negative. The resulting dot product,
- qi T
- pu, captures the interaction between user u and item i—the user’s overall interest in
- the item’s characteristics. This approximates user u’s rating of item i, which is denoted by rui, leading to the estimate
- rˆ
- ui = qi
- T
- pu. (1)
- The major challenge is computing the mapping
- of each item and user to factor vectors
- qi
- , pu ∈  f
- . After the recommender system
- completes this mapping, it can easily estimate
- the rating a user will give to any item
- by using Equation 1. Such a model is closely related to singular value decomposition
- (SVD), a well-established technique for identifying
- latent semantic factors in information retrieval. Applying
- SVD in the collaborative filtering domain requires factoring
- the user-item rating matrix. This often raises difficulties
- due to the high portion of missing values caused by sparseness
- in the user-item ratings matrix. Conventional SVD is
- undefined when knowledge about the matrix is incomplete.
- Moreover, carelessly addressing only the relatively
- few known entries is highly prone to overfitting.
- Earlier systems relied on imputation to fill in missing
- ratings and make the rating matrix dense.2
- However, imputation can be very expensive as it significantly increases
- the amount of data. In addition, inaccurate imputation
- might distort the data considerably. Hence, more recent
- works3-6 suggested modeling directly the observed ratings
- only, while avoiding overfitting through a regularized
- model. To learn the factor vectors (pu and qi ), the system minimizes the regularized squared error on the set of
- known ratings:
- min q p * * , ( , u i)∈
- ∑κ
- (rui - qi
- T
- pu
- )
- 2
- + λ(|| qi
- ||2
- + || pu
- ||2
- ) (2)
- Here, κ is the set of the (u,i) pairs for which rui is known
- (the training set). The system learns the model by fitting the previously observed ratings. However, the goal is to generalize those previous ratings in a way that predicts future, unknown ratings. Thus, the system should avoid overfitting the observed data by regularizing the learned parameters, whose magnitudes are penalized. The constant λ controls the extent of regularization and is usually determined by cross-validation. Ruslan Salakhutdinov and Andriy Mnih’s
- “Probabilistic Matrix Factorization”7
- offers a probabilistic foundation for regularization.
+I modelli di Matrix Factorization possono essere utilizzati per ricercare quali sono i fattori latenti che caratterizzano le interazioni tra due tipologie di entità., tale che le interazioni user-item siano modellate come prodotti interni nello spazio. Ad esempio, due utenti potrebbero votare un determinato film con un voto alto, se ad entrambi piacciono gli attori, o il genere del film, ecc. Quindi, se si riescono a scoprire quali sono i fattori latenti dietro la scelta di un utente, si riesce anche a predire un voto o una possibile preferenza di un altro film rispetto all'utente, perchè le feature associate all'utente dovrebbero convergere alle feature associate all'elemento. Analizziamo la tecnica dal punto di vista matematico. Sia $U$ l'insieme degli utenti, e sia $D$ l'insieme degli elementi. Sia $R$ la matrice dei rating, di dimensione $\lvert U\rvert\times\lvert D\rvert$
 
 \subsection{L'algoritmo Alternating Least Squares (ALS)}
 
