@@ -3,6 +3,9 @@
 \usepackage[italian]{babel}
 \usepackage[utf8x]{inputenc}
 \usepackage {caption}
+\usepackage {amsmath}
+\usepackage {kbordermatrix}
+
 \usepackage {url}
 \usepackage {multirow}
 \usepackage {booktabs}
@@ -25,7 +28,11 @@
 \usepackage{wasysym}
 \usepackage{enumitem}
 \usepackage{lipsum}
+<<<<<<< HEAD
+\usepackage{charter} %font
+=======
 \usepackage[titletoc]{appendix}
+>>>>>>> 93c834e16af5cd5603e423d91c61101a8612faeb
 
 \newcommand{\voceU}[1]{%
 	\item #1\dotfill\Square%
@@ -161,12 +168,139 @@ I contributi relativi ai sistemi CEP, arrivano da diverse comunità, a partire d
 Come possiamo vedere dalla Figura \ref{funcep}, viene associata una semantica dettagliata agli elementi informativi da processare. Da una parte abbiamo gli \textbf{Event Observer}, i quali rappresentano la sorgente dei dati e degli eventi da notificare; in seguito abbiamo il \textbf{CEP Engine}, responsabile del filtraggio e della notifica degli eventi ai nodi \textit{sink}, identificati come \textbf{Event Consumers} \cite{Cugola:2012:PFI:2187671.2187677,fulop2010survey}.
 
 \subsection{Sistemi di Raccomandazione}
-\subsubsection{Filtro collaborativo}
-\subsection{Introduzione allo Stream Processing}
-\subsubsection{Il paradigma Publish-Subscribe}
+I sistemi di raccomandazione, raccolgono informazioni sulle preferenze di utente in corrispondenza di un insieme di elementi (ad esempio, film, musica, libri, giochi, viaggi, siti web, applicazioni, gadget). L'informazione può essere acquisita in maniera esplicita (tipicamente ciò viene fatto acquisendo il voto di un utente) o implicitamente (analizzando il comportamento dell'utente, ad esempio musica ascoltata, applicazioni scaricate, siti web visitati, libri letti). Inoltre i sistemi di raccomandazione, possono tener conto anche delle caratteristiche demografiche dell'utente (ad esempio età, nazionalità, sesso); dei contenuti informativi presenti nel mondo del Web 2.0, ad esempio all'interno delle piattaforme di Social Networking, quali follower, followed, twit, like, post; dei dati provenienti dai dispositivi caratterizzanti l'Internet of Things (ad esempio, coordinate GPS, RFID, segnali medici inviati in real-time). 
+
+I sistemi di raccomandazione utilizzano diverse sorgenti informative al fine di fornire all'utente finale una migliore Quality of Experience relativa alla predizione ed alla raccomandazione degli elementi che potrebbero interessargli. La tecnica del Collaborative Filtering (CF), ha un ruolo fondamentale nella raccomandazione, sebbene viene spesso usata anche con altre tecniche di filtraggio basate sul contenuto o basate sulla conoscenza. Il CF si basa sulla cronologia decisionale dell'utente: oltre alle nostre esperienze, facciamo le nostre decisioni anche in base alla conoscenza che ci circonda.
+
+Il processo con cui un sistema di raccomandazione generi una raccomandazione, è basato sulla combinazione delle seguenti considerazioni:
+
+\begin{enumerate}
+\item La tipologia di dati disponibili nel databse (votazioni, informazioni di registrazione dell'utente, caratteristiche peculiari del contenuto informativo, relazioni sociali)
+\item L'algoritmo di filtraggio usato (demografico, basato sul contenuto, collaborativo, basato sulle relazioni sociali, dipendente dal contesto e ibrido).
+\item Il modello scelto (basato sull'uso diretto dei dati: 'memory-based', oppure un modello generato usando tali dati: 'model-based').
+\item Le tecniche impiegate: approccio probabilistico, reti Bayesiane, algoritmi di tipo nearest neighbors, algoritmi genetici, reti neurali, logica fuzzy.
+\item Livello di dispersione del database e scalabilità desiderata.
+\item Capacità di elaborazione del sistema (tempo di elaborazione e consumi di memoria).
+\item L'obiettivo da raggiungere (predizioni e raccomandazioni)
+\item La qualità del risultato desiderata (ad esempio la precisione).
+\end{enumerate}
+
+La ricerca nell'ambito dei sistemi di raccomandazione, richiede che i dati siano di dominio pubblico, al fine di semplificare la ricerca sulle tecniche innovative relative all'analisi dei dati. Esempi di dataset pubblici presenti in letteratura, sono Last.Fm, Delicious, Netflix, MovieLens.
+Le funzionalità interne per i sistemi di raccomandazione, sono caratterizzate dagli algoritmi di filtraggio. 
+Gli algoritmi di filtraggio vengono classificati nel modo seguente:
+\begin{itemize}
+	\item Collaborative Filtering
+	\item Demographic Filtering
+	\item Content-Based Filtering
+	\item Hybrid Filtering
+\end{itemize}
+
+Il \textbf{Content-Based Filtering} consente di creare raccomandazioni basate sulle scelte fatte in passato da un utente (ad esempio, in un sito E-Commerce, se l'utente ha acquistato una fiction cinematografica, probabilmente il sistema di raccomandazione gli consiglierà una fiction recente, che non ha ancora acquistato sul sito). La tecnica consente inoltre di generare la raccomandazione utilizzando il contenuto dell'oggetto, ad esempio il testo, le immagini, l'audio.
+
+Il \textbf{Demographic Filtering} si basa sul principio che gli individui con caratteristiche personali comuni, quali età, sesso, luogo di residenza e così via, avranno le stesse preferenze.
+
+Il \textbf{Collaborative Filtering} consente agli utenti di attribuire un voto ad un insieme di elementi (filmati, canzoni, film, libri, all'interno di una piattaforma web) salvando le proprie preferenze all'interno di un database, e consentendo di creare una raccomandazione specifica per ogni utente. I voti degli utenti possono essere anche acquisiti in maniera implicita (ad esempio il numero delle che viene ascoltata una canzone, il numero delle consultazioni relative ad una risorsa). L'algoritmo utilizzato maggiormente per il Collaborative Filtering è il $k$ Nearest Neighbors ($k$NN). 
+
+Nella versione "\textit{user to user}", il KNN esegue i seguenti task per generare la raccomandazione:
+\begin{enumerate}
+\item Determinare i $k$ utenti vicini all'utente corrente.
+\item Implementare un approccio che tenga conto degli elementi "\textit{vicini}" non ancora votati dall'utente corrente.
+\item Estrarre le predizioni dal passo $2$ e selezionare le $N$ raccomandazioni.
+\end{enumerate}
+
+La similarità può essere distinta in \textbf{item-item}: due elementi sono simili se tendono ad ottenere lo stesso rate dagli utenti; oppure \textbf{user-user}: due utenti sono simili se tendono a dare lo stesso rate agli elementi.
+
+Uno dei problemi più noti del filtro collaborativo è il "\textit{Cold Start}", che si potrebbe verificare nel caso in cui si considerano elementi che non sono stati votati in precedenza.
+
+L'\textbf{Hybrid Filtering} è una combinazione di Collaborative Filtering e Demographic Filtering, oppure una combinazione tra Collaborative Filtering e Content-Based Filtering che sfrutta i pregi di ciascuna di queste tecniche. Il metodo è basato su metodi probabilistici come gli algoritmi genetici, genetica fuzzy, reti neurali, reti Bayesiane, clustering.
+
+Inoltre possiamo suddividere i metodi in \textit{Memory-Based} e \textit{Model-Based}:
+
+I \textbf{Memory Based} conservano in memoria le informazioni associate ad ogni utente, item o voto all'interno del sistema. Queste informazioni costituiscono la \textit{Knowledge Base} sulla quale lavora l'algoritmo di predizione. Idealmente i sistemi di tipo memory based devono essere in grado di generare l'insieme di predizioni in maniera efficiente, processando tutte le informazioni contenute nella matrice
+\textit{Utenti/Item}.
+
+La matrice \textit{Utenti/Item} definita all'interno del sistema di raccomandazione contiene entry $i,j$ che rappresentano un voto dell'utente \textit{i-esimo} per l'elemento \textit{j-esimo}; nel caso in cui dovesse mancare una preferenza per un determinato item, il valore viene posto a $0$.
+
+\[
+M=\kbordermatrix{%
+	& i_1 & i_2   & \dots & i_j & \dots & i_m \\
+	u_1 & \dots & \dots & \dots & \dots & \dots & \dots \\
+	u_2 & \dots & \dots & \dots & \dots & \dots & \dots \\
+	\dots & \dots & \dots & \dots & \dots & \dots & \dots \\
+	u_i & \dots & \dots & \dots & r_{i,j} & \dots & \dots \\
+	\dots & \dots & \dots & \dots & \dots & \dots & \dots \\
+	u_n & \dots & \dots & \dots & \dots & \dots & \dots
+}
+\]
+
+Poiché i sistemi di raccomandazione sono caratterizzati da una elevata dimensione dello spazio degli utenti e degli item, il funzionamento degli algoritmi \textit{memory-based} è stato definito sull'ipotesi di determinare un grado di similarità tra gli utenti, che permetta di estrapolare dalla matrice dei voti, le informazioni associate ai soli utenti simili all'utente attivo.
+
+I \textbf{Model Based}, utilizzano l'insieme dei voti espressi dagli utenti per costruire un modello statistico di preferenze su cui generare le predizioni. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.40]{images/model-recomm.png}
+	\caption{Modelli di Raccomandazione \cite{Bobadilla:2013:RSS:2483330.2483573}}
+	\label{model-rec}
+\end{figure}
+
+E' utile citare i metodi di riduzione basati sulla Matrix Factorization, la tecnica model-based Latent Semantic Index (LSI), il metodo di riduzione Singular Value Decomposition
+(SVD) e le tecniche di clustering.
+
+Nella Figura \ref{model-rec} viene illustrato un diagramma con le tecniche principali e gli algoritmi di raccomandazione maggiormente utilizzati in letteratura \cite{Bobadilla:2013:RSS:2483330.2483573}.
+
+\subsubsection{Metriche di Valutazione}
+La qualità di un sistema di raccomandazione può essere valutata dai risultati forniti in output. Le tipologie di metriche usate, dipendono dal tipo di CF usato. Le metriche possono essere categorizzate in:
+Predictive Accuracy, come ad esempio il Mean Absolute Error
+(MAE) e sue varianti; Classification Accuracy metrics, come la precision, recall, F1-measure, e sensibilità ROC; Rank Accuracy, come il Mean Average Precision (MAP), e così via.
+Desideriamo concentrarci sulla metrica \textbf{Root Mean Squared Error} (RMSE). Infatti la radice quadrata dell'errore quadratico medio, è una metrica molto utilizzata per la raccomandazione di film.
+
+\[ RMSE=\sqrt{\frac{1}{n}\sum_{{i,j}}(p_{i,j}-r_{i,j})^2} \]
+
+dove $n$ è il numero totale dei voti assegnati dagli utenti,$p_{i,j}$ è il voto predetto per l'utente $i$ sull'elemento $j$, ed $r_{i,j}$ è il voto attuale. L'RMSE consente di valutare in maniera precisa i contributi degli errori assoluti tra i valori predetti ed i valori reali \cite{Su:2009:SCF:1592474.1722966}.
+ 
+\subsubsection{Introduzione alla Matrix Factorization}
+I modelli di Matrix Factorization possono essere utilizzati per ricercare quali sono i fattori latenti che caratterizzano le interazioni tra due tipologie di entità., tale che le interazioni user-item siano modellate come prodotti interni nello spazio. Ad esempio, due utenti potrebbero votare un determinato film con un voto alto, se ad entrambi piacciono gli attori, o il genere del film, ecc. Quindi, se si riescono a scoprire quali sono i fattori latenti dietro la scelta di un utente, si riesce anche a predire un voto o una possibile preferenza di un altro film rispetto all'utente, perchè le feature associate all'utente dovrebbero convergere alle feature associate all'elemento.
+
+Analizziamo la tecnica dal punto di vista matematico. Sia $U$ l'insieme degli utenti, e sia $D$ l'insieme degli elementi. Sia $R$ la matrice dei voti assegnati dagli utenti agli utenti, di dimensione $\lvert U\rvert\times\lvert D\rvert$. Supponiamo di voler cercare i $K$ fattori latenti. Innanzi tutto bisogna cercare le due matrici, $P$ (una matrice $\lvert U\rvert\times K$) e $Q$ (una matrice $\lvert D\rvert\times K$) tale che il loro prodotto sia una stima del tipo: $R\approx P\times Q^T=\hat{R}$. Ogni riga di $P$ rappresenta il grado di associazione tra un utente e le feature, mentre ogni riga di $Q$ tra un elemento e le feature. Al fine di poter calcolare la predizione di un rating su un elemento $d_j$ votato dall'utente $u_i$, definiamo il prodotto interno tra i due vettori corrispondenti come:
+\[\hat{r_{i,j}}={p_i}^Tq_j=\sum_{1}^{k}p_{ik}q_{kj}\]
+
+Quindi un modo per ovviare a questo problema consiste nell'inizializzare le due matrici con alcuni valori, e calcolare la differenza tra i valori stimati ed i valori reali, e infine minimizzare questa differenza in maniera iterativa. Un metodo per minimizzare l'errore calcolato può essere l'algoritmo di discesa del gradiente stocastico oppure l'algoritmo \textbf{Alternating Least Squares} (ALS) \cite{Takacs:2008:MFN:1454008.1454049}.
+
+In generale, mentre l'algoritmo della discesa del gradiente stocastico è più semplice e più veloce di ALS, ALS risulta essere preferibile in molteplici casi, tra cui la parallelizzazione computazionale. In ALS infatti, il sistema calcola ogni vettore $d_j$ indipendentemente dagli altri elementi, così come accade per $u_i$. Ciò comporta un incremento della parallelismo a livello computazionale.
+
+\subsection{Introduzione al Data Stream Processing}
+Di recente, è nata una nuova classe di applicazioni \textit{data-intensive}, nei quali i dati vengono modellati come relazioni transienti piuttosto che persistenti. Definiamo con il termine Data Stream, una sequenza di elementi codificati in digitale rappresentanti un'informazione. Esempi di applicazioni \textbf{Data Stream} vanno dal campo finanziario, monitoraggio del traffico di rete, applicazioni web, sicurezza, telecomunicazioni, gestione dati e reti di sensori. Nel modello Data Stream, i dati possono essere tuple relazionali, come ad esempio misurazioni di rete, registro chiamate, pagine web visitate, dati provenienti da sensori, e così via. Tuttavia, questi dati costituiscono un flusso multiplo e tempo variabile, tali da richiedere una nuova tecnologia al fine di poter esser gestiti.
+
+Nei vari scenari applicativi sopra citati, non è efficiente e ne tanto meno semplice gestire i dati in arrivo all'interno di un Database Management System (DBMS) tradizionale. Infatti, i DBMS tradizionali non sono progettati per trattare in maniera rapida un flusso di dati contiguo. Di conseguenza sono nati i Data \textbf{Stream Management System} (DSMS) in grado di gestire un flusso dati continuo. I DSMS sono in grado di offrire un'elevata flessibilità nell'eseguire query continue sullo stream dati. Poichè i DSMS sono data-driven, ogni qualvolta viene eseguita una query, essa produrrà nuovi risultati non appena arrivano nuovi dati da processare.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.50]{images/dsms.jpg}
+	\caption{Architettura DSMS}
+	\label{dsms}
+\end{figure}
+
+I dati presenti all'interno di uno stream, arrivano online. Il sistema che elabora lo stream, non gestisce l'ordine di arrivo degli elementi da processare. Gli stream inoltre hanno la peculiarità di non avere una dimensione massima prefissata, ma sono altamente variabili. Dopo che il dato è stato processato, o viene scartato, oppure viene archiviato all'interno di uno spazio di storage \cite{Babcock:2002:MID:543613.543615}.
+
+\subsection{Il paradigma Publish-Subscribe}
+Il \textbf{Publisher/Subscribe} (pub/sub) è un design pattern, o uno stile architetturale, organizzato in modo che le entità comunicano tra loro in maniera asincrona.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.50]{images/pubsub.jpg}
+	\caption{Publish/Subscribe}
+	\label{pubsub}
+\end{figure}
+
+I publisher inviano i messaggi utilizzando un canale di comunicazione denominato topic. I publisher e di subscriber sono generalmente utenti che si sottoscrivono ad uno o più topic, ed in base alla loro posizione gerarchica pubblicheranno/riceveranno le informazioni relative al canale di interesse sottoscritto. Il sistema (vedi Figura \ref{pubsub}) infatti ha il compito di distribuire i messaggi pubblicati dal publisher, a tutti i subscriber iscritti al topic. Infatti quando viene consegnato un nuovo messaggio su un determinato topic, ed un subscriber è iscritto a quest ultimo, il sub sarà notificato con un evento.
+
 \subsection{Il pattern Facade}
+
 \subsection{Il pattern Singleton}
+
 \subsection{Il pattern Model-View-Controller (MVC)}
+
 \subsection{La tecnologia WebSocket}
 
 \section{Analisi del progetto}
