@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.7)  30 APR 2016 17:57
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.26)  30 APR 2016 11:28
+>>>>>>> 93c834e16af5cd5603e423d91c61101a8612faeb
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -561,6 +565,7 @@ Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/charter.sty
 Package: charter 2005/04/12 PSNFSS-v9.2a (P.Dyballa) 
 )
+<<<<<<< HEAD
 Package hyperref Info: Option `colorlinks' set `true' on input line 40.
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -568,10 +573,20 @@ File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+=======
+(/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2009/09/02 v1.2b extra appendix facilities
+\c@@pps=\count136
+\c@@ppsavesec=\count137
+\c@@ppsaveapp=\count138
+>>>>>>> 93c834e16af5cd5603e423d91c61101a8612faeb
 )
+Package hyperref Info: Option `colorlinks' set `true' on input line 37.
+
 (./Relazione LIA-ISA.aux)
 \openout1 = `"Relazione LIA-ISA.aux"'.
 
+<<<<<<< HEAD
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
 LaTeX Font Info:    ... okay on input line 61.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
@@ -591,6 +606,23 @@ LaTeX Font Info:    Try loading font information for T1+bch on input line 61.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1bch.fd
 File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 )
+=======
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
+LaTeX Font Info:    ... okay on input line 99.
+
+>>>>>>> 93c834e16af5cd5603e423d91c61101a8612faeb
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -625,8 +657,13 @@ File: t1bch.fd 2004/10/18 font definitions for T1/bch.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+<<<<<<< HEAD
 LaTeX Info: Redefining \it@ocap on input line 61.
 LaTeX Info: Redefining \it@ccap on input line 61.
+=======
+LaTeX Info: Redefining \it@ocap on input line 99.
+LaTeX Info: Redefining \it@ccap on input line 99.
+>>>>>>> 93c834e16af5cd5603e423d91c61101a8612faeb
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
@@ -639,6 +676,7 @@ Package caption Info: End \AtBeginDocument code.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
+<<<<<<< HEAD
 \scratchcounter=\count148
 \scratchdimen=\dimen175
 \scratchbox=\box35
@@ -650,6 +688,19 @@ Package caption Info: End \AtBeginDocument code.
 \MPnumerator=\count152
 \makeMPintoPDFobject=\count153
 \everyMPtoPDFconversion=\toks36
+=======
+\scratchcounter=\count139
+\scratchdimen=\dimen166
+\scratchbox=\box33
+\nofMPsegments=\count140
+\nofMParguments=\count141
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count142
+\MPscratchDim=\dimen167
+\MPnumerator=\count143
+\makeMPintoPDFobject=\count144
+\everyMPtoPDFconversion=\toks32
+>>>>>>> 93c834e16af5cd5603e423d91c61101a8612faeb
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -665,9 +716,15 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+<<<<<<< HEAD
 \c@lstlisting=\count154
 \AtBeginShipoutBox=\box36
 Package hyperref Info: Link coloring ON on input line 61.
+=======
+\c@lstlisting=\count145
+\AtBeginShipoutBox=\box34
+Package hyperref Info: Link coloring ON on input line 99.
+>>>>>>> 93c834e16af5cd5603e423d91c61101a8612faeb
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -675,27 +732,47 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
+<<<<<<< HEAD
 \c@section@level=\count155
 )
 LaTeX Info: Redefining \ref on input line 61.
 LaTeX Info: Redefining \pageref on input line 61.
 LaTeX Info: Redefining \nameref on input line 61.
+=======
+\c@section@level=\count146
+)
+LaTeX Info: Redefining \ref on input line 99.
+LaTeX Info: Redefining \pageref on input line 99.
+LaTeX Info: Redefining \nameref on input line 99.
+>>>>>>> 93c834e16af5cd5603e423d91c61101a8612faeb
 
 (./Relazione LIA-ISA.out) (./Relazione LIA-ISA.out)
 \@outlinefile=\write3
 \openout3 = `"Relazione LIA-ISA.out"'.
 
+<<<<<<< HEAD
 LaTeX Font Info:    Try loading font information for U+msa on input line 71.
+=======
+LaTeX Font Info:    Try loading font information for U+msa on input line 109.
+>>>>>>> 93c834e16af5cd5603e423d91c61101a8612faeb
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
+<<<<<<< HEAD
 LaTeX Font Info:    Try loading font information for U+msb on input line 71.
+=======
+LaTeX Font Info:    Try loading font information for U+msb on input line 109.
+>>>>>>> 93c834e16af5cd5603e423d91c61101a8612faeb
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+<<<<<<< HEAD
 LaTeX Font Info:    Try loading font information for U+wasy on input line 71.
+=======
+LaTeX Font Info:    Try loading font information for U+wasy on input line 109.
+>>>>>>> 93c834e16af5cd5603e423d91c61101a8612faeb
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
@@ -703,7 +780,11 @@ File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 <images/poliba.jpg, id=115, 401.5pt x 401.5pt>
 File: images/poliba.jpg Graphic file (type jpg)
  <use images/poliba.jpg>
+<<<<<<< HEAD
 Package pdftex.def Info: images/poliba.jpg used on input line 74.
+=======
+Package pdftex.def Info: images/poliba.jpg used on input line 112.
+>>>>>>> 93c834e16af5cd5603e423d91c61101a8612faeb
 (pdftex.def)             Requested size: 160.59715pt x 160.59715pt.
  [1
 
@@ -722,23 +803,42 @@ File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 <images/CEP2.jpg, id=157, 719.68875pt x 474.27188pt>
 File: images/CEP2.jpg Graphic file (type jpg)
  <use images/CEP2.jpg>
+<<<<<<< HEAD
 Package pdftex.def Info: images/CEP2.jpg used on input line 99.
+=======
+Package pdftex.def Info: images/CEP2.jpg used on input line 137.
+>>>>>>> 93c834e16af5cd5603e423d91c61101a8612faeb
 (pdftex.def)             Requested size: 359.84349pt x 237.13536pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
+<<<<<<< HEAD
 l.111 
+=======
+l.149 
+>>>>>>> 93c834e16af5cd5603e423d91c61101a8612faeb
        [1 <./images/CEP2.jpg>]
 <images/CEP.png, id=165, 761.84625pt x 292.09125pt>
 File: images/CEP.png Graphic file (type png)
  <use images/CEP.png>
+<<<<<<< HEAD
 Package pdftex.def Info: images/CEP.png used on input line 118.
 (pdftex.def)             Requested size: 304.7331pt x 116.83441pt.
+=======
+Package pdftex.def Info: images/CEP.png used on input line 156.
+(pdftex.def)             Requested size: 304.7331pt x 116.83441pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--179
+
+ []
+
+>>>>>>> 93c834e16af5cd5603e423d91c61101a8612faeb
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
+<<<<<<< HEAD
 l.134 \item L
              'algoritmo di filtraggio usato (demografico, basato sul contenu...
 [2 <./images/CEP.png>]
@@ -837,4 +937,142 @@ PDF statistics:
  278 compressed objects within 3 object streams
  67 named destinations out of 1000 (max. 500000)
  270 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+l.179 
+       [2 <./images/CEP.png>]
+<images/cluster-overview.png, id=180, 598.235pt x 287.0725pt>
+File: images/cluster-overview.png Graphic file (type png)
+
+<use images/cluster-overview.png>
+Package pdftex.def Info: images/cluster-overview.png used on input line 184.
+(pdftex.def)             Requested size: 299.11676pt x 143.53589pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 193.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 193.
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
+
+ []
+
+[3 <./images/cluster-overview.png>]
+<images/streaming-arch.png, id=198, 564.6696pt x 211.0284pt>
+File: images/streaming-arch.png Graphic file (type png)
+
+<use images/streaming-arch.png>
+Package pdftex.def Info: images/streaming-arch.png used on input line 208.
+(pdftex.def)             Requested size: 282.3341pt x 105.51393pt.
+
+<images/streaming-flow.png, id=203, 516.0078pt x 115.1502pt>
+File: images/streaming-flow.png Graphic file (type png)
+
+<use images/streaming-flow.png>
+Package pdftex.def Info: images/streaming-flow.png used on input line 217.
+(pdftex.def)             Requested size: 258.00327pt x 57.57495pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 230--231
+
+ []
+
+[4 <./images/streaming-arch.png> <./images/streaming-flow.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
+
+ []
+
+<images/kafka.png, id=222, 258.9675pt x 180.675pt>
+File: images/kafka.png Graphic file (type png)
+ <use images/kafka.png>
+Package pdftex.def Info: images/kafka.png used on input line 252.
+(pdftex.def)             Requested size: 207.17426pt x 144.54018pt.
+
+<images/log_anatomy.png, id=227, 417.56pt x 268.00125pt>
+File: images/log_anatomy.png Graphic file (type png)
+
+<use images/log_anatomy.png>
+Package pdftex.def Info: images/log_anatomy.png used on input line 262.
+(pdftex.def)             Requested size: 334.04843pt x 214.40128pt.
+ [5 <./images/kafka.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 276--277
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
+
+ []
+
+[6 <./images/log_anatomy.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
+
+ []
+
+[7] [8] (./Relazione LIA-ISA.bbl
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
+File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
+)
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 12.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)) [9
+
+]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2015/06/04 1.6 listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2015/06/04 1.6 listings language file
+) [10] [11]
+[12] [13] [14]
+LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 602.
+ [15]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 668.
+ [16]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 668.
+ (./Relazione LIA-ISA.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 668.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 668.
+Package rerunfilecheck Info: File `"Relazione LIA-ISA".out' has not changed.
+(rerunfilecheck)             Checksum: E86CC4D951860156D12CCC83D18BC7D3;1850.
+ ) 
+Here is how much of TeX's memory you used:
+ 13832 strings out of 495000
+ 198353 string characters out of 6181169
+ 495010 words of memory out of 5000000
+ 16424 multiletter control sequences out of 15000+600000
+ 21472 words of font info for 58 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 45i,8n,92p,857b,2105s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.600pk> </hom
+e/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/makave
+li/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/makaveli/.texm
+f-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/makaveli/.texmf-var/fo
+nts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/makaveli/.texmf-var/fonts/pk/l
+jfour/jknappen/ec/ecbx1200.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jk
+nappen/ec/ecrm1095.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/e
+c/ecbx1440.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx10
+95.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk
+> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home
+/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "Relazione LIA-ISA.pdf" (18 pages, 442598 bytes).
+PDF statistics:
+ 1239 PDF objects out of 1440 (max. 8388607)
+ 702 compressed objects within 8 object streams
+ 380 named destinations out of 1000 (max. 500000)
+ 257 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> 93c834e16af5cd5603e423d91c61101a8612faeb
 
