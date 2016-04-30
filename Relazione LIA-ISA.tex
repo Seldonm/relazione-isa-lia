@@ -239,6 +239,17 @@ Nei vari scenari applicativi sopra citati, non è efficiente e ne tanto meno sem
 I dati presenti all'interno di uno stream, arrivano online. Il sistema che elabora lo stream, non gestisce l'ordine di arrivo degli elementi da processare. Gli stream inoltre hanno la peculiarità di non avere una dimensione massima prefissata, ma sono altamente variabili. Dopo che il dato è stato processato, o viene scartato, oppure viene archiviato all'interno di uno spazio di storage \cite{Babcock:2002:MID:543613.543615}.
 
 \subsection{Il paradigma Publish-Subscribe}
+Il \textbf{Publisher/Subscribe} (pub/sub) è un design pattern, o uno stile architetturale, organizzato in modo che le entità comunicano tra loro in maniera asincrona.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.50]{images/pubsub.gif}
+	\caption{Publish/Subscribe}
+	\label{pubsub}
+\end{figure}
+
+I publisher inviano i messaggi utilizzando un canale di comunicazione denominato topic. I publisher e di subscriber sono generalmente utenti che si sottoscrivono ad uno o più topic, ed in base alla loro posizione gerarchica pubblicheranno/riceveranno le informazioni relative al canale di interesse sottoscritto. Il sistema (vedi Figura \ref{pubsub}) infatti ha il compito di distribuire i messaggi pubblicati dal publisher, a tutti i subscriber iscritti al topic. Infatti quando viene consegnato un nuovo messaggio su un determinato topic, ed un subscriber è iscritto a quest ultimo, il sub sarà notificato con un evento.
+
 
 \subsection{Il pattern Facade}
 
