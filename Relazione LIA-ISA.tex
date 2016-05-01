@@ -353,17 +353,28 @@ logica per l'elaborazione dell'input (Controllore).
 \begin{itemize}
 \item \textbf{Model}
 \begin{itemize}
-	\item Prova
+	\item Contiene le funzionalità di base ed i dati.
+	\item Incapsula lo stato dell'applicazione.
+	\item Mostra le funzionalità dell'applicazione.
+	\item Notifica alla View i cambiamenti.
+	\item Risponde alle query sullo stato. 
 \end{itemize}
 \item \textbf{View}
 \begin{itemize}
-	\item Prova
+	\item Mostra le informazioni all'utente.
+	\item Interpreta il Model.
+	\item Richiede aggiornamenti dal Model.
+	\item Consente al Controller di selezionare la View.
 \end{itemize}
 \item \textbf{Controller}
 \begin{itemize}
-	\item Prova
+	\item Incapsula il comportamento dell'applicazione.
+	\item Mappa gli input dell'utente agli aggiornamenti del Model.
+	\item Seleziona la View dopo un input.
 \end{itemize}
 \end{itemize}
+Separando il Model dalla View e dal Controller, consente l'associazione di più View allo stesso Model. Nel caso in cui l'utilizzatore modifica i dati contenuti nel model mediante il Controller di una determinata
+View, tutte le altre View ricollegate a quel model ne propagano la variazione.
 
 \subsection{La tecnologia WebSocket}
 
