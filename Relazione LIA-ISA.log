@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.26)  30 APR 2016 11:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.7)  1 MAY 2016 10:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -115,32 +115,97 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 )
 \c@ContinuedFloat=\count96
 )
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks21
+\ex@=\dimen119
+))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen120
+)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count97
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count98
+\leftroot@=\count99
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count100
+\DOTSCASE@=\count101
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen121
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count102
+\c@MaxMatrixCols=\count103
+\dotsspace@=\muskip10
+\c@parentequation=\count104
+\dspbrk@lvl=\count105
+\tag@help=\toks22
+\row@=\count106
+\column@=\count107
+\maxfields@=\count108
+\andhelp@=\toks23
+\eqnshift@=\dimen122
+\alignsep@=\dimen123
+\tagshift@=\dimen124
+\tagwidth@=\dimen125
+\totwidth@=\dimen126
+\lineht@=\dimen127
+\@envbody=\toks24
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/share/texmf/tex/latex/kbordermatrix/kbordermatrix.sty
+Package: kbordermatrix 2011/09/21 Bordered matrix with brackets
+\kbcolsep=\skip46
+\kbrowsep=\skip47
+\br@kwd=\skip48
+\k@bordht=\skip49
+)
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip10
+\Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
-\bigstrutjot=\dimen119
+\bigstrutjot=\dimen128
 )
 (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen120
-\lightrulewidth=\dimen121
-\cmidrulewidth=\dimen122
-\belowrulesep=\dimen123
-\belowbottomsep=\dimen124
-\aboverulesep=\dimen125
-\abovetopsep=\dimen126
-\cmidrulesep=\dimen127
-\cmidrulekern=\dimen128
-\defaultaddspace=\dimen129
-\@cmidla=\count97
-\@cmidlb=\count98
-\@aboverulesep=\dimen130
-\@belowrulesep=\dimen131
-\@thisruleclass=\count99
-\@lastruleclass=\count100
-\@thisrulewidth=\dimen132
+\heavyrulewidth=\dimen129
+\lightrulewidth=\dimen130
+\cmidrulewidth=\dimen131
+\belowrulesep=\dimen132
+\belowbottomsep=\dimen133
+\aboverulesep=\dimen134
+\abovetopsep=\dimen135
+\cmidrulesep=\dimen136
+\cmidrulekern=\dimen137
+\defaultaddspace=\dimen138
+\@cmidla=\count109
+\@cmidlb=\count110
+\@aboverulesep=\dimen139
+\@belowrulesep=\dimen140
+\@thisruleclass=\count111
+\@lastruleclass=\count112
+\@thisrulewidth=\dimen141
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/fixltx2e.sty
 Package: fixltx2e 2015/02/21 v2.0a fixes to LaTeX (obsolete)
@@ -152,11 +217,11 @@ Package fixltx2e Warning: fixltx2e is not required with releases after 2015
 
 ) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count101
-\float@exts=\toks21
-\float@box=\box26
-\@float@everytoks=\toks22
-\@floatcapt=\box27
+\c@float@type=\count113
+\float@exts=\toks26
+\float@box=\box28
+\@float@everytoks=\toks27
+\@floatcapt=\box29
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
@@ -181,10 +246,10 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count102
+\Gread@gobject=\count114
 ))
-\Gin@req@height=\dimen133
-\Gin@req@width=\dimen134
+\Gin@req@height=\dimen142
+\Gin@req@width=\dimen143
 )
 (/usr/share/texlive/texmf-dist/tex/latex/cite/cite.sty
 LaTeX Info: Redefining \cite on input line 302.
@@ -192,24 +257,24 @@ LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count103
-\lst@gtempboxa=\box28
-\lst@token=\toks23
-\lst@length=\count104
-\lst@currlwidth=\dimen135
-\lst@column=\count105
-\lst@pos=\count106
-\lst@lostspace=\dimen136
-\lst@width=\dimen137
-\lst@newlines=\count107
-\lst@lineno=\count108
-\lst@maxwidth=\dimen138
+\lst@mode=\count115
+\lst@gtempboxa=\box30
+\lst@token=\toks28
+\lst@length=\count116
+\lst@currlwidth=\dimen144
+\lst@column=\count117
+\lst@pos=\count118
+\lst@lostspace=\dimen145
+\lst@width=\dimen146
+\lst@newlines=\count119
+\lst@lineno=\count120
+\lst@maxwidth=\dimen147
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
-\c@lstnumber=\count109
-\lst@skipnumbers=\count110
-\lst@framebox=\box29
+\c@lstnumber=\count121
+\lst@skipnumbers=\count122
+\lst@framebox=\box31
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2015/06/04 1.6 listings configuration
@@ -247,14 +312,14 @@ Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen139
-\extrarowheight=\dimen140
-\NC@list=\toks24
-\extratabsurround=\skip43
-\backup@length=\skip44
+\col@sep=\dimen148
+\extrarowheight=\dimen149
+\NC@list=\toks29
+\extratabsurround=\skip50
+\backup@length=\skip51
 )
-\everycr=\toks25
-\minrowclearance=\skip45
+\everycr=\toks30
+\minrowclearance=\skip52
 )
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2012/05/21 v1.0 Adjusting TeX boxes (trim, clip, ...)
@@ -264,10 +329,10 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks26
-\XKV@tempa@toks=\toks27
+\XKV@toks=\toks31
+\XKV@tempa@toks=\toks32
 )
-\XKV@depth=\count111
+\XKV@depth=\count123
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjcalc.sty
@@ -279,51 +344,51 @@ Package: trimclip 2012/05/16 v1.0 Trim and clip general TeX material
 
 (/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box30
+\collectedbox=\box32
 )
-\tc@llx=\dimen141
-\tc@lly=\dimen142
-\tc@urx=\dimen143
-\tc@ury=\dimen144
+\tc@llx=\dimen150
+\tc@lly=\dimen151
+\tc@urx=\dimen152
+\tc@ury=\dimen153
 Package trimclip Info: Using driver 'tc-pdftex.def'.
 
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
 File: tc-pdftex.def 2012/05/13 v1.0 Clipping driver for pdftex
 ))
-\adjbox@Width=\dimen145
-\adjbox@Height=\dimen146
-\adjbox@Depth=\dimen147
-\adjbox@Totalheight=\dimen148
+\adjbox@Width=\dimen154
+\adjbox@Height=\dimen155
+\adjbox@Depth=\dimen156
+\adjbox@Totalheight=\dimen157
 
 (/usr/share/texlive/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
 Package: ifoddpage 2011/09/13 v1.0 Conditionals for odd/even page detection
-\c@checkoddpage=\count112
+\c@checkoddpage=\count124
 )
 (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box31
-\sift@deathcycles=\count113
-\@vwid@loff=\dimen149
-\@vwid@roff=\dimen150
+\@vwid@box=\box33
+\sift@deathcycles=\count125
+\@vwid@loff=\dimen158
+\@vwid@roff=\dimen159
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/svg/svg.sty
 Package: svg 2012/09/05 v1.0 SVG inclusion and extraction
 
 (/usr/share/texlive/texmf-dist/tex/latex/subfig/subfig.sty
 Package: subfig 2005/06/28 ver: 1.3 subfig package
-\c@KVtest=\count114
-\sf@farskip=\skip46
-\sf@captopadj=\dimen151
-\sf@capskip=\skip47
-\sf@nearskip=\skip48
-\c@subfigure=\count115
-\c@subfigure@save=\count116
-\c@lofdepth=\count117
-\c@subtable=\count118
-\c@subtable@save=\count119
-\c@lotdepth=\count120
-\sf@top=\skip49
-\sf@bottom=\skip50
+\c@KVtest=\count126
+\sf@farskip=\skip53
+\sf@captopadj=\dimen160
+\sf@capskip=\skip54
+\sf@nearskip=\skip55
+\c@subfigure=\count127
+\c@subfigure@save=\count128
+\c@lofdepth=\count129
+\c@subtable=\count130
+\c@subtable@save=\count131
+\c@lotdepth=\count132
+\sf@top=\skip56
+\sf@bottom=\skip57
 )
 (/usr/share/texlive/texmf-dist/tex/latex/import/import.sty
 Package: import 2009/03/23  v 5.1
@@ -335,16 +400,15 @@ Package: transparent 2007/01/08 v1.0 Transparency via pdfTeX's color stack (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/auxhook.sty
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 ))
-\SVG@out@width=\skip51
-\SVG@out@height=\skip52
-\c@svgfigure=\count121
+\SVG@out@width=\skip58
+\SVG@out@height=\skip59
+\c@svgfigure=\count133
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks28
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
@@ -398,14 +462,14 @@ Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen152
-\Hy@linkcounter=\count122
-\Hy@pagecounter=\count123
+\@linkdim=\dimen161
+\Hy@linkcounter=\count134
+\Hy@pagecounter=\count135
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count124
+\Hy@SavedSpaceFactor=\count136
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -417,12 +481,12 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count125
+\c@Hy@tempcnt=\count137
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen153
-\Fld@menulength=\count126
-\Field@Width=\dimen154
-\Fld@charsize=\dimen155
+\XeTeXLinkMargin=\dimen162
+\Fld@menulength=\count138
+\Field@Width=\dimen163
+\Fld@charsize=\dimen164
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -432,42 +496,42 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count127
-\c@Item=\count128
-\c@Hfootnote=\count129
+\Hy@abspage=\count139
+\c@Item=\count140
+\c@Hfootnote=\count141
 )
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count130
-\c@bookmark@seq@number=\count131
+\Fld@listcount=\count142
+\c@bookmark@seq@number=\count143
 
 (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip53
+\Hy@SectionHShift=\skip60
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tabulary/tabulary.sty
 Package: tabulary 2014/06/11 v0.10 tabulary package (DPC)
-\TY@count=\count132
-\TY@linewidth=\dimen156
-\tymin=\dimen157
-\tymax=\dimen158
-\TY@tablewidth=\dimen159
+\TY@count=\count144
+\TY@linewidth=\dimen165
+\tymin=\dimen166
+\tymax=\dimen167
+\TY@tablewidth=\dimen168
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/tabularx.sty
 Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
-\TX@col@width=\dimen160
-\TX@old@table=\dimen161
-\TX@old@col=\dimen162
-\TX@target=\dimen163
-\TX@delta=\dimen164
-\TX@cols=\count133
-\TX@ftn=\toks29
+\TX@col@width=\dimen169
+\TX@old@table=\dimen170
+\TX@old@col=\dimen171
+\TX@target=\dimen172
+\TX@delta=\dimen173
+\TX@cols=\count145
+\TX@ftn=\toks33
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
@@ -484,42 +548,49 @@ LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 )
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
-\labelindent=\skip54
-\enit@outerparindent=\dimen165
-\enit@toks=\toks30
-\enit@inbox=\box32
-\enitdp@description=\count134
+\labelindent=\skip61
+\enit@outerparindent=\dimen174
+\enit@toks=\toks34
+\enit@inbox=\box34
+\enitdp@description=\count146
 )
 (/usr/share/texlive/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
-\c@lips@count=\count135
+\c@lips@count=\count147
+)
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/charter.sty
+Package: charter 2005/04/12 PSNFSS-v9.2a (P.Dyballa) 
 )
 (/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
 Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count136
-\c@@ppsavesec=\count137
-\c@@ppsaveapp=\count138
+\c@@pps=\count148
+\c@@ppsavesec=\count149
+\c@@ppsaveapp=\count150
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 37.
+Package hyperref Info: Option `colorlinks' set `true' on input line 44.
 
 (./Relazione LIA-ISA.aux)
 \openout1 = `"Relazione LIA-ISA.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 106.
+LaTeX Font Info:    ... okay on input line 106.
+LaTeX Font Info:    Try loading font information for T1+bch on input line 106.
 
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1bch.fd
+File: t1bch.fd 2004/10/18 font definitions for T1/bch.
+)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -554,8 +625,8 @@ LaTeX Font Info:    ... okay on input line 99.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Info: Redefining \it@ocap on input line 99.
-LaTeX Info: Redefining \it@ccap on input line 99.
+LaTeX Info: Redefining \it@ocap on input line 106.
+LaTeX Info: Redefining \it@ccap on input line 106.
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2011/01/21 Fixes to fontencodings LGR, T3
 )
@@ -568,17 +639,17 @@ Package caption Info: End \AtBeginDocument code.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count139
-\scratchdimen=\dimen166
-\scratchbox=\box33
-\nofMPsegments=\count140
-\nofMParguments=\count141
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count142
-\MPscratchDim=\dimen167
-\MPnumerator=\count143
-\makeMPintoPDFobject=\count144
-\everyMPtoPDFconversion=\toks32
+\scratchcounter=\count151
+\scratchdimen=\dimen175
+\scratchbox=\box35
+\nofMPsegments=\count152
+\nofMParguments=\count153
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count154
+\MPscratchDim=\dimen176
+\MPnumerator=\count155
+\makeMPintoPDFobject=\count156
+\everyMPtoPDFconversion=\toks36
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -594,9 +665,9 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\c@lstlisting=\count145
-\AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring ON on input line 99.
+\c@lstlisting=\count157
+\AtBeginShipoutBox=\box36
+Package hyperref Info: Link coloring ON on input line 106.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -604,35 +675,35 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count146
+\c@section@level=\count158
 )
-LaTeX Info: Redefining \ref on input line 99.
-LaTeX Info: Redefining \pageref on input line 99.
-LaTeX Info: Redefining \nameref on input line 99.
+LaTeX Info: Redefining \ref on input line 106.
+LaTeX Info: Redefining \pageref on input line 106.
+LaTeX Info: Redefining \nameref on input line 106.
 
 (./Relazione LIA-ISA.out) (./Relazione LIA-ISA.out)
 \@outlinefile=\write3
 \openout3 = `"Relazione LIA-ISA.out"'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 109.
+LaTeX Font Info:    Try loading font information for U+msa on input line 116.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 109.
+LaTeX Font Info:    Try loading font information for U+msb on input line 116.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 109.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 116.
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
-<images/poliba.jpg, id=111, 401.5pt x 401.5pt>
+<images/poliba.jpg, id=115, 401.5pt x 401.5pt>
 File: images/poliba.jpg Graphic file (type jpg)
  <use images/poliba.jpg>
-Package pdftex.def Info: images/poliba.jpg used on input line 112.
+Package pdftex.def Info: images/poliba.jpg used on input line 119.
 (pdftex.def)             Requested size: 160.59715pt x 160.59715pt.
  [1
 
@@ -648,117 +719,163 @@ Package pdftex.def Info: images/poliba.jpg used on input line 112.
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-<images/CEP2.jpg, id=155, 719.68875pt x 474.27188pt>
+<images/CEP2.jpg, id=157, 719.68875pt x 474.27188pt>
 File: images/CEP2.jpg Graphic file (type jpg)
  <use images/CEP2.jpg>
-Package pdftex.def Info: images/CEP2.jpg used on input line 137.
+Package pdftex.def Info: images/CEP2.jpg used on input line 144.
 (pdftex.def)             Requested size: 359.84349pt x 237.13536pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.149 
+l.156 
        [1 <./images/CEP2.jpg>]
 <images/CEP.png, id=165, 761.84625pt x 292.09125pt>
 File: images/CEP.png Graphic file (type png)
  <use images/CEP.png>
-Package pdftex.def Info: images/CEP.png used on input line 156.
+Package pdftex.def Info: images/CEP.png used on input line 163.
 (pdftex.def)             Requested size: 304.7331pt x 116.83441pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
-
- []
-
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.179 
-       [2 <./images/CEP.png>]
-<images/cluster-overview.png, id=180, 598.235pt x 287.0725pt>
+l.179 \item L
+             'algoritmo di filtraggio usato (demografico, basato sul contenu...
+[2 <./images/CEP.png>]
+LaTeX Font Info:    Try loading font information for OMS+bch on input line 192.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsbch.fd
+File: omsbch.fd 
+)
+LaTeX Font Info:    Font shape `OMS/bch/m/n' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 192.
+ [3]
+<images/model-recomm.png, id=194, 628.3475pt x 826.08624pt>
+File: images/model-recomm.png Graphic file (type png)
+
+<use images/model-recomm.png>
+Package pdftex.def Info: images/model-recomm.png used on input line 242.
+(pdftex.def)             Requested size: 251.33455pt x 330.42863pt.
+ [4] [5 <./images/model-recomm.png>]
+<images/dsms.jpg, id=220, 642.4pt x 337.26pt>
+File: images/dsms.jpg Graphic file (type jpg)
+ <use images/dsms.jpg>
+Package pdftex.def Info: images/dsms.jpg used on input line 279.
+(pdftex.def)             Requested size: 321.19922pt x 168.62958pt.
+ [6]
+<images/pubsub.jpg, id=227, 451.6875pt x 266.9975pt>
+File: images/pubsub.jpg Graphic file (type jpg)
+ <use images/pubsub.jpg>
+Package pdftex.def Info: images/pubsub.jpg used on input line 291.
+(pdftex.def)             Requested size: 225.84319pt x 133.49841pt.
+
+<images/facade.jpg, id=229, 381.425pt x 273.02pt>
+File: images/facade.jpg Graphic file (type jpg)
+ <use images/facade.jpg>
+Package pdftex.def Info: images/facade.jpg used on input line 303.
+(pdftex.def)             Requested size: 266.99567pt x 191.11269pt.
+
+[7 <./images/dsms.jpg> <./images/pubsub.jpg>]
+<images/singleton.jpg, id=237, 272.01625pt x 86.3225pt>
+File: images/singleton.jpg Graphic file (type jpg)
+
+<use images/singleton.jpg>
+Package pdftex.def Info: images/singleton.jpg used on input line 328.
+(pdftex.def)             Requested size: 244.81235pt x 77.6895pt.
+ [8 <./images/facade.jpg> <./images/singleton.jpg>]
+<images/mvc.jpg, id=244, 782.925pt x 321.2pt>
+File: images/mvc.jpg Graphic file (type jpg)
+ <use images/mvc.jpg>
+Package pdftex.def Info: images/mvc.jpg used on input line 348.
+(pdftex.def)             Requested size: 313.16446pt x 128.47772pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
+
+ []
+
+[9 <./images/mvc.jpg>]
+<images/cluster-overview.png, id=252, 598.235pt x 287.0725pt>
 File: images/cluster-overview.png Graphic file (type png)
 
 <use images/cluster-overview.png>
-Package pdftex.def Info: images/cluster-overview.png used on input line 184.
+Package pdftex.def Info: images/cluster-overview.png used on input line 393.
 (pdftex.def)             Requested size: 299.11676pt x 143.53589pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 193.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 193.
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--199
+ [10 <./images/cluster-overview.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
 
  []
 
-[3 <./images/cluster-overview.png>]
-<images/streaming-arch.png, id=198, 564.6696pt x 211.0284pt>
+<images/streaming-arch.png, id=269, 564.6696pt x 211.0284pt>
 File: images/streaming-arch.png Graphic file (type png)
 
 <use images/streaming-arch.png>
-Package pdftex.def Info: images/streaming-arch.png used on input line 208.
+Package pdftex.def Info: images/streaming-arch.png used on input line 417.
 (pdftex.def)             Requested size: 282.3341pt x 105.51393pt.
 
-<images/streaming-flow.png, id=203, 516.0078pt x 115.1502pt>
+<images/streaming-flow.png, id=274, 516.0078pt x 115.1502pt>
 File: images/streaming-flow.png Graphic file (type png)
 
 <use images/streaming-flow.png>
-Package pdftex.def Info: images/streaming-flow.png used on input line 217.
+Package pdftex.def Info: images/streaming-flow.png used on input line 426.
 (pdftex.def)             Requested size: 258.00327pt x 57.57495pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 230--231
-
- []
-
-[4 <./images/streaming-arch.png> <./images/streaming-flow.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 232--233
+ [11 <./images/streaming-arch.png> <./images/streaming-flow.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
 
  []
 
-<images/kafka.png, id=222, 258.9675pt x 180.675pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
+
+ []
+
+
+Overfull \hbox (2.14087pt too wide) in paragraph at lines 447--448
+\T1/bch/m/n/10.95 Apache Kaf-ka è un sis-tema di mes-sag-gis-ti-ca di tipo publ
+ish-subscribe, ori-en-ta-to al-la dis-tribuzione.
+ []
+
+<images/kafka.png, id=294, 258.9675pt x 180.675pt>
 File: images/kafka.png Graphic file (type png)
  <use images/kafka.png>
-Package pdftex.def Info: images/kafka.png used on input line 252.
+Package pdftex.def Info: images/kafka.png used on input line 461.
 (pdftex.def)             Requested size: 207.17426pt x 144.54018pt.
 
-<images/log_anatomy.png, id=227, 417.56pt x 268.00125pt>
+[12] <images/log_anatomy.png, id=306, 417.56pt x 268.00125pt>
 File: images/log_anatomy.png Graphic file (type png)
 
 <use images/log_anatomy.png>
-Package pdftex.def Info: images/log_anatomy.png used on input line 262.
+Package pdftex.def Info: images/log_anatomy.png used on input line 471.
 (pdftex.def)             Requested size: 334.04843pt x 214.40128pt.
- [5 <./images/kafka.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 276--277
+
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
+
+ []
+
+[13 <./images/kafka.png> <./images/log_anatomy.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 495--496
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 286--287
-
- []
-
-[6 <./images/log_anatomy.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 288--289
+Underfull \hbox (badness 10000) in paragraph at lines 497--498
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 290--291
+Underfull \hbox (badness 10000) in paragraph at lines 499--500
 
  []
 
-[7] [8] (./Relazione LIA-ISA.bbl
+[14] [15] (./Relazione LIA-ISA.bbl
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
 File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
 )
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 12.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 24.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)) [9
+)) [16
 
 ]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -769,44 +886,52 @@ File: lstlang2.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2015/06/04 1.6 listings language file
-) [10] [11]
-[12] [13] [14]
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <9> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 602.
- [15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 668.
- [16]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 668.
+) [17] [18]
+[19] [20] [21]
+
+LaTeX Font Warning: Font shape `T1/cmtt/b/n' undefined
+(Font)              using `T1/cmtt/m/n' instead on input line 811.
+
+[22]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 877.
+ [23]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 877.
  (./Relazione LIA-ISA.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 668.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 668.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 877.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 877.
 Package rerunfilecheck Info: File `"Relazione LIA-ISA".out' has not changed.
-(rerunfilecheck)             Checksum: E86CC4D951860156D12CCC83D18BC7D3;1850.
+(rerunfilecheck)             Checksum: 14B4FE35E474E005851712450C130D5C;1944.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
  ) 
 Here is how much of TeX's memory you used:
- 13832 strings out of 495000
- 198353 string characters out of 6181169
- 495010 words of memory out of 5000000
- 16424 multiletter control sequences out of 15000+600000
- 21472 words of font info for 58 fonts, out of 8000000 for 9000
+ 14530 strings out of 495000
+ 207055 string characters out of 6181170
+ 506737 words of memory out of 5000000
+ 17060 multiletter control sequences out of 15000+600000
+ 46124 words of font info for 68 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 45i,8n,92p,857b,2105s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.600pk> </hom
-e/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/makave
-li/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk> </home/makaveli/.texm
-f-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/makaveli/.texmf-var/fo
-nts/pk/ljfour/jknappen/ec/ecti1095.600pk> </home/makaveli/.texmf-var/fonts/pk/l
-jfour/jknappen/ec/ecbx1200.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jk
-nappen/ec/ecrm1095.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/e
-c/ecbx1440.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx10
-95.600pk> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk
-> </home/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home
-/makaveli/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Relazione LIA-ISA.pdf" (18 pages, 442598 bytes).
+ 45i,8n,92p,986b,2123s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/pietro/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt0900.600pk> </home/
+pietro/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/pietro/.te
+xmf-var/fonts/pk/ljfour/jknappen/ec/ectt1095.600pk>{/usr/share/texlive/texmf-di
+st/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/bitst
+rea/charter/bchb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/char
+ter/bchr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/bitstrea/charter/bchr
+i8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb>
+Output written on "Relazione LIA-ISA.pdf" (25 pages, 771664 bytes).
 PDF statistics:
- 1239 PDF objects out of 1440 (max. 8388607)
- 702 compressed objects within 8 object streams
- 380 named destinations out of 1000 (max. 500000)
- 257 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 990 PDF objects out of 1000 (max. 8388607)
+ 759 compressed objects within 8 object streams
+ 409 named destinations out of 1000 (max. 500000)
+ 295 words of extra memory for PDF output out of 10000 (max. 10000000)
 

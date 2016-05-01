@@ -1,5 +1,17 @@
 \begin{thebibliography}{1}
 
+\bibitem{Babcock:2002:MID:543613.543615}
+Brian Babcock, Shivnath Babu, Mayur Datar, Rajeev Motwani, and Jennifer Widom.
+\newblock Models and issues in data stream systems.
+\newblock In {\em Proceedings of the Twenty-first ACM SIGMOD-SIGACT-SIGART
+  Symposium on Principles of Database Systems}, PODS '02, pages 1--16, New
+  York, NY, USA, 2002. ACM.
+
+\bibitem{Bobadilla:2013:RSS:2483330.2483573}
+J.~Bobadilla, F.~Ortega, A.~Hernando, and A.~Guti{\'e}Rrez.
+\newblock Recommender systems survey.
+\newblock {\em Know.-Based Syst.}, 46:109--132, July 2013.
+
 \bibitem{Cugola:2012:PFI:2187671.2187677}
 Gianpaolo Cugola and Alessandro Margara.
 \newblock Processing flows of information: From data stream to complex event
@@ -26,5 +38,18 @@ Lajos~Jeno F{\"u}l{\"o}p, Gabriella T{\'o}th, R{\'o}bert R{\'a}cz, J{\'a}nos
 \bibitem{cepimage}
 Patrick Gantet~Patrick Gantet.
 \newblock Complex event processing.
+
+\bibitem{Su:2009:SCF:1592474.1722966}
+Xiaoyuan Su and Taghi~M. Khoshgoftaar.
+\newblock A survey of collaborative filtering techniques.
+\newblock {\em Adv. in Artif. Intell.}, 2009:4:2--4:2, January 2009.
+
+\bibitem{Takacs:2008:MFN:1454008.1454049}
+G\'{a}bor Tak\'{a}cs, Istv\'{a}n Pil\'{a}szy, Botty\'{a}n N{\'e}meth, and
+  Domonkos Tikk.
+\newblock Matrix factorization and neighbor based algorithms for the netflix
+  prize problem.
+\newblock In {\em Proceedings of the 2008 ACM Conference on Recommender
+  Systems}, RecSys '08, pages 267--274, New York, NY, USA, 2008. ACM.
 
 \end{thebibliography}
