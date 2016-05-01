@@ -380,12 +380,20 @@ Il protocollo WebSocket standardizzato dall'IETF come RFC 6455 consente la comun
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.70]{images/websocket.png}
+	\includegraphics[scale=0.25]{images/websocket.png}
 	\caption{La tecnologia WebSocket}
 	\label{websocket}
 \end{figure}
 
 Il protocollo WebSocket viene inizializzato in primis con una fase di handshake e successivamente si procede con il trasferimento dati. Le porte di comunicazione utilizzate sono le stesse porte TCP di HTTP (80) e HTTPS (443). Inoltre vengono riutilizzati gli stessi elementi strutturali di HTTP, quali proxy ed autenticazione.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1.00]{images/websocket-architecture.jpg}
+	\caption{Architettura di WebSocket}
+	\label{websocket-architecture}
+\end{figure}
+
 Infine lo schema URI utilizzato è \textit{ws://} per connessioni in chiaro, \textit{wss://} per connessioni cifrate con TLS\cite{fette2011websocket}.
 
 WebSocket viene utilizzato molto spesso per ottenere una comunicazione che sia a bassa latenza, efficiente e quasi realtime tra client e server. Vari scenari applicativi sono costituiti da giochi online multiplayer, chat, aggiornamento in tempo reale di informazioni e così via.
