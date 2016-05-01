@@ -296,7 +296,7 @@ Il \textbf{Publisher/Subscribe} (pub/sub) è un design pattern, o uno stile arch
 I publisher inviano i messaggi utilizzando un canale di comunicazione denominato topic. I publisher e di subscriber sono generalmente utenti che si sottoscrivono ad uno o più topic, ed in base alla loro posizione gerarchica pubblicheranno/riceveranno le informazioni relative al canale di interesse sottoscritto. Il sistema (vedi Figura \ref{pubsub}) infatti ha il compito di distribuire i messaggi pubblicati dal publisher, a tutti i subscriber iscritti al topic. Infatti quando viene consegnato un nuovo messaggio su un determinato topic, ed un subscriber è iscritto a quest ultimo, il sub sarà notificato con un evento.
 
 \subsection{Il pattern Facade}
-Il pattern \textbf{Facade}, è un pattern strutturale che consente di fornire un'interfaccia semplice ed unificata, che consente di accedere ai diversi sottosistemi dotati di interfacce complesse e diverse tra loro.
+Il design pattern \textbf{Facade}, è un pattern strutturale che consente di fornire un'interfaccia semplice ed unificata, che consente di accedere ai diversi sottosistemi dotati di interfacce complesse e diverse tra loro.
 
 \begin{figure}[H]
 	\centering
@@ -321,7 +321,24 @@ Le classi e gli oggetti definiti in questo pattern sono:
 \end{itemize}
 
 \subsection{Il pattern Singleton}
-Testing Testing
+Il \textbf{Singleton} è un design pattern creazionale che ha lo scopo di garantire che di una determinata classe venga creata una ed una sola istanza, e di fornire un punto di accesso globale a tale istanza.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.50]{images/singleton.jpg}
+	\caption{Diagramma UML del Pattern Singleton}
+	\label{singleton}
+\end{figure}
+
+Le classi e gli oggetti definiti in questo pattern sono:
+\begin{itemize}
+	\item \textbf{Singleton}
+	\begin{itemize}
+		\item Garantisce che un sistema istanzi un massimo di un oggetto di una classe.
+		\item Consente al client di accedere all'unica istanza creata.
+	\end{itemize}
+\end{itemize}
+
 \subsection{Il pattern Model-View-Controller (MVC)}
 MVC MVC
 MVC
