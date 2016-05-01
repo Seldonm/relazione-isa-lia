@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.7)  1 MAY 2016 09:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.7)  1 MAY 2016 10:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -770,85 +770,104 @@ File: images/pubsub.jpg Graphic file (type jpg)
 Package pdftex.def Info: images/pubsub.jpg used on input line 291.
 (pdftex.def)             Requested size: 225.84319pt x 133.49841pt.
 
+<images/facade.jpg, id=229, 381.425pt x 273.02pt>
+File: images/facade.jpg Graphic file (type jpg)
+ <use images/facade.jpg>
+Package pdftex.def Info: images/facade.jpg used on input line 303.
+(pdftex.def)             Requested size: 266.99567pt x 191.11269pt.
+
 [7 <./images/dsms.jpg> <./images/pubsub.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 314--315
+<images/singleton.jpg, id=237, 272.01625pt x 86.3225pt>
+File: images/singleton.jpg Graphic file (type jpg)
+
+<use images/singleton.jpg>
+Package pdftex.def Info: images/singleton.jpg used on input line 328.
+(pdftex.def)             Requested size: 244.81235pt x 77.6895pt.
+ [8 <./images/facade.jpg> <./images/singleton.jpg>]
+<images/mvc.jpg, id=244, 782.925pt x 321.2pt>
+File: images/mvc.jpg Graphic file (type jpg)
+ <use images/mvc.jpg>
+Package pdftex.def Info: images/mvc.jpg used on input line 348.
+(pdftex.def)             Requested size: 313.16446pt x 128.47772pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 387--388
 
  []
 
-<images/cluster-overview.png, id=238, 598.235pt x 287.0725pt>
+[9 <./images/mvc.jpg>]
+<images/cluster-overview.png, id=252, 598.235pt x 287.0725pt>
 File: images/cluster-overview.png Graphic file (type png)
 
 <use images/cluster-overview.png>
-Package pdftex.def Info: images/cluster-overview.png used on input line 320.
+Package pdftex.def Info: images/cluster-overview.png used on input line 393.
 (pdftex.def)             Requested size: 299.11676pt x 143.53589pt.
- [8 <./images/cluster-overview.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 334--335
+ [10 <./images/cluster-overview.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
 
  []
 
-<images/streaming-arch.png, id=255, 564.6696pt x 211.0284pt>
+<images/streaming-arch.png, id=269, 564.6696pt x 211.0284pt>
 File: images/streaming-arch.png Graphic file (type png)
 
 <use images/streaming-arch.png>
-Package pdftex.def Info: images/streaming-arch.png used on input line 344.
+Package pdftex.def Info: images/streaming-arch.png used on input line 417.
 (pdftex.def)             Requested size: 282.3341pt x 105.51393pt.
 
-<images/streaming-flow.png, id=260, 516.0078pt x 115.1502pt>
+<images/streaming-flow.png, id=274, 516.0078pt x 115.1502pt>
 File: images/streaming-flow.png Graphic file (type png)
 
 <use images/streaming-flow.png>
-Package pdftex.def Info: images/streaming-flow.png used on input line 353.
+Package pdftex.def Info: images/streaming-flow.png used on input line 426.
 (pdftex.def)             Requested size: 258.00327pt x 57.57495pt.
- [9 <./images/streaming-arch.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 366--367
+ [11 <./images/streaming-arch.png> <./images/streaming-flow.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 368--369
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
 
  []
 
 
-Overfull \hbox (2.14087pt too wide) in paragraph at lines 374--375
+Overfull \hbox (2.14087pt too wide) in paragraph at lines 447--448
 \T1/bch/m/n/10.95 Apache Kaf-ka è un sis-tema di mes-sag-gis-ti-ca di tipo publ
 ish-subscribe, ori-en-ta-to al-la dis-tribuzione.
  []
 
-[10 <./images/streaming-flow.png>]
-<images/kafka.png, id=283, 258.9675pt x 180.675pt>
+<images/kafka.png, id=294, 258.9675pt x 180.675pt>
 File: images/kafka.png Graphic file (type png)
  <use images/kafka.png>
-Package pdftex.def Info: images/kafka.png used on input line 388.
+Package pdftex.def Info: images/kafka.png used on input line 461.
 (pdftex.def)             Requested size: 207.17426pt x 144.54018pt.
 
-<images/log_anatomy.png, id=288, 417.56pt x 268.00125pt>
+[12] <images/log_anatomy.png, id=306, 417.56pt x 268.00125pt>
 File: images/log_anatomy.png Graphic file (type png)
 
 <use images/log_anatomy.png>
-Package pdftex.def Info: images/log_anatomy.png used on input line 398.
+Package pdftex.def Info: images/log_anatomy.png used on input line 471.
 (pdftex.def)             Requested size: 334.04843pt x 214.40128pt.
- [11 <./images/kafka.png> <./images/log_anatomy.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 412--413
+
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
+
+ []
+
+[13 <./images/kafka.png> <./images/log_anatomy.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 495--496
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 422--423
+Underfull \hbox (badness 10000) in paragraph at lines 497--498
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 424--425
+Underfull \hbox (badness 10000) in paragraph at lines 499--500
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 426--427
-
- []
-
-[12] [13] (./Relazione LIA-ISA.bbl
+[14] [15] (./Relazione LIA-ISA.bbl
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
 File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
 )
@@ -856,7 +875,7 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 24.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)) [14
+)) [16
 
 ]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -867,19 +886,19 @@ File: lstlang2.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2015/06/04 1.6 listings language file
-) [15] [16]
-[17] [18] [19]
+) [17] [18]
+[19] [20] [21]
 
 LaTeX Font Warning: Font shape `T1/cmtt/b/n' undefined
-(Font)              using `T1/cmtt/m/n' instead on input line 738.
+(Font)              using `T1/cmtt/m/n' instead on input line 811.
 
-[20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 804.
- [21]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 804.
+[22]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 877.
+ [23]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 877.
  (./Relazione LIA-ISA.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 804.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 804.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 877.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 877.
 Package rerunfilecheck Info: File `"Relazione LIA-ISA".out' has not changed.
 (rerunfilecheck)             Checksum: 14B4FE35E474E005851712450C130D5C;1944.
 
@@ -888,10 +907,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 14507 strings out of 495000
- 206675 string characters out of 6181170
- 506397 words of memory out of 5000000
- 17045 multiletter control sequences out of 15000+600000
+ 14530 strings out of 495000
+ 207055 string characters out of 6181170
+ 506737 words of memory out of 5000000
+ 17060 multiletter control sequences out of 15000+600000
  46124 words of font info for 68 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  45i,8n,92p,986b,2123s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -909,10 +928,10 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Relazione LIA-ISA.pdf" (23 pages, 709312 bytes).
+Output written on "Relazione LIA-ISA.pdf" (25 pages, 771664 bytes).
 PDF statistics:
- 974 PDF objects out of 1000 (max. 8388607)
- 748 compressed objects within 8 object streams
- 404 named destinations out of 1000 (max. 500000)
- 280 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 990 PDF objects out of 1000 (max. 8388607)
+ 759 compressed objects within 8 object streams
+ 409 named destinations out of 1000 (max. 500000)
+ 295 words of extra memory for PDF output out of 10000 (max. 10000000)
 
