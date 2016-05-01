@@ -376,8 +376,20 @@ Separando il Model dalla View e dal Controller, si da la possibilità di associa
 View, tutte le altre View ricollegate a quel model ne propagano la variazione.
 
 \subsection{La tecnologia WebSocket}
-Il protocollo WebSocket standardizzato dall'IETF come RFC 6455 The WebSocket Protocol enables two-way communication between a client running untrusted code in a controlled environment to a remote host that has opted-in to communications from that code.  The security model used for this is the origin-based security model commonly used by web browsers.  The protocol consists of an opening handshake
-followed by basic message framing, layered over TCP.  The goal of this technology is to provide a mechanism for browser-based applications that need two-way communication with servers that does not rely on opening multiple HTTP connections (e.g., using XMLHttpRequest or <iframe>s and long polling) .
+Il protocollo WebSocket standardizzato dall'IETF come RFC 6455 consente la comunicazione bidirezionale e full duplex mediante una singola connessione TCP. La connessione persistente, viene instaurata mediante un sistema di handshaking client-key ed un modello di sicurezza origin-based. L'obiettivo di questa tecnologia è fornire un meccanismo per quelle applicazioni web-based che necessitano di comunicare con server che non consentono di aprire connessioni HTTP multiple (ad esempio usando XMLHttpRequest, o <iframe>, o un sistema di polling), oppure per motivi di sicurezza per quei sistemi che bloccano l'utilizzo di porte non standard mediante firewall.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.40]{images/Websocket.png}
+	\caption{La tecnologia WebSocket}
+	\label{websocket}
+\end{figure}
+
+Il protocollo WebSocket viene inizializzato in primis con una fase di handshake e successivamente si procede con il trasferimento dati. Le porte di comunicazione utilizzate sono le stesse porte TCP di HTTP (80) e HTTPS (443). Inoltre vengono riutilizzati gli stessi elementi strutturali di HTTP, quali proxy ed autenticazione.
+Infine lo schema URI utilizzato è \textit{ws://} per connessioni in chiaro, \textit{wss://} per connessioni cifrate con TLS\cite{fette2011websocket}.
+
+WebSocket viene utilizzato molto spesso per ottenere una comunicazione che sia a bassa latenza, efficiente e quasi realtime tra client e server. Vari scenari applicativi sono costituiti da giochi online multiplayer, chat, aggiornamento in tempo reale di informazioni e così via.
+
 
 \section{Analisi del progetto}
 
