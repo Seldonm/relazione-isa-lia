@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Babcock:2002:MID:543613.543615}
 Brian Babcock, Shivnath Babu, Mayur Datar, Rajeev Motwani, and Jennifer Widom.
@@ -17,6 +17,11 @@ Gianpaolo Cugola and Alessandro Margara.
 \newblock Processing flows of information: From data stream to complex event
   processing.
 \newblock {\em ACM Comput. Surv.}, 44(3):15:1--15:62, June 2012.
+
+\bibitem{fette2011websocket}
+Ian Fette and Alexey Melnikov.
+\newblock The websocket protocol.
+\newblock 2011.
 
 \bibitem{kafka}
 Apache™~Software Foundation.
