@@ -22,7 +22,7 @@
 \contentsline {subsubsection}{\numberline {4.2.1}Integrazione con Spark Streaming}{14}{subsubsection.4.2.1}
 \contentsline {subsection}{\numberline {4.3}Il framework Node.js}{15}{subsection.4.3}
 \contentsline {subsubsection}{\numberline {4.3.1}Angular.js}{15}{subsubsection.4.3.1}
-\contentsline {subsection}{\numberline {4.4}La libreria socket.IO}{16}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.4}La libreria Socket.IO}{16}{subsection.4.4}
 \contentsline {section}{\numberline {5}Conclusioni e sviluppi futuri}{16}{section.5}
 \contentsline {section}{Bibliografia}{17}{section.5}
 \contentsline {section}{\numberline {6}Sorgenti}{18}{section.6}
