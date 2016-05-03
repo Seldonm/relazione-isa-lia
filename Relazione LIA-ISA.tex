@@ -420,10 +420,8 @@ La variabile \texttt{SPARK\_WORKER\_CORES}, serve per poter configurare il numer
 La variabile \texttt{SPARK\_WORKER\_MEMORY}, consente di specificare quanta memoria dei rispettivi Workers si desidera allocare per l'esecuzione del software (ad esempio 1000m, 2g).
 La variabile \texttt{SPARK\_WORKER\_PORT}, consente di specificare la porta sulla quale avviare il nodo Master.
 La variabile \texttt{SPARK\_MASTER\_IP}, per impostare l'indirizzo IP o l'hostname del nodo Master. Dopo aver configurato il nodo Master, avviamolo dal terminale mediante \texttt{/sbin/start-master.sh}.
-
-
-
-\texttt{start-slave.sh spark://IP:PORT}
+\\
+Successivamente, sui nodi Worker, \texttt{/sbin/start-slave.sh spark://SPARK\_MASTER\_IP:SPARK\_WORKER\_PORT}
 \end{itemize}
 
 \section{Soluzione proposta}
