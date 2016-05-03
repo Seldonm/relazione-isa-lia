@@ -406,7 +406,7 @@ WebSocket viene utilizzato molto spesso per ottenere una comunicazione che sia a
 \subsection {Configurazione del sistema}
 Suddividiamo in 3 parti la configurazione relativa all'architettura del sistema.
 \begin{itemize}
-\item {Configurazione di Spark}
+\item {Configurazione di Spark}\\
 In primis occorre scaricare \href{http://spark.apache.org/downloads.html}{Spark}. La versione utilizzata è stata la "\textbf{Pre-built for Hadoop 2.6 and later}".
 Dopo aver effettuato il download ed aver estratto il contenuto nella propria \textit{/home}, creiamo una copia del file \textit{spark-env.sh.template} chiamandolo \textit{spark-env.sh} all'interno della directory \textbf{conf} della \textbf{root} di Spark. All'interno del file possiamo specificare varie direttive, ma per il nostro scopo settiamo quelle essenziali al corretto funzionamento:
 \begin{lstlisting}[language=bash, caption=spark-env.sh]
@@ -419,7 +419,8 @@ export MASTER=spark://${SPARK_MASTER_IP}:${SPARK_MASTER_PORT}
 La variabile \texttt{SPARK\_WORKER\_CORES}, serve per poter configurare il numero di core da utilizzare sulla macchina (nel nostro caso settiamo il numero massimo di core che vogliamo utilizzare relativi ai nodi Slave).
 La variabile \texttt{SPARK\_WORKER\_MEMORY}, consente di specificare quanta memoria dei rispettivi Workers si desidera allocare per l'esecuzione del software (ad esempio 1000m, 2g).
 La variabile \texttt{SPARK\_WORKER\_PORT}, consente di specificare la porta sulla quale avviare il nodo Master.
-La variabile \texttt{SPARK\_MASTER\_IP}, per impostare l'indirizzo IP o l'hostname del nodo Master.
+La variabile \texttt{SPARK\_MASTER\_IP}, per impostare l'indirizzo IP o l'hostname del nodo Master.\\
+Dopo ave
 \end{itemize}
 
 \section{Soluzione proposta}
