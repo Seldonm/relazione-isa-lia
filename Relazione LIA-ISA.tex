@@ -552,6 +552,8 @@ Principalmente il protocollo utilizzato è WebSocket, con un modello di esecuzio
 \subsection {Architettura software}
 
 \subsection {Configurazione del sistema}
+Il sistema operativo utilizzato per l'implementazione della soluzione è \textbf{Ubuntu 15.10}. I nodi per testare la soluzione, sono dotati di configurazioni hardware eterogenee.
+
 Suddividiamo in 3 parti la configurazione relativa all'architettura del sistema.
 \begin{itemize}
 \item {\textbf{Configurazione di Apache Spark in Cluster Mode}}\\\\
@@ -584,7 +586,12 @@ advertised.host.name=hostname/ip
 La stringa \texttt{zookeeper.connect=localhost:2181} consente di specificare i parametri di connessione nel formato \texttt{hostname:port} dove \texttt{host} e \texttt{port} rappresentano rispettivamente l'hostname e la porta del server \textbf{ZooKeeper}. La stringa \texttt{advertised.host.name} se settata, rappresenta l'hostname che verrà fornito ai broker, producer, e consumer per connettersi ad esso.
 Successivamente verranno illustrati quali sono le operazioni per creare i topic ed avviare il server Zookeeper da terminale.
 
-\item {\textbf{Configurazione di Apache Kafka}}\\\\
+\item {\textbf{Configurazione del Framework Node.js}}\\\\
+Dal terminale di Ubuntu, digitare \texttt{sudo apt-get install nodejs, npm}, per installare NodeJS ed il gestore dei pacchetti per Javascript \texttt{npm}. Successivamente creiamo un link simbolico per node in questo modo \texttt{sudo ln -s /usr/bin/nodejs /usr/bin/node}. Accertiamoci inoltre con \texttt{node -v} che la versione di node sia la \textbf{5.10.1} (nel caso in cui la versione non dovesse essere questa, sarà necessario effettuare un ulteriore upgrade/downgrade).
+Dopo aver configurato l'ambiente di lavoro, è necessario effettuare il download della applicazione ed estrarla nella directory desiderata (ad esempio \texttt{kafka\_socket}).
+Dal terminale, entrare all'interno della directory \texttt{kafka\_socket} ed effettuare l'installazione di tutte le dipendenze richieste dall'applicazione mediante \texttt{sudo npm install -g}.
+
+
 \end{itemize}
 
 
