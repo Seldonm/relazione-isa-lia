@@ -609,12 +609,11 @@ Dal terminale di Ubuntu, digitare \texttt{sudo apt-get install nodejs, npm}, per
 Dopo aver configurato l'ambiente di lavoro, è necessario effettuare il download della applicazione ed estrarla nella directory desiderata (ad esempio \texttt{kafka\_socket}).
 Dal terminale, entrare all'interno della directory \texttt{kafka\_socket} ed effettuare l'installazione di tutte le dipendenze richieste dall'applicazione mediante \texttt{sudo npm install -g}.
 Nel punto successivo, sarà illustrato come avviare l'applicazione Node.js.
-\item {\textbf{Avvio del Sistema}}
+\item {\textbf{Avvio del Sistema}}\\\\
 Lanciamo il seguente script dal terminale mediante \texttt{sudo ./start.sh}.
 
 \begin{lstlisting}[language=bash,caption=start.sh]
 #!/bin/bash
-
 SCALA_VERSION="2.10"
 KAFKA_VERSION="0.9.0.1"
 
@@ -640,6 +639,7 @@ $KAFKA_HOME/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replicatio
 echo "Starting App on localhost:3000"
 node $HOME/$NODE_SCRIPT_DIR/app.js --port 3000
 \end{lstlisting}
+Lo script è stato realizzato per automatizzare la configurazione dell'ambiente di lavoro. Analizziamone il contenuto
 
 \end{itemize}
 
