@@ -25,9 +25,9 @@
 \contentsline {section}{\numberline {4}Analisi e progettazione della soluzione proposta}{18}{section.4}
 \contentsline {subsection}{\numberline {4.1}Architettura del sistema}{18}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Architettura software}{18}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Configurazione del sistema}{18}{subsection.4.3}
-\contentsline {section}{\numberline {5}Conclusioni e sviluppi futuri}{20}{section.5}
-\contentsline {section}{Bibliografia}{21}{section.5}
-\contentsline {section}{\numberline {6}Sorgenti}{22}{section.6}
-\contentsline {section}{Appendice \numberline {A}Sorgenti Spark}{22}{Appendice.1.Alph1}
-\contentsline {section}{Appendice \numberline {B}Sorgenti Node.js}{28}{Appendice.1.Alph2}
+\contentsline {subsection}{\numberline {4.3}Configurazione del sistema}{19}{subsection.4.3}
+\contentsline {section}{\numberline {5}Conclusioni e sviluppi futuri}{22}{section.5}
+\contentsline {section}{Bibliografia}{23}{section.5}
+\contentsline {section}{\numberline {6}Sorgenti}{24}{section.6}
+\contentsline {section}{Appendice \numberline {A}Sorgenti Spark}{24}{Appendice.1.Alph1}
+\contentsline {section}{Appendice \numberline {B}Sorgenti Node.js}{30}{Appendice.1.Alph2}
