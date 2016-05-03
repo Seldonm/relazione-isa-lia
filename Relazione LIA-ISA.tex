@@ -433,6 +433,9 @@ All'interno del file, aggiungiamo le seguenti stringhe nel caso in cui non doves
 zookeeper.connect=localhost:2181
 advertised.host.name=hostname/ip
 \end{lstlisting}
+La stringa \texttt{zookeeper.connect=localhost:2181} consente di specificare i parametri di connessione nel formato \texttt{hostname:port} dove \texttt{host} e \texttt{port} rappresentano rispettivamente l'hostname e la porta del server \textbf{ZooKeeper}. La stringa \texttt{advertised.host.name} se settata, rappresenta l'hostname che verrà fornito ai broker, producer, e consumer per connettersi ad esso.
+Successivamente verranno illustrati quali sono le operazioni per creare i topic ed avviare il server Zookeeper da terminale.
+
 
 \end{itemize}
 
