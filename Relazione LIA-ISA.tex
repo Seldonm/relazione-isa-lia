@@ -510,7 +510,14 @@ Il secondo approccio, detto \textit{Direct Approch} o \textit{Receivers less}, n
 
 \subsection{Il framework Node.js}
 
-Node.js è un framework per la realizzazione di applicazioni web in Javascript lato server. La piattaforma è basata sul \textbf{Javascript Engine V8}, il runtime di Google utilizzato anche in Chrome, disponibile per le principali piattaforme, anche se maggiormente performante su sistemi operativi UNIX-like.\\
+Node.js è un framework per la realizzazione di applicazioni web in Javascript lato server. La piattaforma è basata sul \textbf{Javascript Engine V8}, il runtime di Google utilizzato anche in Chrome, disponibile per le principali piattaforme, anche se maggiormente performante su sistemi operativi UNIX-like.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.50]{images/nodejs.png}
+	\caption{Il Framework Node.js}
+	\label{node}
+\end{figure}
 
 A differenza dei classici web server, che sfruttano un modello a processi concorrenti, Node.js utilizza una modalità di tipo \textit{event-driven} per l'accesso alle risorse. Scrivere un'applicazione in Node.js dunque consiste nel definire una serie di eventi che il sistema operativo deve monitorare, e all'attivazione degli stessi eseguire una funzione associata a tale evento, detta \textbf{callback}. Tale approccio definisce processi non bloccanti, evita il verificarsi di deadlocks, e in generale le operazioni di I/O non avvengono in maniera diretta. Ciò garantisce una maggiore \textbf{scalabilità} e \textbf{flessibilità} dell'architettura web. \\
 
@@ -525,7 +532,7 @@ L'interfaccia dell'applicazione è stata realizzata attraverso il framework Angu
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.50]{images/angular.png}
-	\caption{Angular JS}
+	\caption{Il Framework Angular.JS}
 	\label{angular}
 \end{figure}
 
