@@ -398,47 +398,6 @@ Infine lo schema URI utilizzato è \texttt{ws://} per connessioni in chiaro, \te
 
 WebSocket viene utilizzato molto spesso per ottenere una comunicazione che sia a bassa latenza, efficiente e quasi realtime tra client e server. Vari scenari applicativi sono costituiti da giochi online multiplayer, chat, aggiornamento in tempo reale di informazioni e così via.
 
-\section{Analisi del progetto}
-\subsection {Architettura del sistema}
-
-\subsection {Architettura software}
-
-\subsection {Configurazione del sistema}
-Suddividiamo in 3 parti la configurazione relativa all'architettura del sistema.
-\begin{itemize}
-\item {\textbf{Configurazione di Spark in Cluster Mode}}\\\\
-In primis occorre scaricare \textbf{Apache Spark} ( \href{http://spark.apache.org/downloads.html}{http://spark.apache.org/downloads.html}). La versione utilizzata è stata la "\textbf{Pre-built for Hadoop 2.6 and later}".
-Dopo aver effettuato il download ed aver estratto il contenuto nella propria \texttt{/home}, creiamo una copia del file \texttt{spark-env.sh.template} chiamandolo \texttt{spark-env.sh} all'interno della directory \texttt{conf} della \texttt{root} di Spark. All'interno del file possiamo specificare varie direttive, ma per il nostro scopo settiamo quelle essenziali al corretto funzionamento:
-\begin{lstlisting}[language=bash, caption=spark-env.sh]
-export SPARK_WORKER_CORES=n
-export SPARK_WORKER_MEMORY=mg
-export SPARK_MASTER_IP=X.X.X.X
-export SPARK_MASTER_PORT=7077
-export MASTER=spark://${SPARK_MASTER_IP}:${SPARK_MASTER_PORT}
-\end{lstlisting}
-La variabile \texttt{SPARK\_WORKER\_CORES}, serve per poter configurare il numero di core da utilizzare sulla macchina (nel nostro caso settiamo il numero massimo di core che vogliamo utilizzare relativi ai nodi Slave).
-La variabile \texttt{SPARK\_WORKER\_MEMORY}, consente di specificare quanta memoria dei rispettivi Workers si desidera allocare per l'esecuzione del software (ad esempio 1000m, 2g).
-La variabile \texttt{SPARK\_MASTER\_PORT}, consente di specificare la porta sulla quale avviare il nodo Master.
-La variabile \texttt{SPARK\_MASTER\_IP}, per impostare l'indirizzo IP o l'hostname del nodo Master. 
-Dopo aver configurato il nodo Master, avviamolo dal terminale mediante \texttt{/sbin/start-master.sh}.
-Successivamente, avviamo i nodi Worker mediante \texttt{/sbin/start-slave.sh spark://SPARK\_MASTER\_IP:SPARK\_MASTER\_PORT}.
-Dal nodo Master, possiamo aprire il browser, digitando \texttt{http://localhost:SPARK\_MASTER\_PORT} in modo da visualizzare dalla Dashboard i Worker connessi ed i Job avviati nel sistema.
-Infine se il sistema non è configurato con \texttt{hadoop}, configurare i percorsi ed i relativi file anche sui Worker.
-
-\item {\textbf{Configurazione di Apache Kafka}}\\\\
-Come prima cosa occorre scaricare \textbf{Apache Kafka} ( \href{http://kafka.apache.org/downloads.html}{http://kafka.apache.org/downloads.html}). La versione utilizzata è la \textbf{0.9.0.1} per \textbf{Scala 2.10}, quindi \textbf{kafka\_2.10-0.9.0.1}. Dopo aver effettuato il download ed aver estratto il contenuto nella propria \texttt{/home}, apriamo il \texttt{server.properties} all'interno della directory \texttt{config} della \texttt{root} di Spark.
-
-All'interno del file, aggiungiamo le seguenti stringhe nel caso in cui non dovessero essere presenti: 
-\begin{lstlisting}[language=bash,caption=server.properties]
-zookeeper.connect=localhost:2181
-advertised.host.name=hostname/ip
-\end{lstlisting}
-La stringa \texttt{zookeeper.connect=localhost:2181} consente di specificare i parametri di connessione nel formato \texttt{hostname:port} dove \texttt{host} e \texttt{port} rappresentano rispettivamente l'hostname e la porta del server \textbf{ZooKeeper}. La stringa \texttt{advertised.host.name} se settata, rappresenta l'hostname che verrà fornito ai broker, producer, e consumer per connettersi ad esso.
-Successivamente verranno illustrati quali sono le operazioni per creare i topic ed avviare il server Zookeeper da terminale.
-
-
-\end{itemize}
-
 \section{Soluzione proposta}
 
 \subsection{La libreria Spark}
@@ -586,6 +545,48 @@ Il layout contiene le seguenti directory:
 Socket.io è una libreria Javascript per applicazioni web real time. Abilita una comunicazione di tipo bidirezionale tra client (generalmente eseguito nel browser) e server (applicazione Node.js).\\
 
 Principalmente il protocollo utilizzato è WebSocket, con un modello di esecuzione di tipo asincrono.  
+
+
+\section{Analisi e progettazione della soluzione proposta}
+\subsection {Architettura del sistema}
+
+\subsection {Architettura software}
+
+\subsection {Configurazione del sistema}
+Suddividiamo in 3 parti la configurazione relativa all'architettura del sistema.
+\begin{itemize}
+\item {\textbf{Configurazione di Spark in Cluster Mode}}\\\\
+In primis occorre scaricare \textbf{Apache Spark} ( \href{http://spark.apache.org/downloads.html}{http://spark.apache.org/downloads.html}). La versione utilizzata è stata la "\textbf{Pre-built for Hadoop 2.6 and later}".
+Dopo aver effettuato il download ed aver estratto il contenuto nella propria \texttt{/home}, creiamo una copia del file \texttt{spark-env.sh.template} chiamandolo \texttt{spark-env.sh} all'interno della directory \texttt{conf} della \texttt{root} di Spark. All'interno del file possiamo specificare varie direttive, ma per il nostro scopo settiamo quelle essenziali al corretto funzionamento:
+\begin{lstlisting}[language=bash, caption=spark-env.sh]
+export SPARK_WORKER_CORES=n
+export SPARK_WORKER_MEMORY=mg
+export SPARK_MASTER_IP=X.X.X.X
+export SPARK_MASTER_PORT=7077
+export MASTER=spark://${SPARK_MASTER_IP}:${SPARK_MASTER_PORT}
+\end{lstlisting}
+La variabile \texttt{SPARK\_WORKER\_CORES}, serve per poter configurare il numero di core da utilizzare sulla macchina (nel nostro caso settiamo il numero massimo di core che vogliamo utilizzare relativi ai nodi Slave).
+La variabile \texttt{SPARK\_WORKER\_MEMORY}, consente di specificare quanta memoria dei rispettivi Workers si desidera allocare per l'esecuzione del software (ad esempio 1000m, 2g).
+La variabile \texttt{SPARK\_MASTER\_PORT}, consente di specificare la porta sulla quale avviare il nodo Master.
+La variabile \texttt{SPARK\_MASTER\_IP}, per impostare l'indirizzo IP o l'hostname del nodo Master. 
+Dopo aver configurato il nodo Master, avviamolo dal terminale mediante \texttt{/sbin/start-master.sh}.
+Successivamente, avviamo i nodi Worker mediante \texttt{/sbin/start-slave.sh spark://SPARK\_MASTER\_IP:SPARK\_MASTER\_PORT}.
+Dal nodo Master, possiamo aprire il browser, digitando \texttt{http://localhost:SPARK\_MASTER\_PORT} in modo da visualizzare dalla Dashboard i Worker connessi ed i Job avviati nel sistema.
+Infine se il sistema non è configurato con \texttt{hadoop}, configurare i percorsi ed i relativi file anche sui Worker.
+
+\item {\textbf{Configurazione di Apache Kafka}}\\\\
+Come prima cosa occorre scaricare \textbf{Apache Kafka} ( \href{http://kafka.apache.org/downloads.html}{http://kafka.apache.org/downloads.html}). La versione utilizzata è la \textbf{0.9.0.1} per \textbf{Scala 2.10}, quindi \textbf{kafka\_2.10-0.9.0.1}. Dopo aver effettuato il download ed aver estratto il contenuto nella propria \texttt{/home}, apriamo il \texttt{server.properties} all'interno della directory \texttt{config} della \texttt{root} di Spark.
+
+All'interno del file, aggiungiamo le seguenti stringhe nel caso in cui non dovessero essere presenti: 
+\begin{lstlisting}[language=bash,caption=server.properties]
+zookeeper.connect=localhost:2181
+advertised.host.name=hostname/ip
+\end{lstlisting}
+La stringa \texttt{zookeeper.connect=localhost:2181} consente di specificare i parametri di connessione nel formato \texttt{hostname:port} dove \texttt{host} e \texttt{port} rappresentano rispettivamente l'hostname e la porta del server \textbf{ZooKeeper}. La stringa \texttt{advertised.host.name} se settata, rappresenta l'hostname che verrà fornito ai broker, producer, e consumer per connettersi ad esso.
+Successivamente verranno illustrati quali sono le operazioni per creare i topic ed avviare il server Zookeeper da terminale.
+
+\item {\textbf{Configurazione di Apache Kafka}}\\\\
+\end{itemize}
 
 
 \section{Conclusioni e sviluppi futuri}
