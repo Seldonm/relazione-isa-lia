@@ -639,7 +639,8 @@ $KAFKA_HOME/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replicatio
 echo "Starting App on localhost:3000"
 node $HOME/$NODE_SCRIPT_DIR/app.js --port 3000
 \end{lstlisting}
-Lo script è stato realizzato per automatizzare la configurazione dell'ambiente di lavoro. Analizziamone il contenuto
+Lo script è stato realizzato per automatizzare la configurazione dell'ambiente di lavoro. Leggendo lo script si intuisce che sia Zookeeper che Kafka Server vengono lanciati come demoni. Inoltre i topic creati mediante \texttt{kafka-topics.sh} presente all'interno della cartella \texttt{bin} della \texttt{root} di Kafka sono rispettivamente: \textbf{votes}, \textbf{result}. Il primo topic viene utilizzato per inviare i voti degli utenti, mentre il topic result, per fornire i risultati derivanti dal filtro collaborativo.
+Infine possiamo notare come l'applicazione Node.js venga avviata in locale sulla porta 3000.
 
 \end{itemize}
 
