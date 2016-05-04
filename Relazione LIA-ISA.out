@@ -1,31 +1,31 @@
-\BOOKMARK [1][-]{section.1}{Introduzione}{}% 1
-\BOOKMARK [1][-]{section.2}{Stato dell'arte}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{Introduzione ai sistemi CEP}{section.2}% 3
-\BOOKMARK [2][-]{subsection.2.2}{Sistemi di Raccomandazione}{section.2}% 4
-\BOOKMARK [3][-]{subsubsection.2.2.1}{Metriche di Valutazione}{subsection.2.2}% 5
-\BOOKMARK [3][-]{subsubsection.2.2.2}{Introduzione alla Matrix Factorization}{subsection.2.2}% 6
-\BOOKMARK [2][-]{subsection.2.3}{Introduzione al Data Stream Processing}{section.2}% 7
-\BOOKMARK [2][-]{subsection.2.4}{Il paradigma Publish-Subscribe}{section.2}% 8
-\BOOKMARK [2][-]{subsection.2.5}{Il pattern Facade}{section.2}% 9
-\BOOKMARK [2][-]{subsection.2.6}{Il pattern Singleton}{section.2}% 10
-\BOOKMARK [2][-]{subsection.2.7}{Il pattern Model-View-Controller \(MVC\)}{section.2}% 11
-\BOOKMARK [2][-]{subsection.2.8}{La tecnologia WebSocket}{section.2}% 12
-\BOOKMARK [1][-]{section.3}{Soluzione proposta}{}% 13
-\BOOKMARK [2][-]{subsection.3.1}{La libreria Spark}{section.3}% 14
-\BOOKMARK [3][-]{subsubsection.3.1.1}{Spark Streaming}{subsection.3.1}% 15
-\BOOKMARK [3][-]{subsubsection.3.1.2}{Spark MLlib}{subsection.3.1}% 16
-\BOOKMARK [3][-]{subsubsection.3.1.3}{Spark SQL}{subsection.3.1}% 17
-\BOOKMARK [2][-]{subsection.3.2}{Apache Kafka}{section.3}% 18
-\BOOKMARK [3][-]{subsubsection.3.2.1}{Integrazione con Spark Streaming}{subsection.3.2}% 19
-\BOOKMARK [2][-]{subsection.3.3}{Il framework Node.js}{section.3}% 20
-\BOOKMARK [2][-]{subsection.3.4}{Angular.js}{section.3}% 21
-\BOOKMARK [2][-]{subsection.3.5}{La libreria Socket.IO}{section.3}% 22
-\BOOKMARK [1][-]{section.4}{Analisi e progettazione della soluzione proposta}{}% 23
-\BOOKMARK [2][-]{subsection.4.1}{Architettura del sistema}{section.4}% 24
-\BOOKMARK [2][-]{subsection.4.2}{Architettura software}{section.4}% 25
-\BOOKMARK [2][-]{subsection.4.3}{Configurazione del sistema}{section.4}% 26
-\BOOKMARK [1][-]{section.5}{Conclusioni e sviluppi futuri}{}% 27
-\BOOKMARK [1][-]{section.5}{Bibliografia}{}% 28
-\BOOKMARK [1][-]{section.6}{Sorgenti}{}% 29
+\BOOKMARK [1][-]{section*.2}{Introduzione}{}% 1
+\BOOKMARK [1][-]{section.1}{Stato dell'arte}{}% 2
+\BOOKMARK [2][-]{subsection.1.1}{Introduzione ai sistemi CEP}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.2}{Sistemi di Raccomandazione}{section.1}% 4
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Metriche di Valutazione}{subsection.1.2}% 5
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Introduzione alla Matrix Factorization}{subsection.1.2}% 6
+\BOOKMARK [2][-]{subsection.1.3}{Introduzione al Data Stream Processing}{section.1}% 7
+\BOOKMARK [2][-]{subsection.1.4}{Il paradigma Publish-Subscribe}{section.1}% 8
+\BOOKMARK [2][-]{subsection.1.5}{Il pattern Facade}{section.1}% 9
+\BOOKMARK [2][-]{subsection.1.6}{Il pattern Singleton}{section.1}% 10
+\BOOKMARK [2][-]{subsection.1.7}{Il pattern Model-View-Controller \(MVC\)}{section.1}% 11
+\BOOKMARK [2][-]{subsection.1.8}{La tecnologia WebSocket}{section.1}% 12
+\BOOKMARK [1][-]{section.2}{Soluzione proposta}{}% 13
+\BOOKMARK [2][-]{subsection.2.1}{La libreria Spark}{section.2}% 14
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Spark Streaming}{subsection.2.1}% 15
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Spark MLlib}{subsection.2.1}% 16
+\BOOKMARK [3][-]{subsubsection.2.1.3}{Spark SQL}{subsection.2.1}% 17
+\BOOKMARK [2][-]{subsection.2.2}{Apache Kafka}{section.2}% 18
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Integrazione con Spark Streaming}{subsection.2.2}% 19
+\BOOKMARK [2][-]{subsection.2.3}{Il framework Node.js}{section.2}% 20
+\BOOKMARK [2][-]{subsection.2.4}{Angular.js}{section.2}% 21
+\BOOKMARK [2][-]{subsection.2.5}{La libreria Socket.IO}{section.2}% 22
+\BOOKMARK [1][-]{section.3}{Analisi e progettazione della soluzione proposta}{}% 23
+\BOOKMARK [2][-]{subsection.3.1}{Architettura del sistema}{section.3}% 24
+\BOOKMARK [2][-]{subsection.3.2}{Architettura software}{section.3}% 25
+\BOOKMARK [2][-]{subsection.3.3}{Configurazione del sistema}{section.3}% 26
+\BOOKMARK [1][-]{section.4}{Conclusioni e sviluppi futuri}{}% 27
+\BOOKMARK [1][-]{section.4}{Bibliografia}{}% 28
+\BOOKMARK [1][-]{section.5}{Sorgenti}{}% 29
 \BOOKMARK [1][-]{Appendice.1.Alph1}{Appendice Sorgenti Spark}{}% 30
 \BOOKMARK [1][-]{Appendice.1.Alph2}{Appendice Sorgenti Node.js}{}% 31
