@@ -25,7 +25,7 @@
 \contentsline {section}{\numberline {3}Analisi e progettazione della soluzione proposta}{19}{section.3}
 \contentsline {subsection}{\numberline {3.1}Architettura del sistema}{19}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Architettura software}{19}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Configurazione del sistema}{20}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.3}Configurazione del sistema}{21}{subsection.3.3}
 \contentsline {section}{\numberline {4}Conclusioni e sviluppi futuri}{23}{section.4}
 \contentsline {section}{Bibliografia}{24}{section.4}
 \contentsline {section}{\numberline {5}Sorgenti}{25}{section.5}
