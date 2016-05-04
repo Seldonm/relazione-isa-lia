@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.7)  3 MAY 2016 20:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.7)  4 MAY 2016 11:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -719,271 +719,272 @@ Package pdftex.def Info: images/poliba.jpg used on input line 120.
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-0.def
 File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
 )
-<images/CEP2.jpg, id=173, 719.68875pt x 474.27188pt>
-File: images/CEP2.jpg Graphic file (type jpg)
- <use images/CEP2.jpg>
-Package pdftex.def Info: images/CEP2.jpg used on input line 145.
-(pdftex.def)             Requested size: 359.84349pt x 237.13536pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.155 
-       [1 <./images/CEP2.jpg>]
-<images/CEP.png, id=181, 761.84625pt x 292.09125pt>
-File: images/CEP.png Graphic file (type png)
- <use images/CEP.png>
-Package pdftex.def Info: images/CEP.png used on input line 164.
-(pdftex.def)             Requested size: 304.7331pt x 116.83441pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.175 
-       [2 <./images/CEP.png>]
-LaTeX Font Info:    Try loading font information for OMS+bch on input line 193.
+LaTeX Font Info:    Try loading font information for OMS+bch on input line 147.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsbch.fd
 File: omsbch.fd 
 )
 LaTeX Font Info:    Font shape `OMS/bch/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 193.
- [3] [4]
-<images/model-recomm.png, id=215, 628.3475pt x 826.08624pt>
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 147.
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.153 \newpage
+               [1] <images/CEP2.jpg, id=178, 719.68875pt x 474.27188pt>
+File: images/CEP2.jpg Graphic file (type jpg)
+
+<use images/CEP2.jpg>
+Package pdftex.def Info: images/CEP2.jpg used on input line 164.
+(pdftex.def)             Requested size: 359.84349pt x 237.13536pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.176 
+       [2 <./images/CEP2.jpg>]
+<images/CEP.png, id=186, 761.84625pt x 292.09125pt>
+File: images/CEP.png Graphic file (type png)
+ <use images/CEP.png>
+Package pdftex.def Info: images/CEP.png used on input line 183.
+(pdftex.def)             Requested size: 304.7331pt x 116.83441pt.
+
+[3 <./images/CEP.png>] [4] [5]
+<images/model-recomm.png, id=225, 628.3475pt x 826.08624pt>
 File: images/model-recomm.png Graphic file (type png)
 
 <use images/model-recomm.png>
-Package pdftex.def Info: images/model-recomm.png used on input line 243.
+Package pdftex.def Info: images/model-recomm.png used on input line 262.
 (pdftex.def)             Requested size: 251.33455pt x 330.42863pt.
- [5 <./images/model-recomm.png>] [6]
-<images/dsms.jpg, id=240, 642.4pt x 337.26pt>
+ [6 <./images/model-recomm.png>] [7]
+<images/dsms.jpg, id=245, 642.4pt x 337.26pt>
 File: images/dsms.jpg Graphic file (type jpg)
  <use images/dsms.jpg>
-Package pdftex.def Info: images/dsms.jpg used on input line 280.
+Package pdftex.def Info: images/dsms.jpg used on input line 299.
 (pdftex.def)             Requested size: 321.19922pt x 168.62958pt.
 
-<images/pubsub.jpg, id=242, 451.6875pt x 266.9975pt>
+<images/pubsub.jpg, id=247, 451.6875pt x 266.9975pt>
 File: images/pubsub.jpg Graphic file (type jpg)
  <use images/pubsub.jpg>
-Package pdftex.def Info: images/pubsub.jpg used on input line 292.
+Package pdftex.def Info: images/pubsub.jpg used on input line 311.
 (pdftex.def)             Requested size: 225.84319pt x 133.49841pt.
 
-[7 <./images/dsms.jpg>] <images/facade.jpg, id=250, 381.425pt x 273.02pt>
+[8 <./images/dsms.jpg>] <images/facade.jpg, id=255, 381.425pt x 273.02pt>
 File: images/facade.jpg Graphic file (type jpg)
 
 <use images/facade.jpg>
-Package pdftex.def Info: images/facade.jpg used on input line 304.
+Package pdftex.def Info: images/facade.jpg used on input line 323.
 (pdftex.def)             Requested size: 266.99567pt x 191.11269pt.
- [8 <./images/pubsub.jpg> <./images/facade.jpg>]
-<images/singleton.jpg, id=257, 272.01625pt x 86.3225pt>
+ [9 <./images/pubsub.jpg> <./images/facade.jpg>]
+<images/singleton.jpg, id=262, 272.01625pt x 86.3225pt>
 File: images/singleton.jpg Graphic file (type jpg)
 
 <use images/singleton.jpg>
-Package pdftex.def Info: images/singleton.jpg used on input line 329.
+Package pdftex.def Info: images/singleton.jpg used on input line 348.
 (pdftex.def)             Requested size: 244.81235pt x 77.6895pt.
- <images/mvc.jpg, id=258, 782.925pt x 321.2pt>
+ <images/mvc.jpg, id=263, 782.925pt x 321.2pt>
 File: images/mvc.jpg Graphic file (type jpg)
 
 <use images/mvc.jpg>
-Package pdftex.def Info: images/mvc.jpg used on input line 349.
+Package pdftex.def Info: images/mvc.jpg used on input line 368.
 (pdftex.def)             Requested size: 313.16446pt x 128.47772pt.
- [9 <./images/singleton.jpg>]
-<images/websocket.png, id=264, 932.48375pt x 840.13875pt>
+ [10 <./images/singleton.jpg> <./images/mvc.jpg>]
+<images/websocket.png, id=270, 932.48375pt x 840.13875pt>
 File: images/websocket.png Graphic file (type png)
 
 <use images/websocket.png>
-Package pdftex.def Info: images/websocket.png used on input line 385.
+Package pdftex.def Info: images/websocket.png used on input line 404.
 (pdftex.def)             Requested size: 233.12036pt x 210.03416pt.
- [10 <./images/mvc.jpg>]
-<images/websocket-architecture.jpg, id=271, 252.945pt x 180.675pt>
+ [11]
+<images/websocket-architecture.jpg, id=277, 252.945pt x 180.675pt>
 File: images/websocket-architecture.jpg Graphic file (type jpg)
 
 <use images/websocket-architecture.jpg>
-Package pdftex.def Info: images/websocket-architecture.jpg used on input line 3
-94.
+Package pdftex.def Info: images/websocket-architecture.jpg used on input line 4
+13.
 (pdftex.def)             Requested size: 252.94438pt x 180.67455pt.
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 399.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 418.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 407--408
+Underfull \hbox (badness 10000) in paragraph at lines 426--427
 
  []
 
-[11 <./images/websocket.png> <./images/websocket-architecture.jpg>]
-<images/cluster-overview.png, id=285, 598.235pt x 287.0725pt>
+[12 <./images/websocket.png> <./images/websocket-architecture.jpg>]
+<images/cluster-overview.png, id=290, 598.235pt x 287.0725pt>
 File: images/cluster-overview.png Graphic file (type png)
 
 <use images/cluster-overview.png>
-Package pdftex.def Info: images/cluster-overview.png used on input line 413.
+Package pdftex.def Info: images/cluster-overview.png used on input line 432.
 (pdftex.def)             Requested size: 299.11676pt x 143.53589pt.
- [12 <./images/cluster-overview.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 427--428
+ [13 <./images/cluster-overview.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 446--447
 
  []
 
-<images/streaming-arch.png, id=301, 564.6696pt x 211.0284pt>
+<images/streaming-arch.png, id=306, 564.6696pt x 211.0284pt>
 File: images/streaming-arch.png Graphic file (type png)
 
 <use images/streaming-arch.png>
-Package pdftex.def Info: images/streaming-arch.png used on input line 437.
+Package pdftex.def Info: images/streaming-arch.png used on input line 456.
 (pdftex.def)             Requested size: 282.3341pt x 105.51393pt.
 
-<images/streaming-flow.png, id=306, 516.0078pt x 115.1502pt>
+<images/streaming-flow.png, id=311, 516.0078pt x 115.1502pt>
 File: images/streaming-flow.png Graphic file (type png)
 
 <use images/streaming-flow.png>
-Package pdftex.def Info: images/streaming-flow.png used on input line 446.
+Package pdftex.def Info: images/streaming-flow.png used on input line 465.
 (pdftex.def)             Requested size: 258.00327pt x 57.57495pt.
- [13 <./images/streaming-arch.png> <./images/streaming-flow.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 459--460
+ [14 <./images/streaming-arch.png> <./images/streaming-flow.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 461--462
+Underfull \hbox (badness 10000) in paragraph at lines 480--481
 
  []
 
-[14] <images/kafka.png, id=331, 258.9675pt x 180.675pt>
+[15] <images/kafka.png, id=336, 258.9675pt x 180.675pt>
 File: images/kafka.png Graphic file (type png)
  <use images/kafka.png>
-Package pdftex.def Info: images/kafka.png used on input line 481.
+Package pdftex.def Info: images/kafka.png used on input line 500.
 (pdftex.def)             Requested size: 207.17426pt x 144.54018pt.
 
-<images/log_anatomy.png, id=336, 417.56pt x 268.00125pt>
+<images/log_anatomy.png, id=341, 417.56pt x 268.00125pt>
 File: images/log_anatomy.png Graphic file (type png)
 
 <use images/log_anatomy.png>
-Package pdftex.def Info: images/log_anatomy.png used on input line 491.
+Package pdftex.def Info: images/log_anatomy.png used on input line 510.
 (pdftex.def)             Requested size: 334.04843pt x 214.40128pt.
- [15 <./images/kafka.png> <./images/log_anatomy.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 505--506
-
- []
-
-<images/nodejs.png, id=352, 562.1pt x 192.72pt>
-File: images/nodejs.png Graphic file (type png)
- <use images/nodejs.png>
-Package pdftex.def Info: images/nodejs.png used on input line 519.
-(pdftex.def)             Requested size: 281.04932pt x 96.35976pt.
-
+ [16 <./images/kafka.png> <./images/log_anatomy.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 524--525
 
  []
 
-[16 <./images/nodejs.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 526--527
+<images/nodejs.png, id=357, 562.1pt x 192.72pt>
+File: images/nodejs.png Graphic file (type png)
+ <use images/nodejs.png>
+Package pdftex.def Info: images/nodejs.png used on input line 538.
+(pdftex.def)             Requested size: 281.04932pt x 96.35976pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 543--544
 
  []
 
-<images/angular.png, id=359, 697.60625pt x 185.69376pt>
+[17 <./images/nodejs.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 545--546
+
+ []
+
+<images/angular.png, id=365, 697.60625pt x 185.69376pt>
 File: images/angular.png Graphic file (type png)
 
 <use images/angular.png>
-Package pdftex.def Info: images/angular.png used on input line 536.
+Package pdftex.def Info: images/angular.png used on input line 555.
 (pdftex.def)             Requested size: 348.80226pt x 92.84665pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 563--564
+Underfull \hbox (badness 10000) in paragraph at lines 582--583
 
  []
 
-[17 <./images/angular.png>] [18]
+[18 <./images/angular.png>] [19]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-Underfull \hbox (badness 10000) in paragraph at lines 578--581
+Underfull \hbox (badness 10000) in paragraph at lines 597--600
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 578--581
+Underfull \hbox (badness 10000) in paragraph at lines 597--600
 \T1/bch/m/n/12 In prim-is oc-corre scari-care \T1/bch/b/n/12 Apache Spark \T1/b
 ch/m/n/12 (
  []
 
 
-Underfull \hbox (badness 1117) in paragraph at lines 578--581
+Underfull \hbox (badness 1117) in paragraph at lines 597--600
 [][]\T1/bch/m/n/12 http://spark.apache.org/downloads.html[][]). La ver-sione ut
 i-liz-za-ta è sta-ta la
  []
 
 
 LaTeX Font Warning: Font shape `T1/cmtt/b/n' undefined
-(Font)              using `T1/cmtt/m/n' instead on input line 582.
+(Font)              using `T1/cmtt/m/n' instead on input line 601.
 
-[19]
-Underfull \hbox (badness 1478) in paragraph at lines 593--597
+[20]
+Underfull \hbox (badness 1478) in paragraph at lines 612--616
 []\T1/bch/m/n/12 Dopo aver con-fig-u-ra-to il no-do Mas-ter, avvi-amo-lo dal te
 r-mi-nale me-di-ante
  []
 
 
-Underfull \hbox (badness 1655) in paragraph at lines 593--597
+Underfull \hbox (badness 1655) in paragraph at lines 612--616
 \T1/cmtt/m/n/12 /sbin/start-master.sh\T1/bch/m/n/12 . Suc-ces-si-va-mente, avvi
 -amo i no-di Work-er me-di-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 593--597
+Underfull \hbox (badness 10000) in paragraph at lines 612--616
 \T1/bch/m/n/12 ante \T1/cmtt/m/n/12 /sbin/start-slave.sh spark://SPARK_MASTER_I
 P:SPARK_MASTER_PORT\T1/bch/m/n/12 .
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 593--597
+Underfull \hbox (badness 10000) in paragraph at lines 612--616
 \T1/bch/m/n/12 Dal no-do Mas-ter, pos-si-amo aprire il brows-er, dig-i-tan-do
  []
 
 
-Underfull \hbox (badness 1014) in paragraph at lines 593--597
+Underfull \hbox (badness 1014) in paragraph at lines 612--616
 \T1/cmtt/m/n/12 http://localhost:SPARK_MASTER_PORT \T1/bch/m/n/12 in mo-do da v
 i-su-al-iz-zare dal-la Dash-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 598--600
+Underfull \hbox (badness 10000) in paragraph at lines 617--619
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 598--600
+Underfull \hbox (badness 10000) in paragraph at lines 617--619
 \T1/bch/m/n/12 Come pri-ma cosa oc-corre scari-care \T1/bch/b/n/12 Apache Kaf-k
 a \T1/bch/m/n/12 (
  []
 
 
-Underfull \hbox (badness 5475) in paragraph at lines 606--608
+Underfull \hbox (badness 5475) in paragraph at lines 625--627
 \T1/bch/m/n/12 La stringa \T1/cmtt/m/n/12 zookeeper.connect=localhost:2181 \T1/
 bch/m/n/12 con-sente di speci-fi-care i
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 609--614
+Underfull \hbox (badness 10000) in paragraph at lines 628--633
 
  []
 
 
-Underfull \hbox (badness 1024) in paragraph at lines 609--614
+Underfull \hbox (badness 1024) in paragraph at lines 628--633
 \T1/bch/m/n/12 va-mente creiamo un link sim-bol-i-co per node in questo mo-do \
 T1/cmtt/m/n/12 sudo ln -s
  []
 
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 614--616
+[21]
+Underfull \hbox (badness 10000) in paragraph at lines 633--635
 
  []
 
-[21] [22] (./Relazione LIA-ISA.bbl
+[22] [23] (./Relazione LIA-ISA.bbl
 (/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-33.def
 File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
-)) [23
+)) [24
 
 ]
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -994,27 +995,27 @@ File: lstlang2.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2015/06/04 1.6 listings language file
-) [24] [25]
-[26] [27] [28] [29] [30] [31]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1082.
- [32]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1082.
+) [25] [26]
+[27] [28] [29] [30] [31] [32]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1101.
+ [33]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1101.
  (./Relazione LIA-ISA.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1082.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1082.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1101.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1101.
 
 Package rerunfilecheck Info: File `"Relazione LIA-ISA".out' has not changed.
-(rerunfilecheck)             Checksum: 9DE333D820D683E82C3DCBDC59F697AE;2183.
+(rerunfilecheck)             Checksum: 3A19A33395850AB40688DF6998EEAD41;2184.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 14852 strings out of 495000
- 211525 string characters out of 6181170
- 490589 words of memory out of 5000000
- 17240 multiletter control sequences out of 15000+600000
+ 14854 strings out of 495000
+ 211546 string characters out of 6181170
+ 490628 words of memory out of 5000000
+ 17241 multiletter control sequences out of 15000+600000
  47597 words of font info for 75 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  45i,8n,93p,986b,2103s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1032,10 +1033,10 @@ e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf
 -dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type
 1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Relazione LIA-ISA.pdf" (34 pages, 930367 bytes).
+Output written on "Relazione LIA-ISA.pdf" (35 pages, 933683 bytes).
 PDF statistics:
- 1253 PDF objects out of 1440 (max. 8388607)
- 953 compressed objects within 10 object streams
- 542 named destinations out of 1000 (max. 500000)
+ 1258 PDF objects out of 1440 (max. 8388607)
+ 957 compressed objects within 10 object streams
+ 543 named destinations out of 1000 (max. 500000)
  339 words of extra memory for PDF output out of 10000 (max. 10000000)
 
