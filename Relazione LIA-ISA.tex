@@ -101,7 +101,7 @@
 	breakatwhitespace=true,
 	tabsize=3,
 }
-\setcounter{secnumdepth}{0}
+
 \begin{document}
 \sloppy
 
@@ -132,6 +132,8 @@
 
 \newpage
 \section*{Introduzione}
+\label{sec:intro}
+\addcontentsline{toc}{section}{\nameref{sec:intro}}
 La crescente diffusione dei contenuti digitali e l'incremento pervasivo dei dispositivi tecnologici I sistemi di raccomandazione sono degli strumenti che suggeriscono in modo personalizzato i prodotti utili che potrebbero interessare un utente, in base ai propri interessi. L'elenco degli elementi in output è il risultato di un processo decisionale, che ha l'obiettivo di dedurre quali sono le preferenze dell'utente ed aiutarlo a scegliere il prodotto a lui più indicato. I sistemi di raccomandazione, coinvolgono settori multidisciplinari che vanno dall'interazione uomo-macchina, all'intelligenza artificiale, dalla sicurezza informatica, al supporto decisionale. Esempi cardini di sistemi raccomandazione sono Google News per le notizie, Netflix per i film, Amazon per l'e-commerce, Last.fm per la musica.
 
 Il tema d'anno realizzato ha lo scopo di costruire un sistema di raccomandazione distribuito, utilizzabile con un'interfaccia web, che sia in grado di analizzare lo stream dati in input, gestendo gli eventi complessi mediante query continue sul flusso informativo. Il sistema di raccomandazione consentirà di votare un numero di film che sia strettamente maggiore di tre, selezionando i contenuti votati con un rate superiore o uguale a quattro, al fine di raccomandare i film non ancora visti, che si avvicinano di più ai gusti dell'utente. 
