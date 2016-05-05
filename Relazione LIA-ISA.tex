@@ -315,7 +315,7 @@ Il \textbf{Publisher/Subscribe} (pub/sub) è un design pattern, o uno stile arch
 
 I \textbf{publisher} inviano i messaggi utilizzando un canale di comunicazione denominato topic.
 I \textbf{subscriber} invece, si sottoscrivono ad un topic, al fine di ricevere tutti gli aggiornamenti inviati dal publisher.
-I publisher e di subscriber sono generalmente utenti che si sottoscrivono ad uno o più topic, ed in base alla loro posizione gerarchica pubblicheranno/riceveranno le informazioni relative al canale di interesse sottoscritto. Il sistema (vedi Figura \ref{pubsub}) infatti ha il compito di distribuire i messaggi pubblicati dal publisher, a tutti i subscriber iscritti al topic. Infatti quando viene consegnato un nuovo messaggio su un determinato topic, ed un subscriber è iscritto a quest ultimo, il sub sarà notificato con un evento.
+Il sistema (vedi Figura \ref{pubsub}) infatti ha il compito di distribuire i messaggi pubblicati dal publisher, a tutti i subscriber iscritti al topic. Infatti quando viene consegnato un nuovo messaggio su un determinato topic, ed un subscriber è iscritto a quest ultimo, il sub sarà notificato con un evento.
 
 \subsection{Il pattern Facade}
 Il design pattern \textbf{Facade}, è un pattern strutturale che consente di fornire un'interfaccia semplice ed unificata, che consente di accedere ai diversi sottosistemi dotati di interfacce complesse e diverse tra loro.
