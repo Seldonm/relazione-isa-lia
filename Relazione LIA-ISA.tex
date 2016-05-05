@@ -277,7 +277,7 @@ Desideriamo concentrarci sulla metrica \textbf{Root Mean Squared Error} (RMSE). 
 
 \[ RMSE=\sqrt{\frac{1}{n}\sum_{{i,j}}(p_{i,j}-r_{i,j})^2} \]
 
-dove $n$ è il numero totale dei voti assegnati dagli utenti,$p_{i,j}$ è il voto predetto per l'utente $i$ sull'elemento $j$, ed $r_{i,j}$ è il voto attuale. L'RMSE consente di valutare in maniera precisa i contributi degli errori assoluti tra i valori predetti ed i valori reali \cite{Su:2009:SCF:1592474.1722966}.
+Nella seguente formula, $n$ è il numero totale dei voti assegnati dagli utenti,$p_{i,j}$ è il voto predetto per l'utente $i$ sull'elemento $j$, ed $r_{i,j}$ è il voto attuale. L'RMSE consente di valutare in maniera precisa i contributi degli errori assoluti tra i valori predetti ed i valori reali \cite{Su:2009:SCF:1592474.1722966}.
  
 \subsubsection{Introduzione alla Matrix Factorization}
 I modelli di Matrix Factorization possono essere utilizzati per ricercare quali sono i fattori latenti che caratterizzano le interazioni tra due tipologie di entità., tale che le interazioni user-item siano modellate come prodotti interni nello spazio. Ad esempio, due utenti potrebbero votare un determinato film con un voto alto, se ad entrambi piacciono gli attori, o il genere del film, ecc. Quindi, se si riescono a scoprire quali sono i fattori latenti dietro la scelta di un utente, si riesce anche a predire un voto o una possibile preferenza di un altro film rispetto all'utente, perchè le feature associate all'utente dovrebbero convergere alle feature associate all'elemento.
