@@ -656,7 +656,7 @@ export SPARK_MASTER_IP=X.X.X.X
 export SPARK_MASTER_PORT=7077
 export MASTER=spark://${SPARK_MASTER_IP}:${SPARK_MASTER_PORT}
 \end{lstlisting}
-La variabile \texttt{SPARK\_WORKER\_CORES}, serve per poter configurare il numero di core da utilizzare sulla macchina (nel nostro caso settiamo il numero massimo di core che vogliamo utilizzare relativi ai nodi Slave).
+La variabile \texttt{SPARK\_WORKER\_CORES}, serve per poter configurare il numero di core da utilizzare sulla macchina (nel nostro caso settiamo il numero massimo di core che vogliamo utilizzare relativi ai nodi di tipo worker).
 La variabile \texttt{SPARK\_WORKER\_MEMORY}, consente di specificare quanta memoria dei rispettivi Workers si desidera allocare per l'esecuzione del software (ad esempio 1000m, 2g).
 La variabile \texttt{SPARK\_MASTER\_PORT}, consente di specificare la porta sulla quale avviare il nodo Master.
 La variabile \texttt{SPARK\_MASTER\_IP}, per impostare l'indirizzo IP o l'hostname del nodo Master.
