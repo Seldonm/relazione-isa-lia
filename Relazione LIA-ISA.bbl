@@ -33,6 +33,11 @@ Apache™~Software Foundation.
 \newblock {S}park {O}fficial 1.6.1 {D}ocumentation.
 \newblock \url{http://spark.apache.org/docs/latest/}, 2016.
 
+\bibitem{nodejs}
+Linux Foundation.
+\newblock {N}ode.js {O}fficial {D}ocumentation.
+\newblock \url{https://nodejs.org/en/docs/}, 2016.
+
 \bibitem{fulop2010survey}
 Lajos~Jeno F{\"u}l{\"o}p, Gabriella T{\'o}th, R{\'o}bert R{\'a}cz, J{\'a}nos
   P{\'a}ncz{\'e}l, Tam{\'a}s Gergely, Arp{\'a}d Besz{\'e}des, and
@@ -43,6 +48,11 @@ Lajos~Jeno F{\"u}l{\"o}p, Gabriella T{\'o}th, R{\'o}bert R{\'a}cz, J{\'a}nos
 \bibitem{cepimage}
 Patrick Gantet~Patrick Gantet.
 \newblock Complex event processing.
+
+\bibitem{angularjs}
+Google.
+\newblock {A}ngular.js {O}fficial {D}ocumentation.
+\newblock \url{https://docs.angularjs.org/guide}, 2016.
 
 \bibitem{Su:2009:SCF:1592474.1722966}
 Xiaoyuan Su and Taghi~M. Khoshgoftaar.
