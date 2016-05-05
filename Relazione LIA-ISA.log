@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.26)  5 MAY 2016 14:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.26)  5 MAY 2016 14:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1019,12 +1019,12 @@ File: uni-33.def 2013/05/13 UCS: Unicode data U+2100..U+21FF
 
 ] [26]
 [27] [28] [29] [30] [31] [32] [33]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1150.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1157.
  [34]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1150.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1157.
  (./Relazione LIA-ISA.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1150.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1150.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1157.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1157.
 
 Package rerunfilecheck Info: File `"Relazione LIA-ISA".out' has not changed.
 (rerunfilecheck)             Checksum: CAF2EFDBDE88F1F21294E4876B23A85D;2049.
@@ -1055,7 +1055,7 @@ texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Relazione LIA-ISA.pdf" (36 pages, 1034164 bytes).
+Output written on "Relazione LIA-ISA.pdf" (36 pages, 1034747 bytes).
 PDF statistics:
  1274 PDF objects out of 1440 (max. 8388607)
  970 compressed objects within 10 object streams
