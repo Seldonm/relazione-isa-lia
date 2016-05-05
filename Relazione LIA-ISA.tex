@@ -541,7 +541,7 @@ Il secondo approccio, detto \textit{Direct Approch} o \textit{Receivers Less}, n
 	\label{node}
 \end{figure}
 
-A differenza dei classici web server, che sfruttano un modello a processi concorrenti, Node.js utilizza una modalità di tipo \textit{event-driven} per l'accesso alle risorse. Scrivere un'applicazione in Node.js dunque consiste nel definire una serie di eventi che il sistema operativo deve monitorare, e all'attivazione degli stessi eseguire una funzione associata a tale evento, detta \textbf{callback}. Tale approccio definisce processi non bloccanti, evita il verificarsi di deadlocks, e in generale le operazioni di I/O non avvengono in maniera diretta. Ciò garantisce una maggiore \textbf{scalabilità} e \textbf{flessibilità} dell'architettura web \cite{nodejs}. \\
+A differenza dei classici web server, che sfruttano un modello a processi concorrenti, Node.js utilizza una modalità di tipo \textit{event-driven} per l'accesso alle risorse. Scrivere un'applicazione in Node.js dunque, consiste nel definire una serie di eventi che il sistema operativo deve monitorare, e all'attivazione degli stessi eseguire una funzione associata a tale evento, detta \textbf{callback}. Tale approccio definisce processi non bloccanti, evita il verificarsi di deadlocks, e in generale le operazioni di I/O non avvengono in maniera diretta. Ciò garantisce una maggiore \textbf{scalabilità} e \textbf{flessibilità} dell'architettura web \cite{nodejs}. \\
 
 All'interno del framework si ha a disposizione il package manager \textbf{npm}, tramite il quale è possibile installare moduli e librerie, gestire le diverse release, gli update e le dipendenze \cite{nodejs}.\\
 
