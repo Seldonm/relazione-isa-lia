@@ -134,19 +134,19 @@
 \section*{Introduzione}
 \label{sec:intro}
 \addcontentsline{toc}{section}{\nameref{sec:intro}}
-Con la crescente diffusione dei contenuti digitali e la proliferazione pervasiva dei dispositivi tecnologici, hanno aperto un nuovo scenario innovativo alla costruzione di sistemi che potessero seguire in qualche modo le scelte di un utente. I sistemi di raccomandazione infatti, sono degli strumenti che suggeriscono in modo personalizzato i prodotti utili che potrebbero incuriosire un utente, in base ai propri interessi. L'elenco degli elementi in output è il risultato di un processo decisionale, che ha l'obiettivo di dedurre quali sono le preferenze dell'utente ed aiutarlo a scegliere il prodotto a lui più indicato.
+La crescente diffusione dei contenuti digitali e la proliferazione pervasiva dei dispositivi tecnologici, hanno aperto un nuovo scenario innovativo alla costruzione di sistemi che potessero seguire in qualche modo le scelte di un utente. I \textbf{sistemi di raccomandazione} infatti, sono degli strumenti che suggeriscono in modo personalizzato i prodotti utili che potrebbero incuriosire un utente, in base ai propri interessi. L'elenco degli elementi in output è il risultato di un processo decisionale, che ha l'obiettivo di dedurre quali sono le preferenze dell'utente ed aiutarlo a scegliere il prodotto a lui più indicato.
 
-I sistemi di raccomandazione, coinvolgono settori multidisciplinari che vanno dall'interazione uomo-macchina, all'intelligenza artificiale, dalla sicurezza informatica, al supporto decisionale. Esempi cardini di questi sistemi sono Google News per le notizie, Netflix per i film, Amazon per l'e-commerce, Last.fm per la musica.
+I sistemi di raccomandazione, coinvolgono settori multidisciplinari che vanno dall'interazione uomo-macchina, all'intelligenza artificiale, dalla sicurezza informatica, al supporto decisionale. Esempi cardini di questi sistemi sono \textit{Google News} per le notizie, \textit{Netflix} per i film, \textit{Amazon} per l'e-commerce, \textit{Last.fm} per la musica.
 
-Il tema d'anno realizzato ha lo scopo di costruire un sistema di raccomandazione distribuito, utilizzabile con un'interfaccia web, che sia in grado di analizzare lo stream dati in input, gestendo gli eventi complessi mediante query continue sul flusso informativo. Il sistema di raccomandazione consentirà di votare un numero di film che sia strettamente maggiore di tre, selezionando i contenuti votati con un rate superiore o uguale a quattro, al fine di raccomandare i film non ancora visti, che si avvicinano di più ai gusti dell'utente. 
+Il seguente tema d'anno, ha lo scopo di costruire un sistema di raccomandazione distribuito, utilizzabile con un'interfaccia web, che sia in grado di analizzare lo stream dati in input, gestendo gli eventi complessi mediante query continue sul flusso informativo. Il sistema di raccomandazione consentirà di votare un numero di film che sia strettamente maggiore di tre, selezionando i contenuti votati con un rate superiore o uguale a quattro, al fine di raccomandare i film non ancora visti, che si avvicinano di più ai gusti dell'utente. 
 
-In questo tema d'anno il sistema progettato ed implementato a livello di middleware per il collaborative filtering, utilizza le seguenti tecnologie: Apache Spark, Apache Kafka, Node.js, Angular.js. I linguaggi di programmazione usati sono Scala e Javascript.
+Il sistema progettato ed implementato a livello di middleware per il collaborative filtering, utilizza le seguenti tecnologie: \textbf{Apache Spark}, \textbf{Apache Kafka}, \textbf{Node.js}, \textbf{Angular.js}. I linguaggi di programmazione usati sono \textbf{Scala} e \textbf{Javascript}.
 
 Il presente lavoro è organizzato nel modo seguente:
 \begin{itemize}
 \item Nel \textbf{Capitolo 1}, è stato descritto lo stato dell'arte relativo ai sistemi CEP, sistemi di raccomandazione, Stream Processing, i pattern utilizzati per la progettazione del software e la tecnologia websocket per il developing della piattaforma web, evidenziandone gli aspetti principali.
-\item Nel \textbf{Capitolo 2} si affronta la discussione sulla soluzione proposta, descrivendo nel dettaglio i framework e le librerie utilizzate per la messa a punto della soluzione.
-\item Nel \textbf{Capitolo 3} si descrive l'analisi e la progettazione della soluzione proposta, illustrandone l'architettura del sistema, l'architettura del software, e le particolarità inerenti alla configurazione del funzionamento del sistema.
+\item Nel \textbf{Capitolo 2}, si affronta la discussione sulla soluzione proposta, descrivendo nel dettaglio i framework e le librerie utilizzate.
+\item Nel \textbf{Capitolo 3}, si descrive l'analisi e la progettazione della soluzione proposta, illustrandone l'architettura del sistema, l'architettura del software, e le particolarità inerenti alla configurazione del funzionamento del sistema.
 \item Il \textbf{Capitolo 4}, è dedicato alla descrizione delle conclusioni e possibili sviluppi futuri con un'analisi dei vantaggi e dei miglioramenti relativi al lavoro svolto.
 \item Il \textbf{Capitolo 5}, infine contiene i sorgenti dell'applicativo realizzato.
 \end{itemize}
@@ -156,7 +156,7 @@ Il presente lavoro è organizzato nel modo seguente:
 \subsection{Introduzione ai sistemi CEP}
 L'incremento dei dispositivi interconnessi e delle applicazioni distribuite, richiede un'elaborazione continua del flusso dati. Esempi di tali applicazioni, vanno dal traffico generato dalle Wireless Sensor Networks (WSN) al flusso dati relativo agli indici finanziari, dal monitoraggio stradale alla Clickstream Analysis. 
 
-Un sistema ad eventi complessi, meglio conosciuto come \textit{Complex Event Processing} (CEP), modella il flusso informativo dei dati, visualizzando gli elementi come notifiche di ciò che sta accadendo nel mondo esterno. I dati vengono rilevati e filtrati utilizzando dei pattern (oppure le \textit{processing rules}), i quali hanno il compito di rappresentare il modello di riferimento con l'informazione da rilevare, per poi farla pervenire alle rispettive parti (ad esempio, i dispositivi che effettuano una sottoscrizione ad un determinato topic nel paradigma \textit{publish-subscribe}). L'obiettivo di un sistema CEP consiste nell'identificare eventi significanti e rispondere ad essi nel più breve tempo possibile.
+Un sistema ad eventi complessi o  \textbf{Complex Event Processing} (CEP), modella il flusso informativo dei dati, visualizzando gli elementi come notifiche di ciò che sta accadendo nel mondo esterno. I dati vengono rilevati e filtrati utilizzando dei pattern (oppure le \textit{processing rules}), i quali hanno il compito di rappresentare il modello di riferimento con l'informazione da rilevare, per poi farla pervenire alle rispettive parti (ad esempio, i dispositivi che effettuano una sottoscrizione ad un determinato topic nel paradigma \textit{publish-subscribe}). L'obiettivo di un sistema CEP consiste nell'identificare eventi significativi e rispondere ad essi nel più breve tempo possibile.
 Un pattern o una regola, può essere definita mediante un linguaggio basato su query, il cosiddetto \textbf{Event Query
 	Language}.
 \begin{figure}[H]
@@ -166,15 +166,15 @@ Un pattern o una regola, può essere definita mediante un linguaggio basato su q
 	\label{archcep}
 \end{figure}
 
-Gli \textbf{Event Query Languages} possono essere raggruppati in tre categorie: Composition Operators, Data Stream Query Languages e
-Production Rules. I Composition Operators identificano gli eventi complessi partendo dalla composizione dei singoli eventi, utilizzando operatori quali congiunzione, negazione o di sequenza per la costruzione delle espressioni. Esempi rilevanti sono IBM Active Middleware Technology e ruleCore. 
+Gli \textbf{Event Query Languages} possono essere raggruppati in tre categorie: \textit{Composition Operators, Data Stream Query Languages e
+Production Rules}. I \textbf{Composition Operators} identificano gli eventi complessi partendo dalla composizione dei singoli eventi, utilizzando operatori quali congiunzione, negazione o di sequenza per la costruzione delle espressioni. Esempi rilevanti sono IBM Active Middleware Technology e ruleCore. 
 
 I \textbf{Data Stream Query Languages} sono basati sul linguaggio SQL; gli stream di dati sono semplicemente tuple convertite per database relazionali, in modo che si possano eseguire query SQL su di esse. E' utile citare i seguenti approcci: CQL, Coral8, StreamBase,
 Aleri, Esper e così via.
 
 Le \textbf{Production Rules} specificano le azioni che devono essere eseguite quando il sistema si trova in determinati stati; non è un linguaggio ad eventi, ma costituisce un approccio importante nei sistemi CEP. Un esempio pratico è TIBCO Business Events.
 
-Un altro fattore importante è il tempo. Sono due le parti da considerare quando si parla del tempo, il tempo della finestra ed il tempo dell'evento informativo. Il tempo della finestra mostra gli eventi che vengono esaminati in un determinato intervallo. Il tempo dell'evento invece, porta con se informazioni relative alla data, ora di rilevazione, tempo di transizione, ed intervallo di elaborazione.
+Un altro fattore importante da considerare è il tempo. Sono due le parti da tener presente quando si parla del tempo: il \textit{tempo della finestra} ed il \textit{tempo dell'evento} informativo. Il tempo della finestra mostra gli eventi che vengono esaminati in un determinato intervallo. Il tempo dell'evento invece, porta con se informazioni relative alla data, ora di rilevazione, tempo di transizione, ed intervallo di elaborazione.
 
 I contributi relativi ai sistemi CEP, arrivano da diverse comunità, a partire da quelle che si occupano di sistemi distribuiti, automazione industriale, sistemi di controllo, monitoraggio delle reti, Internet of Things, e middleware in generale.
 
@@ -188,16 +188,16 @@ I contributi relativi ai sistemi CEP, arrivano da diverse comunità, a partire d
 Come possiamo vedere dalla Figura \ref{funcep}, viene associata una semantica dettagliata agli elementi informativi da processare. Da una parte abbiamo gli \textbf{Event Observer}, i quali rappresentano la sorgente dei dati e degli eventi da notificare; in seguito abbiamo il \textbf{CEP Engine}, responsabile del filtraggio e della notifica degli eventi ai nodi \textit{sink}, identificati come \textbf{Event Consumers} \cite{Cugola:2012:PFI:2187671.2187677,fulop2010survey}.
 
 \subsection{Sistemi di Raccomandazione}
-I sistemi di raccomandazione, raccolgono informazioni sulle preferenze di utente in corrispondenza di un insieme di elementi (ad esempio, film, musica, libri, giochi, viaggi, siti web, applicazioni, gadget). L'informazione può essere acquisita in maniera esplicita (tipicamente ciò viene fatto acquisendo il voto di un utente) o implicitamente (analizzando il comportamento dell'utente, ad esempio musica ascoltata, applicazioni scaricate, siti web visitati, libri letti). Inoltre i sistemi di raccomandazione, possono tener conto anche delle caratteristiche demografiche dell'utente (ad esempio età, nazionalità, sesso); dei contenuti informativi presenti nel mondo del Web 2.0, ad esempio all'interno delle piattaforme di Social Networking, quali follower, followed, twit, like, post; dei dati provenienti dai dispositivi caratterizzanti l'Internet of Things (ad esempio, coordinate GPS, RFID, segnali medici inviati in real-time). 
+I sistemi di raccomandazione, raccolgono informazioni sulle preferenze di utente in corrispondenza di un insieme di elementi (ad esempio, film, musica, libri, giochi, viaggi, siti web, applicazioni, gadget). L'informazione può essere acquisita in maniera \textbf{esplicita} (tipicamente ciò viene fatto acquisendo il voto di un utente) o \textbf{implicitamente} (analizzando il comportamento dell'utente, ad esempio musica ascoltata, applicazioni scaricate, siti web visitati, libri letti). Inoltre i sistemi di raccomandazione, possono tener conto anche delle caratteristiche demografiche dell'utente (ad esempio età, nazionalità, sesso); dei contenuti informativi presenti nel mondo del Web 2.0, tipo quelli presenti all'interno dei Social Network, quali follower, followed, twit, like, post; dei dati provenienti dai dispositivi caratterizzanti l'Internet of Things (ad esempio, coordinate GPS, RFID, segnali medici inviati in real-time). 
 
-I sistemi di raccomandazione utilizzano diverse sorgenti informative al fine di fornire all'utente finale una migliore Quality of Experience relativa alla predizione ed alla raccomandazione degli elementi che potrebbero interessargli. La tecnica del Collaborative Filtering (CF), ha un ruolo fondamentale nella raccomandazione, sebbene viene spesso usata anche con altre tecniche di filtraggio basate sul contenuto o basate sulla conoscenza. Il CF si basa sulla cronologia decisionale dell'utente: oltre alle nostre esperienze, facciamo le nostre decisioni anche in base alla conoscenza che ci circonda.
+I sistemi di raccomandazione utilizzano diverse sorgenti informative al fine di fornire all'utente finale una migliore \textbf{Quality of Experience}, relativa alla predizione ed alla raccomandazione degli elementi che potrebbero interessargli. La tecnica del \textbf{Collaborative Filtering} (CF), ha un ruolo fondamentale nella raccomandazione, sebbene viene spesso usata anche con altre tecniche di filtraggio basate sul contenuto o basate sulla conoscenza. Il CF si basa sulla cronologia decisionale dell'utente: oltre alle nostre esperienze, facciamo le nostre decisioni anche in base alla conoscenza che ci circonda.
 
 Il processo con cui un sistema di raccomandazione generi una raccomandazione, è basato sulla combinazione delle seguenti considerazioni:
 
 \begin{enumerate}
 \item La tipologia di dati disponibili nel databse (votazioni, informazioni di registrazione dell'utente, caratteristiche peculiari del contenuto informativo, relazioni sociali)
 \item L'algoritmo di filtraggio usato (demografico, basato sul contenuto, collaborativo, basato sulle relazioni sociali, dipendente dal contesto e ibrido).
-\item Il modello scelto (basato sull'uso diretto dei dati: 'memory-based', oppure un modello generato usando tali dati: 'model-based').
+\item Il modello scelto (basato sull'uso diretto dei dati: '\textbf{memory-based}', oppure un modello generato usando tali dati: '\textbf{model-based}').
 \item Le tecniche impiegate: approccio probabilistico, reti Bayesiane, algoritmi di tipo nearest neighbors, algoritmi genetici, reti neurali, logica fuzzy.
 \item Livello di dispersione del database e scalabilità desiderata.
 \item Capacità di elaborazione del sistema (tempo di elaborazione e consumi di memoria).
@@ -205,21 +205,21 @@ Il processo con cui un sistema di raccomandazione generi una raccomandazione, è
 \item La qualità del risultato desiderata (ad esempio la precisione).
 \end{enumerate}
 
-La ricerca nell'ambito dei sistemi di raccomandazione, richiede che i dati siano di dominio pubblico, al fine di semplificare la ricerca sulle tecniche innovative relative all'analisi dei dati. Esempi di dataset pubblici presenti in letteratura, sono Last.Fm, Delicious, Netflix, MovieLens.
+La ricerca nell'ambito dei sistemi di raccomandazione, richiede che i dati siano di dominio pubblico, al fine di semplificare la ricerca sulle tecniche innovative relative all'analisi dei dati. Esempi di dataset pubblici presenti in letteratura, sono L\textit{ast.Fm, Delicious, Netflix, MovieLens}.
 Le funzionalità interne per i sistemi di raccomandazione, sono caratterizzate dagli algoritmi di filtraggio. 
 Gli algoritmi di filtraggio vengono classificati nel modo seguente:
 \begin{itemize}
-	\item Collaborative Filtering
-	\item Demographic Filtering
-	\item Content-Based Filtering
-	\item Hybrid Filtering
+	\item \textbf{Collaborative Filtering}
+	\item \textbf{Demographic Filtering}
+	\item \textbf{Content-Based Filtering}
+	\item \textbf{Hybrid Filtering}
 \end{itemize}
 
 Il \textbf{Content-Based Filtering} consente di creare raccomandazioni basate sulle scelte fatte in passato da un utente (ad esempio, in un sito E-Commerce, se l'utente ha acquistato una fiction cinematografica, probabilmente il sistema di raccomandazione gli consiglierà una fiction recente, che non ha ancora acquistato sul sito). La tecnica consente inoltre di generare la raccomandazione utilizzando il contenuto dell'oggetto, ad esempio il testo, le immagini, l'audio.
 
 Il \textbf{Demographic Filtering} si basa sul principio che gli individui con caratteristiche personali comuni, quali età, sesso, luogo di residenza e così via, avranno le stesse preferenze.
 
-Il \textbf{Collaborative Filtering} consente agli utenti di attribuire un voto ad un insieme di elementi (filmati, canzoni, film, libri, all'interno di una piattaforma web) salvando le proprie preferenze all'interno di un database, e consentendo di creare una raccomandazione specifica per ogni utente. I voti degli utenti possono essere anche acquisiti in maniera implicita (ad esempio il numero delle che viene ascoltata una canzone, il numero delle consultazioni relative ad una risorsa). L'algoritmo utilizzato maggiormente per il Collaborative Filtering è il $k$ Nearest Neighbors ($k$NN). 
+Il \textbf{Collaborative Filtering} consente agli utenti di attribuire un voto ad un insieme di elementi (filmati, canzoni, film, libri, all'interno di una piattaforma web) salvando le proprie preferenze all'interno di un database, e consentendo di creare una raccomandazione specifica per ogni utente. I voti degli utenti possono essere anche acquisiti in maniera implicita (ad esempio il numero delle volte che viene ascoltata una canzone, il numero delle consultazioni relative ad una risorsa). L'algoritmo utilizzato maggiormente per il Collaborative Filtering è il $k$ Nearest Neighbors ($k$NN). 
 
 Nella versione "\textit{user to user}", il KNN esegue i seguenti task per generare la raccomandazione:
 \begin{enumerate}
@@ -236,7 +236,7 @@ L'\textbf{Hybrid Filtering} è una combinazione di Collaborative Filtering e Dem
 
 Inoltre possiamo suddividere i metodi in \textit{Memory-Based} e \textit{Model-Based}:
 
-I \textbf{Memory Based} conservano in memoria le informazioni associate ad ogni utente, item o voto all'interno del sistema. Queste informazioni costituiscono la \textit{Knowledge Base} sulla quale lavora l'algoritmo di predizione. Idealmente i sistemi di tipo memory based devono essere in grado di generare l'insieme di predizioni in maniera efficiente, processando tutte le informazioni contenute nella matrice
+I \textbf{Memory Based} conservano in memoria le informazioni associate ad ogni utente, item o voto presente all'interno del sistema. Queste informazioni costituiscono la \textit{Knowledge Base} sulla quale lavora l'algoritmo di predizione. Idealmente i sistemi di tipo memory based devono essere in grado di generare l'insieme di predizioni in maniera efficiente, processando tutte le informazioni contenute nella matrice
 \textit{Utenti/Item}.
 
 La matrice \textit{Utenti/Item} definita all'interno del sistema di raccomandazione contiene entry $i,j$ che rappresentano un voto dell'utente \textit{i-esimo} per l'elemento \textit{j-esimo}; nel caso in cui dovesse mancare una preferenza per un determinato item, il valore viene posto a $0$.
@@ -253,7 +253,7 @@ M=\kbordermatrix{%
 }
 \]
 
-Poiché i sistemi di raccomandazione sono caratterizzati da una elevata dimensione dello spazio degli utenti e degli item, il funzionamento degli algoritmi \textit{memory-based} è stato definito sull'ipotesi di determinare un grado di similarità tra gli utenti, che permetta di estrapolare dalla matrice dei voti, le informazioni associate ai soli utenti simili all'utente attivo.
+Poiché i sistemi di raccomandazione sono caratterizzati da una elevata dimensione dello spazio degli utenti e degli item, il funzionamento degli algoritmi \textit{memory-based} è stato definito sull'ipotesi di determinare un grado di similarità tra gli utenti, che permetta di estrapolare dalla matrice dei voti, le informazioni associate ai soli utenti simili dell'utente attivo.
 
 I \textbf{Model Based}, utilizzano l'insieme dei voti espressi dagli utenti per costruire un modello statistico di preferenze su cui generare le predizioni. 
 
@@ -270,29 +270,29 @@ E' utile citare i metodi di riduzione basati sulla Matrix Factorization, la tecn
 Nella Figura \ref{model-rec} viene illustrato un diagramma con le tecniche principali e gli algoritmi di raccomandazione maggiormente utilizzati in letteratura \cite{Bobadilla:2013:RSS:2483330.2483573}.
 
 \subsubsection{Metriche di Valutazione}
-La qualità di un sistema di raccomandazione può essere valutata dai risultati forniti in output. Le tipologie di metriche usate, dipendono dal tipo di CF usato. Le metriche possono essere categorizzate in:
-Predictive Accuracy, come ad esempio il Mean Absolute Error
-(MAE) e sue varianti; Classification Accuracy metrics, come la precision, recall, F1-measure, e sensibilità ROC; Rank Accuracy, come il Mean Average Precision (MAP), e così via.
+La qualità di un sistema di raccomandazione può essere valutata dai risultati forniti in output. Le tipologie di metriche usate, dipendono dal tipo di CF utilizzato. Le metriche possono essere categorizzate in:
+\textbf{Predictive Accuracy}, come ad esempio il \textit{Mean Absolute Error}
+(MAE) e sue varianti; \textbf{Classification Accuracy} metrics, come la \textit{precision, recall, F1-measure}, e sensibilità \textit{ROC}; \textbf{Rank Accuracy}, come il \textit{Mean Average Precision} (MAP).
 Desideriamo concentrarci sulla metrica \textbf{Root Mean Squared Error} (RMSE). Infatti la radice quadrata dell'errore quadratico medio, è una metrica molto utilizzata per la raccomandazione di film.
 
 \[ RMSE=\sqrt{\frac{1}{n}\sum_{{i,j}}(p_{i,j}-r_{i,j})^2} \]
 
-dove $n$ è il numero totale dei voti assegnati dagli utenti,$p_{i,j}$ è il voto predetto per l'utente $i$ sull'elemento $j$, ed $r_{i,j}$ è il voto attuale. L'RMSE consente di valutare in maniera precisa i contributi degli errori assoluti tra i valori predetti ed i valori reali \cite{Su:2009:SCF:1592474.1722966}.
+Nella seguente formula, $n$ è il numero totale dei voti assegnati dagli utenti, $p_{i,j}$ è il voto predetto per l'utente $i$ sull'elemento $j$, ed $r_{i,j}$ è il voto attuale. L'RMSE consente di valutare in maniera precisa i contributi degli errori assoluti tra i valori predetti ed i valori reali \cite{Su:2009:SCF:1592474.1722966}.
  
 \subsubsection{Introduzione alla Matrix Factorization}
-I modelli di Matrix Factorization possono essere utilizzati per ricercare quali sono i fattori latenti che caratterizzano le interazioni tra due tipologie di entità., tale che le interazioni user-item siano modellate come prodotti interni nello spazio. Ad esempio, due utenti potrebbero votare un determinato film con un voto alto, se ad entrambi piacciono gli attori, o il genere del film, ecc. Quindi, se si riescono a scoprire quali sono i fattori latenti dietro la scelta di un utente, si riesce anche a predire un voto o una possibile preferenza di un altro film rispetto all'utente, perchè le feature associate all'utente dovrebbero convergere alle feature associate all'elemento.
+I modelli di \textbf{Matrix Factorization} possono essere utilizzati per ricercare quali sono i fattori latenti che caratterizzano le interazioni tra due tipologie di entità, tale che le interazioni user-item siano modellate come prodotti interni nello spazio. Ad esempio, due utenti potrebbero votare un determinato film con un voto alto, se ad entrambi piacciono gli attori, o il genere del film, ecc. Quindi, se si riescono a scoprire quali sono i fattori latenti dietro la scelta di un utente, si riesce anche a predire un voto o una possibile preferenza di un altro film rispetto all'utente. Ciò è possibile, perchè le feature associate all'utente dovrebbero convergere con le feature associate all'elemento.
 
-Analizziamo la tecnica dal punto di vista matematico. Sia $U$ l'insieme degli utenti, e sia $D$ l'insieme degli elementi. Sia $R$ la matrice dei voti assegnati dagli utenti agli utenti, di dimensione $\lvert U\rvert\times\lvert D\rvert$. Supponiamo di voler cercare i $K$ fattori latenti. Innanzi tutto bisogna cercare le due matrici, $P$ (una matrice $\lvert U\rvert\times K$) e $Q$ (una matrice $\lvert D\rvert\times K$) tale che il loro prodotto sia una stima del tipo: $R\approx P\times Q^T=\hat{R}$. Ogni riga di $P$ rappresenta il grado di associazione tra un utente e le feature, mentre ogni riga di $Q$ tra un elemento e le feature. Al fine di poter calcolare la predizione di un rating su un elemento $d_j$ votato dall'utente $u_i$, definiamo il prodotto interno tra i due vettori corrispondenti come:
+Analizziamo la tecnica dal punto di vista matematico. Sia $U$ l'insieme degli utenti, e sia $D$ l'insieme degli elementi. Sia $R$ la matrice dei voti assegnati dagli utenti agli elementi, di dimensione $\lvert U\rvert\times\lvert D\rvert$. Supponiamo di voler cercare i $K$ fattori latenti. Innanzi tutto bisogna cercare le due matrici, $P$ (una matrice $\lvert U\rvert\times K$) e $Q$ (una matrice $\lvert D\rvert\times K$) tale che il loro prodotto sia una stima del tipo: $R\approx P\times Q^T=\hat{R}$. Ogni riga di $P$ rappresenta il grado di associazione tra un utente e le feature, mentre ogni riga di $Q$ tra un elemento e le feature. Al fine di poter calcolare la predizione di un rating su un elemento $d_j$ votato dall'utente $u_i$, definiamo il prodotto interno tra i due vettori corrispondenti come:
 \[\hat{r_{i,j}}={p_i}^Tq_j=\sum_{1}^{k}p_{ik}q_{kj}\]
 
 Quindi un modo per ovviare a questo problema consiste nell'inizializzare le due matrici con alcuni valori, e calcolare la differenza tra i valori stimati ed i valori reali, e infine minimizzare questa differenza in maniera iterativa. Un metodo per minimizzare l'errore calcolato può essere l'algoritmo di discesa del gradiente stocastico oppure l'algoritmo \textbf{Alternating Least Squares} (ALS) \cite{Takacs:2008:MFN:1454008.1454049}.
 
-In generale, mentre l'algoritmo della discesa del gradiente stocastico è più semplice e più veloce di ALS, ALS risulta essere preferibile in molteplici casi, tra cui la parallelizzazione computazionale. In ALS infatti, il sistema calcola ogni vettore $d_j$ indipendentemente dagli altri elementi, così come accade per $u_i$. Ciò comporta un incremento della parallelismo a livello computazionale.
+In generale, mentre l'algoritmo della discesa del gradiente stocastico è più semplice e più veloce di ALS, ALS risulta essere preferibile in molteplici casi, tra cui la parallelizzazione computazionale. In ALS infatti, il sistema calcola ogni vettore $d_j$ indipendentemente dagli altri elementi, così come accade per $u_i$. Ciò comporta un incremento del parallelismo a livello computazionale.
 
 \subsection{Introduzione al Data Stream Processing}
 Di recente, è nata una nuova classe di applicazioni \textit{data-intensive}, nei quali i dati vengono modellati come relazioni transienti piuttosto che persistenti. Definiamo con il termine Data Stream, una sequenza di elementi codificati in digitale rappresentanti un'informazione. Esempi di applicazioni \textbf{Data Stream} vanno dal campo finanziario, monitoraggio del traffico di rete, applicazioni web, sicurezza, telecomunicazioni, gestione dati e reti di sensori. Nel modello Data Stream, i dati possono essere tuple relazionali, come ad esempio misurazioni di rete, registro chiamate, pagine web visitate, dati provenienti da sensori, e così via. Tuttavia, questi dati costituiscono un flusso multiplo e tempo variabile, tali da richiedere una nuova tecnologia al fine di poter esser gestiti.
 
-Nei vari scenari applicativi sopra citati, non è efficiente e ne tanto meno semplice gestire i dati in arrivo all'interno di un Database Management System (DBMS) tradizionale. Infatti, i DBMS tradizionali non sono progettati per trattare in maniera rapida un flusso di dati contiguo. Di conseguenza sono nati i Data \textbf{Stream Management System} (DSMS) in grado di gestire un flusso dati continuo. I DSMS sono in grado di offrire un'elevata flessibilità nell'eseguire query continue sullo stream dati. Poichè i DSMS sono data-driven, ogni qualvolta viene eseguita una query, essa produrrà nuovi risultati non appena arrivano nuovi dati da processare.
+Nei vari scenari applicativi sopra citati, non è efficiente e ne tanto meno semplice gestire i dati in arrivo, all'interno di un \textit{Database Management System} (DBMS) tradizionale. Infatti, i DBMS tradizionali non sono progettati per trattare in maniera rapida un flusso di dati contiguo. Di conseguenza sono nati i \textbf{Data Stream Management System} (DSMS) in grado di gestire un flusso dati continuo. I DSMS sono in grado di offrire un'elevata flessibilità nell'eseguire query continue sullo stream dati. Poichè i DSMS sono data-driven, ogni qualvolta viene eseguita una query, essa produrrà nuovi risultati non appena arrivano nuovi dati da processare.
 
 \begin{figure}[H]
 	\centering
@@ -301,7 +301,7 @@ Nei vari scenari applicativi sopra citati, non è efficiente e ne tanto meno sem
 	\label{dsms}
 \end{figure}
 
-I dati presenti all'interno di uno stream, arrivano online. Il sistema che elabora lo stream, non gestisce l'ordine di arrivo degli elementi da processare. Gli stream inoltre hanno la peculiarità di non avere una dimensione massima prefissata, ma sono altamente variabili. Dopo che il dato è stato processato, o viene scartato, oppure viene archiviato all'interno di uno spazio di storage \cite{Babcock:2002:MID:543613.543615}.
+I dati presenti all'interno di uno stream, arrivano online. Il sistema che elabora lo stream, non gestisce l'ordine di arrivo degli elementi da processare. Gli stream inoltre hanno la peculiarità di non avere una dimensione massima prefissata, poichè questa è altamente variabile. Il dato analizzato, può essere ulteriormente processato, o scartato, oppure archiviato all'interno di uno spazio di storage \cite{Babcock:2002:MID:543613.543615}.
 
 \subsection{Il paradigma Publish-Subscribe}
 Il \textbf{Publisher/Subscribe} (pub/sub) è un design pattern, o uno stile architetturale, organizzato in modo che le entità comunicano tra loro in maniera asincrona.
@@ -313,10 +313,12 @@ Il \textbf{Publisher/Subscribe} (pub/sub) è un design pattern, o uno stile arch
 	\label{pubsub}
 \end{figure}
 
-I publisher inviano i messaggi utilizzando un canale di comunicazione denominato topic. I publisher e di subscriber sono generalmente utenti che si sottoscrivono ad uno o più topic, ed in base alla loro posizione gerarchica pubblicheranno/riceveranno le informazioni relative al canale di interesse sottoscritto. Il sistema (vedi Figura \ref{pubsub}) infatti ha il compito di distribuire i messaggi pubblicati dal publisher, a tutti i subscriber iscritti al topic. Infatti quando viene consegnato un nuovo messaggio su un determinato topic, ed un subscriber è iscritto a quest ultimo, il sub sarà notificato con un evento.
+I \textbf{publisher} inviano i messaggi utilizzando un canale di comunicazione denominato topic.
+I \textbf{subscriber} invece, si sottoscrivono ad un topic, al fine di ricevere tutti gli aggiornamenti di loro interesse, inviati dal publisher.
+Il sistema (vedi Figura \ref{pubsub}) infatti ha il compito di distribuire i messaggi pubblicati dal publisher, a tutti i subscriber iscritti al topic. Infatti quando viene consegnato un nuovo messaggio su un determinato topic, ed un subscriber è iscritto a quest ultimo, il sub sarà notificato con un evento.
 
 \subsection{Il pattern Facade}
-Il design pattern \textbf{Facade}, è un pattern strutturale che consente di fornire un'interfaccia semplice ed unificata, che consente di accedere ai diversi sottosistemi dotati di interfacce complesse e diverse tra loro.
+Il design pattern \textbf{Facade}, è un pattern strutturale che consente di fornire un'interfaccia semplice ed unificata, la quale permette di accedere ai diversi sottosistemi dotati di interfacce complesse e diverse tra loro.
 
 \begin{figure}[H]
 	\centering
@@ -360,7 +362,7 @@ Le classi e gli oggetti definiti in questo pattern sono:
 \end{itemize}
 
 \subsection{Il pattern Model-View-Controller (MVC)}
-Il pattern MVC è un pattern architetturale in grado di separare i dati dell'applicazione (contenuti nel Modello) dai componenti per la presentazione grafica (Vista) e la
+Il pattern \textbf{Model View Controller} (MVC) è un pattern architetturale in grado di separare i dati dell'applicazione (contenuti nel Modello) dai componenti per la presentazione grafica (Vista) e la
 logica per l'elaborazione dell'input (Controllore).
 
 \begin{figure}[H]
@@ -397,7 +399,7 @@ Separando il Model dalla View e dal Controller, si da la possibilità di associa
 View, tutte le altre View ricollegate a quel model ne propagano la variazione.
 
 \subsection{La tecnologia WebSocket}
-Il protocollo WebSocket standardizzato dall'IETF come RFC 6455 consente la comunicazione bidirezionale e full duplex mediante una singola connessione TCP. La connessione persistente, viene instaurata mediante un sistema di handshaking client-key ed un modello di sicurezza origin-based. L'obiettivo di questa tecnologia è fornire un meccanismo per quelle applicazioni web-based che necessitano di comunicare con server che non consentono di aprire connessioni HTTP multiple (ad esempio usando XMLHttpRequest, o <iframe>, o un sistema di polling), oppure per motivi di sicurezza per quei sistemi che bloccano l'utilizzo di porte non standard mediante firewall.
+Il protocollo \textbf{WebSocket} standardizzato dall'IETF come \textbf{RFC 6455} consente la comunicazione bidirezionale e full duplex mediante una singola connessione TCP. La connessione persistente, viene instaurata mediante un sistema di handshaking client-key ed un modello di sicurezza origin-based. L'obiettivo di questa tecnologia è fornire un meccanismo per quelle applicazioni web-based che necessitano di comunicare con server che non consente di aprire connessioni HTTP multiple (ad esempio usando \textit{XMLHttpRequest}, o <iframe>, o un sistema di \textit{polling}), oppure per motivi di sicurezza per quei sistemi che bloccano l'utilizzo di porte non standard mediante firewall.
 
 \begin{figure}[H]
 	\centering
@@ -417,13 +419,13 @@ Il protocollo WebSocket viene inizializzato in primis con una fase di handshake 
 
 Infine lo schema URI utilizzato è \texttt{ws://} per connessioni in chiaro, \texttt{wss://} per connessioni cifrate con TLS\cite{fette2011websocket}.
 
-WebSocket viene utilizzato molto spesso per ottenere una comunicazione che sia a bassa latenza, efficiente e quasi realtime tra client e server. Vari scenari applicativi sono costituiti da giochi online multiplayer, chat, aggiornamento in tempo reale di informazioni e così via.
+WebSocket viene utilizzato molto spesso per ottenere una comunicazione che sia a bassa latenza, efficiente e quasi realtime tra client e server. Vari scenari applicativi sono costituiti da giochi online multiplayer, chat, aggiornamento in tempo reale di informazioni ecc..
 
 \section{Soluzione proposta}
 
 \subsection{La libreria Spark}
 
-Apache Spark è un sistema di cluster computing di tipo general-purpose, scalabile e veloce. Dispone di API di alto livello in \textbf{Java}, \textbf{Scala},\textbf{ Python} ed \textbf{R}, e un engine ottimizzato che supporta grafi di esecuzione generici. Integra inoltre un ampio set di tool come \textbf{Spark SQL}, per structured data processing, \textbf{MLlib} per il machine learning e \textbf{Spark Streaming}, descritti nelle sezioni successive. Spark è eseguibile sia su sistemi Windows che UNIX-like (Linux, Mac OS) \cite{spark}. \\
+\textbf{Apache Spark} è un sistema di cluster computing di tipo general-purpose, scalabile e veloce. Dispone di API di alto livello in \textbf{Java}, \textbf{Scala},\textbf{ Python} ed \textbf{R}, e un engine ottimizzato che supporta grafi di esecuzione generici. Integra inoltre un ampio set di tool come \textbf{Spark SQL} per structured data processing, \textbf{MLlib} per il machine learning e \textbf{Spark Streaming} per applicazioni streaming in tempo reale, descritti nelle sezioni successive. Spark è eseguibile sia su sistemi \textit{Windows} che \textit{UNIX-like} (Linux, Mac OS) \cite{spark}. \\
 
 Una delle possibili configurazioni di un sistema Spark è la modalità \textit{cluster}, mostrata in Figura \ref{spark-cluster}. 
 
@@ -434,22 +436,22 @@ Una delle possibili configurazioni di un sistema Spark è la modalità \textit{c
 	\label{spark-cluster}
 \end{figure}
 
-Le applicazioni Spark sono eseguite come un set di processi indipendenti sul cluster, coordinati dall'oggetto \textit{SparkContext} del programma sorgente (detto \textbf{driver program}). Precisamente, il programma driver può connettersi su diversi tipi di \textit{cluster managers} (ad esempio un cluster di tipo Standalone, Mesos o YARN), il quale alloca le risorse a disposizione delle applicazioni. Una volta connesso, Spark scansiona i nodi del cluster alla ricerca degli \textbf{executor} (detti anche \textit{worker node}), i quali eseguono effettivamente i task e il data storage delle applicazioni. A questo punto il driver invia il codice dell'applicazione agli executor (tipicamente un file JAR o Python incluso nello SparkContext) e schedula i task per l'esecuzione parallela \cite{spark}. 
+Le applicazioni Spark sono eseguite come un set di processi indipendenti sul cluster, coordinati dall'oggetto \textit{SparkContext} del programma sorgente (detto \textbf{driver program}). Nel dettaglio, il driver può connettersi su diversi tipi di \textit{cluster managers} (ad esempio un cluster di tipo Standalone, Mesos o YARN), il quale alloca le risorse a disposizione delle applicazioni. Una volta connesso, Spark scansiona i nodi del cluster alla ricerca degli \textbf{executor} (detti anche \textit{worker node}), i quali eseguono effettivamente i task e il data storage delle applicazioni. A questo punto il driver invia il codice dell'applicazione agli executor (tipicamente un file JAR o Python incluso nello SparkContext) e schedula i task per l'esecuzione parallela \cite{spark}. 
 
 Alcune considerazioni riguardo tale architettura sono: 
 \begin{itemize}
-	\item Ogni applicazione gestisce i propri workers, i quali restano attivi durante tutto il ciclo di vita ed eseguono task multipli in thread multipli. Questo implica un isolamento tra le applicazioni, sia lato scheduling (ogni driver schedula i propri tasks) sia lato executor (tasks relativi ad applicazioni differenti risiedono in JVM differenti). Tuttavia ciò implica che non è possibile condividere nativamente i dati tra applicazioni diverse, a meno di utilizzare uno storage system esterno;
-	\item Il driver deve poter gestire le connessioni con i workers durante l'intero ciclo di vita dell'applicazione. Per questo motivo dev'essere sempre garantita la visibilità a livello di rete tra driver e workers durante l'esecuzione;
+	\item Ogni applicazione gestisce i propri worker, i quali restano attivi durante tutto il ciclo di vita, ed eseguono task multipli in thread multipli. Questo implica un isolamento tra le applicazioni, sia lato scheduling (ogni driver schedula i propri tasks) sia lato executor (tasks relativi ad applicazioni differenti risiedono in JVM differenti). Tuttavia ciò implica che non è possibile condividere nativamente i dati tra applicazioni diverse, a meno di utilizzare uno storage system esterno (ad esempio mediante \textit{Apache Hadoop}).
+	\item Il driver deve poter gestire le connessioni con i worker durante l'intero ciclo di vita dell'applicazione. Per questo motivo dev'essere sempre garantita la visibilità a livello di rete tra driver e worker durante l'esecuzione.
 	\item \`E necessario che driver e worker abbiano, a livello di rete, una distanza relativamente breve, preferibilmente nella stessa LAN, affinché lo scheduling sia rapidamente eseguito \cite{spark}. 
 \end{itemize}
 
-Il principio di funzionamento di Spark si basa sostanzialmente sul concetto di \textit{Resilient Distributed Dataset} (\textbf{RDD}). Un RDD è una collezione di dati su cui è possibile operare parallelamente, ed è distribuita su tutti i nodi del cluster come file system Hadoop oppure è generata da una collezione esistente in Java o Scala \cite{spark}. \\
+Il principio di funzionamento di Spark, si basa sostanzialmente sul concetto di \textit{Resilient Distributed Dataset} (\textbf{RDD}). Un RDD è una collezione di dati su cui è possibile operare parallelamente, ed è distribuita su tutti i nodi del cluster come file system Hadoop oppure è generata da una collezione esistente in Java o Scala \cite{spark}. \\
 
-Una seconda astrazione è rappresentata dalle variabili condivise (\textit{shared variables}), utilizzate nelle computazioni parallele. Di default Spark tiene traccia delle variabili istanziate nei vari task, e consente se necessario di condividerle fra task o fra task e driver. Le variabili condivise possono essere di due tipi: di tipo \textit{broadcast}, il cui valore viene salvato nella cache per ogni nodo, e di tipo \textit{accumulatore}, per esempio contatori o sommatori \cite{spark}.
+Una seconda astrazione è rappresentata dalle variabili condivise (\textit{shared variables}), utilizzate nelle computazioni parallele. Di default Spark tiene traccia delle variabili istanziate nei vari task, e consente se necessario di condividerle fra task, o fra task e driver. Le variabili condivise possono essere di due tipi: di tipo \textbf{broadcast}, il cui valore viene salvato nella cache per ogni nodo, e di tipo \textbf{accumulatore}, per esempio contatori o sommatori \cite{spark}.
 
 \subsubsection{Spark Streaming}
 
-Spark Streaming è un'estensione delle Core API di Spark per lo\textbf{ stream processing} di live data streams ad alto throughput. Supporta molteplici sorgenti di data stream come\textbf{ Kafka}, Flume, Twitter, ZeroMQ, Kinesis o socket TCP, i quali possono essere processati tramite direttive come \textit{map}, \textit{join}, \textit{reduce} e \textit{window}. Nel post processing è possibile salvare i data stream in un file system, in un database o visualizzarli in una live dashboard. Come ulteriore fase nella pipeline di operazione rientra anche il machine learning ed il graph processing. In Figura \ref{spark-streaming} viene riassunta l'architettura descritta \cite{spark}. 
+\textbf{Spark Streaming,} è un'estensione delle Core API di Spark per lo\textbf{ stream processing}, di live data streams con throughput elevato. Supporta differenti sorgenti di data stream, come\textbf{ Kafka}, F\textit{lume, Twitter, ZeroMQ, Kinesis} o \textit{socket TCP}, i quali possono essere processati tramite direttive come \textit{map}, \textit{join}, \textit{reduce} e \textit{window}. Nel post processing è possibile salvare i data stream in un file system, in un database o visualizzarli in una live dashboard. Come ulteriore fase nella pipeline delle operazioni, rientra anche il \textbf{machine learning} ed il graph processing. In Figura \ref{spark-streaming} viene riassunta l'architettura descritta \cite{spark}. 
 
 \begin{figure}[H]
 	\centering
@@ -462,20 +464,20 @@ Nello specifico, i data streams ricevuti vengono suddivisi in frammenti (\textit
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.50]{images/streaming-flow.png}
+	\includegraphics[scale=0.70]{images/streaming-flow.png}
 	\caption{Spark Streaming Data Stream Processing \cite{spark}}
 	\label{spark-streaming-processing}
 \end{figure}
 
-A livello alto il flusso continuo di dati è rappresento da una struttura astratta detta \textit{discretized stream} o \textit{DStream}, il cui contenuto è rappresentato da tutte le sorgenti collegate eventualmente con Spark, o da stream risultati da altri DStream. Internamente, un DStream è rappresentato tramite una sequenza di RDD \cite{spark}. 
+Ad alto livello, il flusso continuo di dati è rappresento da una struttura astratta detta \textit{discretized stream} o \textit{DStream}, il cui contenuto è rappresentato da tutte le sorgenti collegate eventualmente con Spark, o da stream risultati da altri DStream. Internamente, un DStream è rappresentato tramite una sequenza di RDD \cite{spark}. 
 
 \subsubsection{Spark MLlib}
 
-Spark MLlib è la libreria per il machine learning di Spark, ed il suo obiettivo è di rendere l'uso di tali funzionalità semplice e scalabile. Comprende i più comuni algoritmi di learning quali classificazione, regressione, clustering, filtro collaborativo, riduzione dello spazio delle features, etc. \cite{spark}. 
+\textbf{Spark MLlib} è la libreria per il machine learning di Spark, ed il suo obiettivo è di rendere l'uso di tali funzionalità semplice e scalabile. Comprende i più comuni algoritmi di learning quali classificazione, regressione, clustering, filtro collaborativo, riduzione dello spazio delle features, ecc. \cite{spark}. 
 
 \subsubsection{Spark SQL}
 
-Spark SQL è un modulo di Spark per il processing di dati strutturati. A differenza delle API RDD la sua interfaccia consente di descrivere in maniera dettagliata la struttura e le operazioni da eseguire sui dati, in stile SQL. Le strutture astratte di riferimento per questo modulo sono i \textbf{Dataframes} e i \textbf{Datasets} \cite{spark}.\\
+\textbf{Spark SQL} è un modulo di Spark per il processing di dati strutturati. A differenza delle API RDD, la sua interfaccia consente di descrivere in maniera dettagliata la struttura e le operazioni da eseguire sui dati, in stile SQL. Le strutture astratte di riferimento per questo modulo sono i \textbf{Dataframes} e i \textbf{Datasets} \cite{spark}.\\
 
 Un \textbf{Dataframe} è un collezione distribuita di informazioni organizzata in colonne e attributi. Concettualmente è equivalente ad una tabella in un database relazionale, con caratteristiche aggiuntive fornite da Spark. In accordo con tale definizione sono presenti, oltre alle classiche funzionalità SQL, la creazione di DataFrame a partire da un RDD o un oggetto JSON e viceversa \cite{spark}.\\
 
@@ -483,17 +485,16 @@ Un \textbf{Dataset} invece è un'interfaccia sperimentale introdotta nella versi
 
 \subsection{Apache Kafka}
 
-Apache Kafka è un sistema di messaggistica di tipo publish-subscribe, orientato alla distribuzione. La sua architettura consente ad un singolo cluster di agire da backbone centrale per i dati di grandi organizzazioni, e gli stream vengono partizionati e distribuiti lungo tutti i nodi del cluster, sfruttando la potenza di calcolo di ogni singola macchina. Di seguito si introduce la terminologia utilizzata in Kafka: 
+\textbf{Apache Kafka} è un sistema di messaggistica di tipo publish-subscribe, orientato alla distribuzione. La sua architettura consente ad un singolo cluster di agire da backbone centrale per i dati di grandi organizzazioni. Gli stream, vengono partizionati e distribuiti lungo tutti i nodi del cluster, sfruttando la potenza di calcolo di ogni singola macchina. Di seguito si introduce la terminologia utilizzata in Kafka: 
 
 \begin{itemize}
-	\item Kafka organizza i flussi dei messaggi in categorie chiamate \textit{topics};
-	\item I processi che si occupano di pubblicare i messaggi in Kafka sono chiamati \textit{producers};
-	\item I processi che effettuano una sottoscrizione ad un topic ed elaborano i messaggi pubblicati sullo stesso sono chiamati \textit{consumers};
-	\item I nodi all'interno del cluster(producers e consumers) sono coordinati da uno o più server chiamati \textit{brokers} \cite{kafka}.
-	
+	\item Kafka organizza i flussi dei messaggi in categorie chiamate \textit{topics}.
+	\item I processi che si occupano di pubblicare i messaggi in Kafka sono chiamati \textit{producer}.
+	\item I processi che effettuano una sottoscrizione ad un topic ed elaborano i messaggi pubblicati sullo stesso sono chiamati \textit{consumer}.
+	\item I nodi all'interno del cluster(producer e consumer) sono coordinati da uno o più server chiamati \textit{brokers} \cite{kafka}.
 \end{itemize}
 
-A livello concettuale il funzionamento di Kafka è riassunto in Figura \ref{kafka}. La comunicazione tra client e server avviene tramite protocollo TCP. Sono presenti varie implementazioni del client Kafka, disponibili in vari linguaggi tra cui Java, Javascript e PHP \cite{kafka}. 
+A livello concettuale il funzionamento di Kafka è riassunto in Figura \ref{kafka}. La comunicazione tra client e server avviene tramite protocollo TCP. Inoltre, sono presenti varie implementazioni del client Kafka, disponibili in vari linguaggi tra cui Java, Javascript e PHP \cite{kafka}. 
 
 \begin{figure}[H]
 	\centering
@@ -503,7 +504,7 @@ A livello concettuale il funzionamento di Kafka è riassunto in Figura \ref{kafk
 \end{figure}
 
 
-Di seguito viene mostrata nel dettaglio la struttura di un topic in Figura \ref{kafka-topic}. Per ogni topic Kafka effettua un partizionamento dei messaggi in arrivo, tenendo traccia dell'ordine di arrivo con un sistema di log \cite{kafka}. 
+Di seguito viene mostrata nel dettaglio la struttura di un topic in Figura \ref{kafka-topic}. Per ogni topic, Kafka effettua un partizionamento dei messaggi in arrivo, tenendo traccia del loro ordine mediante un sistema di log \cite{kafka}. 
 
 \begin{figure}[H]
 	\centering
@@ -512,26 +513,26 @@ Di seguito viene mostrata nel dettaglio la struttura di un topic in Figura \ref{
 	\label{kafka-topic}
 \end{figure}
 
-Ogni partizione è una sequenza immutabile di messaggi, registrata e ordinata in un commit log. Ad ogni messaggio presente viene assegnato un id sequenziale, detto \textit{offset}, che identifica univocamente un messaggio nella relativa partizione \cite{kafka}.
+Ogni partizione è una sequenza immutabile di messaggi, registrata e ordinata in un \textit{commit log}. Ad ogni messaggio presente, viene assegnato un \textit{id} sequenziale, detto \textit{offset}, che identifica univocamente un messaggio nella relativa partizione \cite{kafka}.
 
-Il cluster di Kafka conserva in memoria tutti i messaggi pubblicati, letti o non dai consumers, per un periodo di tempo configurabile. In pratica, il server registra dei metadati relativi ad ogni posizione del consumer nel log, chiamato appunto offset. Tale offset è fissato dal consumer, il quale può leggere i messaggi nell'ordine preferito \cite{kafka}. 
+Il cluster di Kafka conserva in memoria tutti i messaggi pubblicati, letti o non dai consumer, per un periodo di tempo configurabile. In pratica, il server registra dei metadati relativi ad ogni posizione del consumer nel log, chiamato appunto offset. Tale offset è fissato dal consumer, il quale può leggere i messaggi nell'ordine preferito \cite{kafka}. 
 
 
 \subsubsection{Integrazione con Spark Streaming}
 
 Le API di Spark Streaming offrono la possibilità di configurare Kafka come sorgente di data stream, attraverso due possibili approcci \cite{spark}. 
 
-Il primo approccio è detto \textbf{Receiver-based}, e consiste nell'implementazione di un Receiver tramite le API di Kafka. I dati ricevuti attraverso tale oggetto vengono memorizzati e processati nei worker node. Tuttavia, tale approccio potrebbe non garantire la consistenza in caso di data loss, ed è dunque necessario abilitare un meccanismo di integrità chiamato \textit{Ahead Logs} \cite{spark}. \\
+Il primo approccio è detto \textbf{Receiver-based}, e consiste nell'implementazione di un Receiver tramite le API di Kafka. I dati ricevuti attraverso tale oggetto vengono memorizzati e processati nei worker node. Tuttavia, tale approccio potrebbe non garantire la consistenza in caso di \textit{data loss}, ed è dunque necessario abilitare un meccanismo di integrità chiamato \textit{Ahead Logs} \cite{spark}. \\
 
-Il secondo approccio, detto \textit{Direct Approch} o \textit{Receivers less}, non prevede l'uso di Receivers ma interroga periodicamente il server Kafka per rilevare il topic e la partizione aggiornata di recente, definendo in automatico la dimensione del batch di dati da processare. I vantaggi di questa tecnica sono: 
+Il secondo approccio, detto \textit{Direct Approch} o \textit{Receivers Less}, non prevede l'uso di Receiver, ma interroga periodicamente il server Kafka per rilevare il topic e la partizione aggiornata di recente, definendo in automatico la dimensione del batch di dati da processare. I vantaggi di questa tecnica sono: 
 \begin{itemize}
-	\item \textit{Parallelismo semplificato: } Non è necessario creare ed unificare stream multipli di Kafka. Tramite la funzione \textit{directStream}, Spark Streaming effettua un mapping tra le partizioni di Kafka in RDD, semplificandone l'elaborazione in parallelo;
-	\item \textit{Efficienza: } Il meccanismo Write Ahead Logs potrebbe generare problemi di duplicazione dei dati e relativi conflitti, nel momento in cui entrambe le istanze di Spark e Kafka tentino di risolvere una perdita di informazioni. Con un approccio diretto senza Receivers tale problema non sussiste \cite{spark}.
+	\item \textit{Parallelismo semplificato: } Non è necessario creare ed unificare stream multipli di Kafka. Tramite la funzione \textit{directStream}, Spark Streaming effettua un mapping tra le partizioni di Kafka in RDD, semplificandone l'elaborazione in parallelo.
+	\item \textit{Efficienza: } Il meccanismo Write Ahead Logs potrebbe generare problemi di duplicazione dei dati e relativi conflitti, nel momento in cui entrambe le istanze di Spark e Kafka tentino di risolvere una perdita di informazioni. Con un approccio diretto senza Receiver tale problema non sussiste \cite{spark}.
 \end{itemize}
 
 \subsection{Il framework Node.js}
 
-Node.js è un framework per la realizzazione di applicazioni web in Javascript lato server. La piattaforma è basata sul \textbf{Javascript Engine V8}, il runtime di Google utilizzato anche in Chrome, disponibile per le principali piattaforme, anche se maggiormente performante su sistemi operativi UNIX-like \cite{nodejs}.
+\textbf{Node.js} è un framework per la realizzazione di applicazioni web in Javascript lato server. La piattaforma è basata sul \textbf{Javascript Engine V8}, il runtime di Google utilizzato anche in Chrome, disponibile per le principali piattaforme, anche se maggiormente performante su sistemi operativi UNIX-like \cite{nodejs}.
 
 \begin{figure}[H]
 	\centering
@@ -540,15 +541,15 @@ Node.js è un framework per la realizzazione di applicazioni web in Javascript l
 	\label{node}
 \end{figure}
 
-A differenza dei classici web server, che sfruttano un modello a processi concorrenti, Node.js utilizza una modalità di tipo \textit{event-driven} per l'accesso alle risorse. Scrivere un'applicazione in Node.js dunque consiste nel definire una serie di eventi che il sistema operativo deve monitorare, e all'attivazione degli stessi eseguire una funzione associata a tale evento, detta \textbf{callback}. Tale approccio definisce processi non bloccanti, evita il verificarsi di deadlocks, e in generale le operazioni di I/O non avvengono in maniera diretta. Ciò garantisce una maggiore \textbf{scalabilità} e \textbf{flessibilità} dell'architettura web \cite{nodejs}. \\
+A differenza dei classici web server, che sfruttano un modello a processi concorrenti, Node.js utilizza una modalità di tipo \textit{event-driven} per l'accesso alle risorse. Scrivere un'applicazione in Node.js dunque, consiste nel definire una serie di eventi che il sistema operativo deve monitorare, e all'attivazione degli stessi eseguire una funzione associata a tale evento, detta \textbf{callback}. Tale approccio definisce processi non bloccanti, evita il verificarsi di deadlocks, e in generale le operazioni di \textit{I/O} non avvengono in maniera diretta. Ciò garantisce una maggiore \textbf{scalabilità} e \textbf{flessibilità} dell'architettura web \cite{nodejs}. \\
 
 All'interno del framework si ha a disposizione il package manager \textbf{npm}, tramite il quale è possibile installare moduli e librerie, gestire le diverse release, gli update e le dipendenze \cite{nodejs}.\\
 
-Il modulo \textbf{kafka.node} (\href{https://www.npmjs.com/package/kafka-node}{https://www.npmjs.com/package/kafka-node}) mette a disposizione un client in Node.js per la connessione ad un server Kafka. \`E possibile implementare sia il Producer che il Consumer, gestire gli eventi, creare topics, etc \cite{nodejs}.
+Il modulo \textbf{kafka.node} (\href{https://www.npmjs.com/package/kafka-node}{https://www.npmjs.com/package/kafka-node}) mette a disposizione un client in Node.js per la connessione ad un server Kafka. \`E possibile implementare sia il Producer che il Consumer, gestire gli eventi, creare topics, ecc. \cite{nodejs}.
 
 \subsection{Angular.js}
 
-L'interfaccia dell'applicazione è stata realizzata attraverso il framework AngularJS, creando un modello MVC che sfrutta il two-way data binding di AngularJS \cite{angularjs}.
+L'interfaccia dell'applicazione è stata realizzata attraverso il framework \textbf{AngularJS}, creando un modello MVC che sfrutta il two-way data binding di AngularJS \cite{angularjs}.
 
 \begin{figure}[H]
 	\centering
@@ -557,24 +558,24 @@ L'interfaccia dell'applicazione è stata realizzata attraverso il framework Angu
 	\label{angular}
 \end{figure}
 
-Il front end è costruito grazie alla libreria Bootstrap, un framework che mira alla creazione di pagine web dinamiche, fluide e adattabili a qualsiasi dispositivo con differenti grandezze e risoluzione, che contiene una serie di modelli CSS, HTML e Javascript dei componenti web maggiormente utilizzati. Altre librerie utilizzate sono: 
+Il front end è costruito grazie alla libreria \textbf{Bootstrap}, un framework che mira alla creazione di pagine web dinamiche, fluide e adattabili a qualsiasi dispositivo con differenti grandezze e risoluzione, che contiene una serie di modelli CSS, HTML e Javascript dei componenti web maggiormente utilizzati. Altre librerie utilizzate sono: 
 \begin{itemize}
 	\item \textbf{Angular Route} Una libreria che gestisce le view ed il routing in una macchina a stati.
 \end{itemize}
 
 Il layout contiene le seguenti directory: 
 \begin{itemize}
-	\item \textbf{/css} Fogli di stile per le pagine HTML;
-	\item \textbf{/fonts} Web font;
-	\item \textbf{/img} Logo e immagini;
-	\item \textbf{/vendor} Librerie utilizzate dall'applicazione;
-	\item \textbf{/js} File Javascript della dashboard;
+	\item \texttt{/css}: Fogli di stile per le pagine HTML.
+	\item \texttt{/fonts}: Web font.
+	\item \texttt{/img}: Logo e immagini.
+	\item \texttt{/vendor}: Librerie utilizzate dall'applicazione.
+	\item \texttt{/js}: File Javascript della dashboard.
 	\begin{itemize}
-		\item \textbf{/controllers} Script dei controller di AngularJS;
-		\item \textbf{views} File HTML relativi alle view di AngularJS;
-		\item \textbf{/services} Direttive di AngularJS per gli eventi associati al websocket.
+		\item \texttt{/controllers}: Script dei controller di AngularJS.
+		\item \texttt{/views}: File HTML relativi alle view di AngularJS.
+		\item \texttt{/services}: Direttive di AngularJS per gli eventi associati al websocket.
 	\end{itemize}
-	\item \textbf{app.js} Script principale dell'applicazione. Al suo interno sono definiti gli stati con le relative view, le transizioni e le direttive associate ad ogni view per i relativi dati da visualizzare \cite{angularjs}.
+	\item \texttt{app.js}: Script principale dell'applicazione. Al suo interno sono definiti gli stati con le relative view, le transizioni e le direttive associate ad ogni view per i relativi dati da visualizzare \cite{angularjs}.
 \end{itemize}
 
 Per l'implementazione del WebSocket, la dashboard si avvale della libreria \textbf{Socket.IO}. Socket.io è una libreria Javascript per applicazioni web real time. Abilita una comunicazione di tipo bidirezionale tra client (generalmente eseguito nel browser) e server (applicazione Node.js). Principalmente il protocollo utilizzato è WebSocket, con un modello di esecuzione di tipo asincrono. \\
@@ -596,7 +597,7 @@ Scala è un linguaggio multiparadigma, fortemente orientato alla programmazione 
 	\label{umlcep}
 \end{figure}
 
-In Scala, i metodi e le variabili non associate esplicitamente ad un'istanza di una classe sono convertite in oggetti di tipo \textbf{Singleton}, e si definiscono tramite la keyword \textit{object}.
+In Scala, i metodi e le variabili non associate esplicitamente ad un'istanza di una classe, sono convertite in oggetti di tipo \textbf{Singleton}, e si definiscono tramite la keyword \textit{object}.
 
 \begin{lstlisting}[style=scalacode, caption=Pattern Singleton in Scala]
 	package test
@@ -610,12 +611,12 @@ Tali attributi e funzioni sono accessibili globalmente importando tale oggetto e
 Di seguito sono descritte nel dettaglio le classi, i relativi attributi e metodi
 
 \begin{itemize}
-	\item \textbf{classe SparkCommons} : si occupa di inizializzare a livello globale il driver di Spark, settando l'indirizzo del master, il contesto per lo Streaming ed SQL, ed effettua il linking del JAR dell'applicazione nei nodi worker.
-	\item \textbf{classe KafkaCommons}: Configura l'interfaccia verso il server Kafka, definendo la lista dei brokers, dei topic ed inizializzando il Producer per la notifica delle raccomandazioni effettuate. Inoltre inizializza lo stream attraverso il metodo \textit{createDirectStream}, il quale preleva preleva i batches forniti da Spark Streaming ogni 30 secondi, aggiornati da una finestra di osservazione totale di 60 secondi.
-	\item \textbf{classe CEP}: La classe CEP implementa il metodo \textit{hasEnoughVotes}, il quale effettua pattern matching sul DataFrame dall'aggregazione dei voti ricevuti nella finestra temporale. A seconda del numero di voti validi inseriti dall'utente e delle \textit{rules} prestabilite verrà visualizzata la relativa notifica sul driver di Spark, e in caso di pattern positivo verrà eseguito il filtro collaborativo.
+	\item \textbf{classe SparkCommons} : Si occupa di inizializzare a livello globale il driver di Spark, settando l'indirizzo del master, il contesto per lo Streaming ed SQL, ed effettua il linking del JAR dell'applicazione nei nodi worker.
+	\item \textbf{classe KafkaCommons}: Configura l'interfaccia verso il server Kafka, definendo la lista dei broker, dei topic ed inizializzando il Producer per la notifica delle raccomandazioni effettuate. Inoltre inizializza lo stream attraverso il metodo \textit{createDirectStream}, il quale preleva i batches forniti da Spark Streaming ogni 30 secondi, aggiornati da una finestra di osservazione totale di 60 secondi.
+	\item \textbf{classe CEP}: La classe CEP implementa il metodo \textit{hasEnoughVotes}, il quale effettua il \textit{pattern matching} sul DataFrame dall'aggregazione dei voti ricevuti nella finestra temporale. A seconda del numero di voti validi inseriti dall'utente e delle \textit{rules} prestabilite verrà visualizzata la relativa notifica sul driver di Spark. In caso di pattern positivo verrà eseguito il filtro collaborativo.
 	\item \textbf{classe CollaborativeFiltering}: Questo oggetto si occupa di eseguire l'algoritmo ALS sul set di dati ricevuti. 
-    Il metodo \textbf{userCF} ha come parametri lo stream rating dell'utente, la lista dei ratings disponibili e la lista dei film. Il dataset dei ratings è suddiviso in set di training, validation e test (rispettivamente 60\%, 20\% e 20\%). Al training set vengono aggiunti i voti dell'ultimo datastream ricevuto, ed il modello viene addestrato in diversi step provando diversi valori del numero di iterazioni, numero di fattori latenti e lambda. Ad ogni ciclo il metodo \textbf{computeRmse} effettua la predizione di n ratings per l'utente e calcola l'RMSE sul validation set.
-	Dopo aver effettuato la validazione sul test set dell'RMSE, il modello con errore più basso verrà utilizzato per la predizione delle Top-N raccomandazioni, filtrando i ratings in modo tale da escludere i film che l'utente ha già votato. L'ultimo step è la serializzazione del risultato in formato JSON ed invio come topic al server Kafka, svolto dal metodo \textit{out}
+    Il metodo \textbf{userCF} ha come parametri lo stream rating dell'utente, la lista dei ratings disponibili e la lista dei film. Il dataset dei ratings è suddiviso in set di training, validation e test (rispettivamente 60\%, 20\% e 20\%). Al training set vengono aggiunti i voti dell'ultimo datastream ricevuto, ed il modello viene addestrato in diversi step provando diversi valori del numero di iterazioni, numero di fattori latenti e lambda. Ad ogni ciclo il metodo \textbf{computeRmse} effettua la predizione di $n$ ratings per l'utente e calcola l'RMSE sul validation set.
+	Dopo aver effettuato la validazione sul test set dell'RMSE, verrà utilizzato il modello con errore più basso per la predizione delle \textbf{Top-N raccomandazioni}, filtrando i ratings in modo tale da escludere i film che l'utente ha già votato. L'ultimo step è la serializzazione del risultato in formato JSON e l'invio dei dati sul topic creato dal server Kafka, svolto dal metodo \textit{out}.
 	
 	\item \textbf{classe FileParser}: L'oggetto mette a disposizione i metodi \textbf{parseRatings} e \textbf{parseMovies}, i quali utilizzando la funzione \textit{textFile} dell'oggetto SparkContext effettuano il parsing dei file, definendo le strutture dati associate nel formato opportuno. In particolare, il parsing dei ratings avviene secondo un ordinamento decrescente in base al timestamp associato al voto. 
 	
@@ -636,14 +637,14 @@ In questa sezione viene descritta l'organizzazione fisica dell'architettura di s
 
 All'interno della web dashboard sono presenti due pagine, dalle quali è possibile rispettivamente effettuare le votazioni e visualizzare i risultati della raccomandazione. Esse interagiscono esclusivamente con Kafka tramite pubblicazione/sottoscrizione ai relativi topics, rendendo di fatto \textbf{trasparente} il flusso d'esecuzione sottostante. \\
 
-Il modulo di Kafka, dunque, svolge effettivamente la funzione di \textbf{middleware} tra il livello applicativo ed la parte di gestione dello stream. La sorgente di stream pubblica i dati ricevuti verso il master di Spark, il quale smista l'elaborazione (funzionalità CEP e ALS) verso i workers disponibili. 
+Il modulo di Kafka, dunque, svolge effettivamente la funzione di \textbf{middleware} tra il livello applicativo e la parte di gestione dello stream. La sorgente di stream, pubblica i dati ricevuti verso il master di Spark, il quale smista l'elaborazione (funzionalità CEP e ALS) verso i worker disponibili. 
 
-L'ultimo passaggio riguarda la pubblicazione dei film raccomandati verso il topic sul quale è collegata la pagina web in formato JSON, opportunamente monitorato da quest'ultima grazie alle Websocket. \\
+L'ultimo passaggio riguarda la pubblicazione dei film raccomandati, verso il topic sul quale è collegata la pagina web in formato JSON, opportunamente monitorato da quest'ultima grazie alle Websocket. \\
 
 
-Il sistema operativo utilizzato per l'implementazione della soluzione è \textbf{Ubuntu 15.10}. I nodi per testare la soluzione, sono dotati di configurazioni hardware eterogenee.
+Il sistema operativo utilizzato per l'implementazione della soluzione è stato \textbf{Ubuntu 15.10}. I nodi per testare la soluzione, sono dotati di configurazioni hardware eterogenee.
 
-Suddividiamo in 3 parti la configurazione relativa all'architettura del sistema.
+Suddividiamo in tre parti la configurazione relativa all'architettura del sistema.
 \begin{itemize}
 \item {\textbf{Configurazione di Apache Spark in Cluster Mode}}\\\\
 In primis occorre scaricare \textbf{Apache Spark} ( \href{http://spark.apache.org/downloads.html}{http://spark.apache.org/downloads.html}). La versione utilizzata è stata la "\textbf{Pre-built for Hadoop 2.6 and later}".
@@ -655,29 +656,29 @@ export SPARK_MASTER_IP=X.X.X.X
 export SPARK_MASTER_PORT=7077
 export MASTER=spark://${SPARK_MASTER_IP}:${SPARK_MASTER_PORT}
 \end{lstlisting}
-La variabile \texttt{SPARK\_WORKER\_CORES}, serve per poter configurare il numero di core da utilizzare sulla macchina (nel nostro caso settiamo il numero massimo di core che vogliamo utilizzare relativi ai nodi Slave).
-La variabile \texttt{SPARK\_WORKER\_MEMORY}, consente di specificare quanta memoria dei rispettivi Workers si desidera allocare per l'esecuzione del software (ad esempio 1000m, 2g).
+La variabile \texttt{SPARK\_WORKER\_CORES}, serve per poter configurare il numero di core da utilizzare sulla macchina (nel nostro caso settiamo il numero massimo di core che vogliamo utilizzare relativi ai nodi di tipo worker).
+La variabile \texttt{SPARK\_WORKER\_MEMORY}, consente di specificare quanta memoria dei rispettivi worker si desidera allocare per l'esecuzione del software (ad esempio 1000m, 2g).
 La variabile \texttt{SPARK\_MASTER\_PORT}, consente di specificare la porta sulla quale avviare il nodo Master.
 La variabile \texttt{SPARK\_MASTER\_IP}, per impostare l'indirizzo IP o l'hostname del nodo Master.
 
 Dopo aver configurato il nodo Master, avviamolo dal terminale mediante \texttt{/sbin/start-master.sh}.
 Successivamente, avviamo i nodi Worker mediante \texttt{/sbin/start-slave.sh spark://SPARK\_MASTER\_IP:SPARK\_MASTER\_PORT}.
 Dal nodo Master, possiamo aprire il browser, digitando \texttt{http://localhost:SPARK\_MASTER\_PORT} in modo da visualizzare dalla Dashboard i Worker connessi ed i Job avviati nel sistema.
-Infine se il sistema non è configurato con \texttt{hadoop}, configurare i percorsi ed i relativi file anche sui Worker.
+Infine se il sistema non è configurato con \texttt{hadoop}, configurare i percorsi ed i relativi file anche sui worker.
 
 \item {\textbf{Configurazione di Apache Kafka}}\\\\
-Come prima cosa occorre scaricare \textbf{Apache Kafka} ( \href{http://kafka.apache.org/downloads.html}{http://kafka.apache.org/downloads.html}). La versione utilizzata è la \textbf{0.9.0.1} per \textbf{Scala 2.10}, quindi \textbf{kafka\_2.10-0.9.0.1}. Dopo aver effettuato il download ed aver estratto il contenuto nella propria \texttt{/home}, apriamo il \texttt{server.properties} all'interno della directory \texttt{config} della \texttt{root} di Spark.
+Come prima cosa occorre scaricare \textbf{Apache Kafka} ( \href{http://kafka.apache.org/downloads.html}{http://kafka.apache.org/downloads.html}). La versione utilizzata è la \textbf{0.9.0.1} per \textbf{Scala 2.10}, quindi \textbf{kafka\_2.10-0.9.0.1}. Dopo aver effettuato il download ed aver estratto il contenuto nella propria \texttt{/home}, apriamo il file \texttt{server.properties} all'interno della directory \texttt{config} della \texttt{root} di Spark.
 
 All'interno del file, aggiungiamo le seguenti stringhe nel caso in cui non dovessero essere presenti: 
 \begin{lstlisting}[language=bash,caption=server.properties]
 zookeeper.connect=localhost:2181
 advertised.host.name=hostname/ip
 \end{lstlisting}
-La stringa \texttt{zookeeper.connect=localhost:2181} consente di specificare i parametri di connessione nel formato \texttt{hostname:port} dove \texttt{host} e \texttt{port} rappresentano rispettivamente l'hostname e la porta del server \textbf{ZooKeeper}. La stringa \texttt{advertised.host.name} se settata, rappresenta l'hostname che verrà fornito ai broker, producer, e consumer per connettersi ad esso.
+La stringa \texttt{zookeeper.connect=localhost:2181} consente di specificare i parametri di connessione nel formato \texttt{hostname:port}, dove \texttt{host} e \texttt{port} rappresentano rispettivamente l'hostname e la porta del server \textbf{ZooKeeper}. La stringa \texttt{advertised.host.name} se settata, rappresenta l'hostname che verrà fornito ai broker, producer, e consumer per connettersi ad esso.
 Successivamente verranno illustrati quali sono le operazioni per creare i topic ed avviare il server Zookeeper da terminale.
 
 \item {\textbf{Configurazione del Framework Node.js}}\\\\
-Dal terminale di Ubuntu, digitare \texttt{sudo apt-get install nodejs, npm}, per installare NodeJS ed il gestore dei pacchetti per Javascript \texttt{npm}. Successivamente creiamo un link simbolico per node in questo modo \texttt{sudo ln -s /usr/bin/nodejs /usr/bin/node}. Accertiamoci inoltre con \texttt{node -v} che la versione di node sia la \textbf{5.10.1} (nel caso in cui la versione non dovesse essere questa, sarà necessario effettuare un ulteriore upgrade/downgrade).
+Dal terminale di Ubuntu, digitare \texttt{sudo apt-get install nodejs, npm}, per installare NodeJS, ed il gestore dei pacchetti per Javascript \texttt{npm}. Successivamente creiamo un link simbolico per node in questo modo \texttt{sudo ln -s /usr/bin/nodejs /usr/bin/node}. Accertiamoci inoltre con \texttt{node -v} che la versione di node sia la \textbf{5.10.1} (nel caso in cui la versione non dovesse essere questa, sarà necessario effettuare un ulteriore upgrade/downgrade).
 Dopo aver configurato l'ambiente di lavoro, è necessario effettuare il download della applicazione ed estrarla nella directory desiderata (ad esempio \texttt{kafka\_socket}).
 Dal terminale, entrare all'interno della directory \texttt{kafka\_socket} ed effettuare l'installazione di tutte le dipendenze richieste dall'applicazione mediante \texttt{sudo npm install -g}.
 Nel punto successivo, sarà illustrato come avviare l'applicazione Node.js \cite{nodejs}.
@@ -723,7 +724,7 @@ Nel presente tema d'anno è stato realizzato un sistema di raccomandazione distr
 
 Gli sviluppi futuri di tale progetto potrebbero riguardare la valutazione delle performance, la scelta di calcolatori più efficienti ed una possibile migrazione su piattaforma cloud. 
 
-Riguardo l'aspetto software e del machine learning, interessante è la possibilità di sperimentare nuovi algoritmi e tecniche per l'addestramento e la Matrix Factorization, in particolare per il filtro collaborativo basato su data stream.
+Riguardo l'aspetto software e del machine learning, interessante è la possibilità di sperimentare nuovi algoritmi, tecniche per l'addestramento e la Matrix Factorization, in particolare per il filtro collaborativo basato su data stream.
 
 
 \clearpage

@@ -6,7 +6,7 @@
 \contentsline {subsection}{\numberline {1.2}Sistemi di Raccomandazione}{3}{subsection.1.2}
 \contentsline {subsubsection}{\numberline {1.2.1}Metriche di Valutazione}{6}{subsubsection.1.2.1}
 \contentsline {subsubsection}{\numberline {1.2.2}Introduzione alla Matrix Factorization}{7}{subsubsection.1.2.2}
-\contentsline {subsection}{\numberline {1.3}Introduzione al Data Stream Processing}{7}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.3}Introduzione al Data Stream Processing}{8}{subsection.1.3}
 \contentsline {subsection}{\numberline {1.4}Il paradigma Publish-Subscribe}{8}{subsection.1.4}
 \contentsline {subsection}{\numberline {1.5}Il pattern Facade}{9}{subsection.1.5}
 \contentsline {subsection}{\numberline {1.6}Il pattern Singleton}{10}{subsection.1.6}
@@ -24,8 +24,8 @@
 \contentsline {section}{\numberline {3}Analisi e progettazione della soluzione proposta}{19}{section.3}
 \contentsline {subsection}{\numberline {3.1}Modello software}{19}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Architettura e Configurazione del sistema}{21}{subsection.3.2}
-\contentsline {section}{\numberline {4}Conclusioni e sviluppi futuri}{24}{section.4}
-\contentsline {section}{Bibliografia}{25}{section.4}
-\contentsline {section}{\numberline {5}Sorgenti}{26}{section.5}
-\contentsline {section}{Appendice \numberline {A}Sorgenti Spark}{26}{Appendice.1.Alph1}
-\contentsline {section}{Appendice \numberline {B}Sorgenti Node.js}{32}{Appendice.1.Alph2}
+\contentsline {section}{\numberline {4}Conclusioni e sviluppi futuri}{25}{section.4}
+\contentsline {section}{Bibliografia}{26}{section.4}
+\contentsline {section}{\numberline {5}Sorgenti}{27}{section.5}
+\contentsline {section}{Appendice \numberline {A}Sorgenti Spark}{27}{Appendice.1.Alph1}
+\contentsline {section}{Appendice \numberline {B}Sorgenti Node.js}{33}{Appendice.1.Alph2}
