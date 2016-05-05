@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.26)  5 MAY 2016 11:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.26)  5 MAY 2016 14:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -866,7 +866,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 524--525
 
  []
 
-<images/nodejs.png, id=347, 562.1pt x 192.72pt>
+<images/nodejs.png, id=348, 562.1pt x 192.72pt>
 File: images/nodejs.png Graphic file (type png)
  <use images/nodejs.png>
 Package pdftex.def Info: images/nodejs.png used on input line 538.
@@ -881,7 +881,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 545--546
 
  []
 
-<images/angular.png, id=355, 697.60625pt x 185.69376pt>
+<images/angular.png, id=361, 697.60625pt x 185.69376pt>
 File: images/angular.png Graphic file (type png)
 
 <use images/angular.png>
@@ -893,7 +893,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 580--581
  []
 
 [18 <./images/angular.png>]
-<images/umlcep.png, id=363, 1107.13625pt x 616.3025pt>
+<images/umlcep.png, id=371, 1107.13625pt x 616.3025pt>
 File: images/umlcep.png Graphic file (type png)
  <use images/umlcep.png>
 Package pdftex.def Info: images/umlcep.png used on input line 594.
@@ -907,7 +907,7 @@ File: lstlang2.sty 2015/06/04 1.6 listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
 File: lstlang3.sty 2015/06/04 1.6 listings language file
-) [19 <./images/umlcep.png (PNG copy)>] [20] <images/cephw.png, id=380, 911.405
+) [19 <./images/umlcep.png (PNG copy)>] [20] <images/cephw.png, id=388, 911.405
 pt x 698.61pt>
 File: images/cephw.png Graphic file (type png)
 
@@ -1034,10 +1034,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 14871 strings out of 495000
- 211850 string characters out of 6181169
- 494884 words of memory out of 5000000
- 17252 multiletter control sequences out of 15000+600000
+ 14875 strings out of 495000
+ 211894 string characters out of 6181169
+ 494950 words of memory out of 5000000
+ 17254 multiletter control sequences out of 15000+600000
  47597 words of font info for 75 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  45i,8n,93p,986b,2078s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1055,10 +1055,10 @@ texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/font
 s/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on "Relazione LIA-ISA.pdf" (36 pages, 1033334 bytes).
+Output written on "Relazione LIA-ISA.pdf" (36 pages, 1034164 bytes).
 PDF statistics:
- 1262 PDF objects out of 1440 (max. 8388607)
- 958 compressed objects within 10 object streams
- 547 named destinations out of 1000 (max. 500000)
+ 1274 PDF objects out of 1440 (max. 8388607)
+ 970 compressed objects within 10 object streams
+ 549 named destinations out of 1000 (max. 500000)
  333 words of extra memory for PDF output out of 10000 (max. 10000000)
 

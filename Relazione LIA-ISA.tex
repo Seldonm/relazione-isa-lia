@@ -531,7 +531,7 @@ Il secondo approccio, detto \textit{Direct Approch} o \textit{Receivers less}, n
 
 \subsection{Il framework Node.js}
 
-Node.js è un framework per la realizzazione di applicazioni web in Javascript lato server. La piattaforma è basata sul \textbf{Javascript Engine V8}, il runtime di Google utilizzato anche in Chrome, disponibile per le principali piattaforme, anche se maggiormente performante su sistemi operativi UNIX-like.
+Node.js è un framework per la realizzazione di applicazioni web in Javascript lato server. La piattaforma è basata sul \textbf{Javascript Engine V8}, il runtime di Google utilizzato anche in Chrome, disponibile per le principali piattaforme, anche se maggiormente performante su sistemi operativi UNIX-like \cite{nodejs}.
 
 \begin{figure}[H]
 	\centering
@@ -540,15 +540,15 @@ Node.js è un framework per la realizzazione di applicazioni web in Javascript l
 	\label{node}
 \end{figure}
 
-A differenza dei classici web server, che sfruttano un modello a processi concorrenti, Node.js utilizza una modalità di tipo \textit{event-driven} per l'accesso alle risorse. Scrivere un'applicazione in Node.js dunque consiste nel definire una serie di eventi che il sistema operativo deve monitorare, e all'attivazione degli stessi eseguire una funzione associata a tale evento, detta \textbf{callback}. Tale approccio definisce processi non bloccanti, evita il verificarsi di deadlocks, e in generale le operazioni di I/O non avvengono in maniera diretta. Ciò garantisce una maggiore \textbf{scalabilità} e \textbf{flessibilità} dell'architettura web. \\
+A differenza dei classici web server, che sfruttano un modello a processi concorrenti, Node.js utilizza una modalità di tipo \textit{event-driven} per l'accesso alle risorse. Scrivere un'applicazione in Node.js dunque consiste nel definire una serie di eventi che il sistema operativo deve monitorare, e all'attivazione degli stessi eseguire una funzione associata a tale evento, detta \textbf{callback}. Tale approccio definisce processi non bloccanti, evita il verificarsi di deadlocks, e in generale le operazioni di I/O non avvengono in maniera diretta. Ciò garantisce una maggiore \textbf{scalabilità} e \textbf{flessibilità} dell'architettura web \cite{nodejs}. \\
 
-All'interno del framework si ha a disposizione il package manager \textbf{npm}, tramite il quale è possibile installare moduli e librerie, gestire le diverse release, gli update e le dipendenze.\\
+All'interno del framework si ha a disposizione il package manager \textbf{npm}, tramite il quale è possibile installare moduli e librerie, gestire le diverse release, gli update e le dipendenze \cite{nodejs}.\\
 
-Il modulo \textbf{kafka.node} (\href{https://www.npmjs.com/package/kafka-node}{https://www.npmjs.com/package/kafka-node}) mette a disposizione un client in Node.js per la connessione ad un server Kafka. \`E possibile implementare sia il Producer che il Consumer, gestire gli eventi, creare topics, etc.
+Il modulo \textbf{kafka.node} (\href{https://www.npmjs.com/package/kafka-node}{https://www.npmjs.com/package/kafka-node}) mette a disposizione un client in Node.js per la connessione ad un server Kafka. \`E possibile implementare sia il Producer che il Consumer, gestire gli eventi, creare topics, etc \cite{nodejs}.
 
 \subsection{Angular.js}
 
-L'interfaccia dell'applicazione è stata realizzata attraverso il framework AngularJS, creando un modello MVC che sfrutta il two-way data binding di AngularJS.
+L'interfaccia dell'applicazione è stata realizzata attraverso il framework AngularJS, creando un modello MVC che sfrutta il two-way data binding di AngularJS \cite{angularjs}.
 
 \begin{figure}[H]
 	\centering
@@ -574,7 +574,7 @@ Il layout contiene le seguenti directory:
 		\item \textbf{views} File HTML relativi alle view di AngularJS;
 		\item \textbf{/services} Direttive di AngularJS per gli eventi associati al websocket.
 	\end{itemize}
-	\item \textbf{app.js} Script principale dell'applicazione. Al suo interno sono definiti gli stati con le relative view, le transizioni e le direttive associate ad ogni view per i relativi dati da visualizzare.
+	\item \textbf{app.js} Script principale dell'applicazione. Al suo interno sono definiti gli stati con le relative view, le transizioni e le direttive associate ad ogni view per i relativi dati da visualizzare \cite{angularjs}.
 \end{itemize}
 
 Per l'implementazione del WebSocket, la dashboard si avvale della libreria \textbf{Socket.IO}. Socket.io è una libreria Javascript per applicazioni web real time. Abilita una comunicazione di tipo bidirezionale tra client (generalmente eseguito nel browser) e server (applicazione Node.js). Principalmente il protocollo utilizzato è WebSocket, con un modello di esecuzione di tipo asincrono. \\
@@ -680,7 +680,7 @@ Successivamente verranno illustrati quali sono le operazioni per creare i topic 
 Dal terminale di Ubuntu, digitare \texttt{sudo apt-get install nodejs, npm}, per installare NodeJS ed il gestore dei pacchetti per Javascript \texttt{npm}. Successivamente creiamo un link simbolico per node in questo modo \texttt{sudo ln -s /usr/bin/nodejs /usr/bin/node}. Accertiamoci inoltre con \texttt{node -v} che la versione di node sia la \textbf{5.10.1} (nel caso in cui la versione non dovesse essere questa, sarà necessario effettuare un ulteriore upgrade/downgrade).
 Dopo aver configurato l'ambiente di lavoro, è necessario effettuare il download della applicazione ed estrarla nella directory desiderata (ad esempio \texttt{kafka\_socket}).
 Dal terminale, entrare all'interno della directory \texttt{kafka\_socket} ed effettuare l'installazione di tutte le dipendenze richieste dall'applicazione mediante \texttt{sudo npm install -g}.
-Nel punto successivo, sarà illustrato come avviare l'applicazione Node.js.
+Nel punto successivo, sarà illustrato come avviare l'applicazione Node.js \cite{nodejs}.
 \item {\textbf{Avvio del Sistema}}\\\\
 Lanciamo il seguente script dal terminale mediante \texttt{sudo ./start.sh}.
 
