@@ -440,7 +440,7 @@ Le applicazioni Spark sono eseguite come un set di processi indipendenti sul clu
 
 Alcune considerazioni riguardo tale architettura sono: 
 \begin{itemize}
-	\item Ogni applicazione gestisce i propri workers, i quali restano attivi durante tutto il ciclo di vita, ed eseguono task multipli in thread multipli. Questo implica un isolamento tra le applicazioni, sia lato scheduling (ogni driver schedula i propri tasks) sia lato executor (tasks relativi ad applicazioni differenti risiedono in JVM differenti). Tuttavia ciò implica che non è possibile condividere nativamente i dati tra applicazioni diverse, a meno di utilizzare uno storage system esterno (ad esempio mediante il file system \textit{Hadoop}).
+	\item Ogni applicazione gestisce i propri workers, i quali restano attivi durante tutto il ciclo di vita, ed eseguono task multipli in thread multipli. Questo implica un isolamento tra le applicazioni, sia lato scheduling (ogni driver schedula i propri tasks) sia lato executor (tasks relativi ad applicazioni differenti risiedono in JVM differenti). Tuttavia ciò implica che non è possibile condividere nativamente i dati tra applicazioni diverse, a meno di utilizzare uno storage system esterno (ad esempio mediane\textit{Apache Hadoop}).
 	\item Il driver deve poter gestire le connessioni con i workers durante l'intero ciclo di vita dell'applicazione. Per questo motivo dev'essere sempre garantita la visibilità a livello di rete tra driver e workers durante l'esecuzione.
 	\item \`E necessario che driver e worker abbiano, a livello di rete, una distanza relativamente breve, preferibilmente nella stessa LAN, affinché lo scheduling sia rapidamente eseguito \cite{spark}. 
 \end{itemize}
