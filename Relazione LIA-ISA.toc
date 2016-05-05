@@ -21,13 +21,11 @@
 \contentsline {subsubsection}{\numberline {2.2.1}Integrazione con Spark Streaming}{17}{subsubsection.2.2.1}
 \contentsline {subsection}{\numberline {2.3}Il framework Node.js}{17}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Angular.js}{18}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}La libreria Socket.IO}{19}{subsection.2.5}
 \contentsline {section}{\numberline {3}Analisi e progettazione della soluzione proposta}{19}{section.3}
-\contentsline {subsection}{\numberline {3.1}Architettura del sistema}{19}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Architettura software}{19}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Configurazione del sistema}{21}{subsection.3.3}
-\contentsline {section}{\numberline {4}Conclusioni e sviluppi futuri}{23}{section.4}
-\contentsline {section}{Bibliografia}{24}{section.4}
-\contentsline {section}{\numberline {5}Sorgenti}{25}{section.5}
-\contentsline {section}{Appendice \numberline {A}Sorgenti Spark}{25}{Appendice.1.Alph1}
-\contentsline {section}{Appendice \numberline {B}Sorgenti Node.js}{31}{Appendice.1.Alph2}
+\contentsline {subsection}{\numberline {3.1}Modello software}{19}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Architettura e Configurazione del sistema}{21}{subsection.3.2}
+\contentsline {section}{\numberline {4}Conclusioni e sviluppi futuri}{24}{section.4}
+\contentsline {section}{Bibliografia}{25}{section.4}
+\contentsline {section}{\numberline {5}Sorgenti}{26}{section.5}
+\contentsline {section}{Appendice \numberline {A}Sorgenti Spark}{26}{Appendice.1.Alph1}
+\contentsline {section}{Appendice \numberline {B}Sorgenti Node.js}{32}{Appendice.1.Alph2}
