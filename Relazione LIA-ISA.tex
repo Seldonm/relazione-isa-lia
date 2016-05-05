@@ -558,24 +558,24 @@ L'interfaccia dell'applicazione è stata realizzata attraverso il framework \tex
 	\label{angular}
 \end{figure}
 
-Il front end è costruito grazie alla libreria Bootstrap, un framework che mira alla creazione di pagine web dinamiche, fluide e adattabili a qualsiasi dispositivo con differenti grandezze e risoluzione, che contiene una serie di modelli CSS, HTML e Javascript dei componenti web maggiormente utilizzati. Altre librerie utilizzate sono: 
+Il front end è costruito grazie alla libreria \textbf{Bootstrap}, un framework che mira alla creazione di pagine web dinamiche, fluide e adattabili a qualsiasi dispositivo con differenti grandezze e risoluzione, che contiene una serie di modelli CSS, HTML e Javascript dei componenti web maggiormente utilizzati. Altre librerie utilizzate sono: 
 \begin{itemize}
 	\item \textbf{Angular Route} Una libreria che gestisce le view ed il routing in una macchina a stati.
 \end{itemize}
 
 Il layout contiene le seguenti directory: 
 \begin{itemize}
-	\item \textbf{/css} Fogli di stile per le pagine HTML;
-	\item \textbf{/fonts} Web font;
-	\item \textbf{/img} Logo e immagini;
-	\item \textbf{/vendor} Librerie utilizzate dall'applicazione;
-	\item \textbf{/js} File Javascript della dashboard;
+	\item \texttt{/css} Fogli di stile per le pagine HTML.
+	\item \texttt{/fonts} Web font.
+	\item \texttt{/img} Logo e immagini.
+	\item \texttt{/vendor} Librerie utilizzate dall'applicazione.
+	\item \texttt{/js} File Javascript della dashboard.
 	\begin{itemize}
-		\item \textbf{/controllers} Script dei controller di AngularJS;
-		\item \textbf{views} File HTML relativi alle view di AngularJS;
-		\item \textbf{/services} Direttive di AngularJS per gli eventi associati al websocket.
+		\item \texttt{/controllers} Script dei controller di AngularJS.
+		\item \texttt{views} File HTML relativi alle view di AngularJS.
+		\item \texttt{/services} Direttive di AngularJS per gli eventi associati al websocket.
 	\end{itemize}
-	\item \textbf{app.js} Script principale dell'applicazione. Al suo interno sono definiti gli stati con le relative view, le transizioni e le direttive associate ad ogni view per i relativi dati da visualizzare \cite{angularjs}.
+	\item \texttt{app.js} Script principale dell'applicazione. Al suo interno sono definiti gli stati con le relative view, le transizioni e le direttive associate ad ogni view per i relativi dati da visualizzare \cite{angularjs}.
 \end{itemize}
 
 Per l'implementazione del WebSocket, la dashboard si avvale della libreria \textbf{Socket.IO}. Socket.io è una libreria Javascript per applicazioni web real time. Abilita una comunicazione di tipo bidirezionale tra client (generalmente eseguito nel browser) e server (applicazione Node.js). Principalmente il protocollo utilizzato è WebSocket, con un modello di esecuzione di tipo asincrono. \\
