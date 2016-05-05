@@ -488,11 +488,10 @@ Un \textbf{Dataset} invece è un'interfaccia sperimentale introdotta nella versi
 \textbf{Apache Kafka} è un sistema di messaggistica di tipo publish-subscribe, orientato alla distribuzione. La sua architettura consente ad un singolo cluster di agire da backbone centrale per i dati di grandi organizzazioni. Gli stream, vengono partizionati e distribuiti lungo tutti i nodi del cluster, sfruttando la potenza di calcolo di ogni singola macchina. Di seguito si introduce la terminologia utilizzata in Kafka: 
 
 \begin{itemize}
-	\item Kafka organizza i flussi dei messaggi in categorie chiamate \textit{topics};
-	\item I processi che si occupano di pubblicare i messaggi in Kafka sono chiamati \textit{producers};
-	\item I processi che effettuano una sottoscrizione ad un topic ed elaborano i messaggi pubblicati sullo stesso sono chiamati \textit{consumers};
+	\item Kafka organizza i flussi dei messaggi in categorie chiamate \textit{topics}.
+	\item I processi che si occupano di pubblicare i messaggi in Kafka sono chiamati \textit{producers}.
+	\item I processi che effettuano una sottoscrizione ad un topic ed elaborano i messaggi pubblicati sullo stesso sono chiamati \textit{consumers}.
 	\item I nodi all'interno del cluster(producers e consumers) sono coordinati da uno o più server chiamati \textit{brokers} \cite{kafka}.
-	
 \end{itemize}
 
 A livello concettuale il funzionamento di Kafka è riassunto in Figura \ref{kafka}. La comunicazione tra client e server avviene tramite protocollo TCP. Sono presenti varie implementazioni del client Kafka, disponibili in vari linguaggi tra cui Java, Javascript e PHP \cite{kafka}. 
