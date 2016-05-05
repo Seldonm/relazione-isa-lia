@@ -19,13 +19,11 @@
 \BOOKMARK [3][-]{subsubsection.2.2.1}{Integrazione con Spark Streaming}{subsection.2.2}% 19
 \BOOKMARK [2][-]{subsection.2.3}{Il framework Node.js}{section.2}% 20
 \BOOKMARK [2][-]{subsection.2.4}{Angular.js}{section.2}% 21
-\BOOKMARK [2][-]{subsection.2.5}{La libreria Socket.IO}{section.2}% 22
-\BOOKMARK [1][-]{section.3}{Analisi e progettazione della soluzione proposta}{}% 23
-\BOOKMARK [2][-]{subsection.3.1}{Architettura del sistema}{section.3}% 24
-\BOOKMARK [2][-]{subsection.3.2}{Architettura software}{section.3}% 25
-\BOOKMARK [2][-]{subsection.3.3}{Configurazione del sistema}{section.3}% 26
-\BOOKMARK [1][-]{section.4}{Conclusioni e sviluppi futuri}{}% 27
-\BOOKMARK [1][-]{section.4}{Bibliografia}{}% 28
-\BOOKMARK [1][-]{section.5}{Sorgenti}{}% 29
-\BOOKMARK [1][-]{Appendice.1.Alph1}{Appendice Sorgenti Spark}{}% 30
-\BOOKMARK [1][-]{Appendice.1.Alph2}{Appendice Sorgenti Node.js}{}% 31
+\BOOKMARK [1][-]{section.3}{Analisi e progettazione della soluzione proposta}{}% 22
+\BOOKMARK [2][-]{subsection.3.1}{Modello software}{section.3}% 23
+\BOOKMARK [2][-]{subsection.3.2}{Architettura e Configurazione del sistema}{section.3}% 24
+\BOOKMARK [1][-]{section.4}{Conclusioni e sviluppi futuri}{}% 25
+\BOOKMARK [1][-]{section.4}{Bibliografia}{}% 26
+\BOOKMARK [1][-]{section.5}{Sorgenti}{}% 27
+\BOOKMARK [1][-]{Appendice.1.Alph1}{Appendice Sorgenti Spark}{}% 28
+\BOOKMARK [1][-]{Appendice.1.Alph2}{Appendice Sorgenti Node.js}{}% 29

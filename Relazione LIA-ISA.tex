@@ -577,18 +577,15 @@ Il layout contiene le seguenti directory:
 	\item \textbf{app.js} Script principale dell'applicazione. Al suo interno sono definiti gli stati con le relative view, le transizioni e le direttive associate ad ogni view per i relativi dati da visualizzare.
 \end{itemize}
 
-\subsection{La libreria Socket.IO}
+Per l'implementazione del WebSocket, la dashboard si avvale della libreria \textbf{Socket.IO}. Socket.io è una libreria Javascript per applicazioni web real time. Abilita una comunicazione di tipo bidirezionale tra client (generalmente eseguito nel browser) e server (applicazione Node.js). Principalmente il protocollo utilizzato è WebSocket, con un modello di esecuzione di tipo asincrono. \\
 
-Socket.io è una libreria Javascript per applicazioni web real time. Abilita una comunicazione di tipo bidirezionale tra client (generalmente eseguito nel browser) e server (applicazione Node.js).\\
-
-Principalmente il protocollo utilizzato è WebSocket, con un modello di esecuzione di tipo asincrono.  
+Per la visualizzazione dei dettagli relativi ai film, sia in fase di votazione che post-raccomandazione, è stato utilizzato il servizio \textbf{OMDb API}, un web service che consente attraverso API REST di ottenere le informazioni sui film aggiornate dalla community.
 
 \section{Analisi e progettazione della soluzione proposta}
-\subsection {Architettura del sistema}
 
-\subsection {Architettura software}
+\subsection {Modello software}
 
-L'architettura del sistema è stata struttura secondo i principi di programmazione del linguaggio utilizzato, ovvero \textbf{Scala}. 
+A livello software il modello proposto segue i principi del linguaggio di programmazione utilizzato, ovvero \textbf{Scala}. 
 
 Scala è un linguaggio multiparadigma, fortemente orientato alla programmazione ad oggetti e funzionale, che consente di definire i classici pattern software con una sintassi concisa ed elegante, secondo un principio di \textit{type-safe}. In Figura \ref{umlcep} è mostrato lo schema delle classi utilizzate nell'applicazione, gli attributi ed i relativi metodi. 
 
@@ -625,13 +622,25 @@ Di seguito sono descritte nel dettaglio le classi, i relativi attributi e metodi
 	\item \textbf{classe Main}: La classe Main fornisce un'interfaccia per l'intera applicazione, avviando la pipeline di operazioni messe a disposizione dagli oggetti precedentemente descritti. Dopo aver inizializzato la lista dei file necessari, viene gestito il ciclo relativo alla lettura degli stream, check degli RDD, trasformazione in DataStream e verifica delle proprietà CEP. Esegue inoltre il trigger necessario per l'avvio dello stream, tramite la funzione \textit{start()} di StreamingContext.
 \end{itemize}
 
+\subsection {Architettura e Configurazione del sistema}
+
+In questa sezione viene descritta l'organizzazione fisica dell'architettura di sistema, gli attori in gioco ed i rispettivi ruoli e funzionalità. In Figura \ref{cephw} è raffigurato il workflow tra i componenti ed il corrispettivo input/output.
 
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.50]{images/cephw.png}
+	\caption{Architettura del sistema}
+	\label{cephw}
+\end{figure}
+
+All'interno della web dashboard sono presenti due pagine, dalle quali è possibile rispettivamente effettuare le votazioni e visualizzare i risultati della raccomandazione. Esse interagiscono esclusivamente con Kafka tramite pubblicazione/sottoscrizione ai relativi topics, rendendo di fatto \textbf{trasparente} il flusso d'esecuzione sottostante. \\
+
+Il modulo di Kafka, dunque, svolge effettivamente la funzione di \textbf{middleware} tra il livello applicativo ed la parte di gestione dello stream. La sorgente di stream pubblica i dati ricevuti verso il master di Spark, il quale smista l'elaborazione (funzionalità CEP e ALS) verso i workers disponibili. 
+
+L'ultimo passaggio riguarda la pubblicazione dei film raccomandati verso il topic sul quale è collegata la pagina web in formato JSON, opportunamente monitorato da quest'ultima grazie alle Websocket. \\
 
 
-
-
-\subsection {Configurazione del sistema}
 Il sistema operativo utilizzato per l'implementazione della soluzione è \textbf{Ubuntu 15.10}. I nodi per testare la soluzione, sono dotati di configurazioni hardware eterogenee.
 
 Suddividiamo in 3 parti la configurazione relativa all'architettura del sistema.
