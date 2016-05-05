@@ -270,9 +270,9 @@ E' utile citare i metodi di riduzione basati sulla Matrix Factorization, la tecn
 Nella Figura \ref{model-rec} viene illustrato un diagramma con le tecniche principali e gli algoritmi di raccomandazione maggiormente utilizzati in letteratura \cite{Bobadilla:2013:RSS:2483330.2483573}.
 
 \subsubsection{Metriche di Valutazione}
-La qualità di un sistema di raccomandazione può essere valutata dai risultati forniti in output. Le tipologie di metriche usate, dipendono dal tipo di CF usato. Le metriche possono essere categorizzate in:
-Predictive Accuracy, come ad esempio il Mean Absolute Error
-(MAE) e sue varianti; Classification Accuracy metrics, come la precision, recall, F1-measure, e sensibilità ROC; Rank Accuracy, come il Mean Average Precision (MAP), e così via.
+La qualità di un sistema di raccomandazione può essere valutata dai risultati forniti in output. Le tipologie di metriche usate, dipendono dal tipo di CF utilizzato. Le metriche possono essere categorizzate in:
+\textbf{Predictive Accuracy}, come ad esempio il \textit{Mean Absolute Error}
+(MAE) e sue varianti; \textbf{Classification Accuracy} metrics, come la \textit{precision, recall, F1-measure}, e sensibilità \textit{ROC}; \textbf{Rank Accuracy}, come il \textit{Mean Average Precision} (MAP).
 Desideriamo concentrarci sulla metrica \textbf{Root Mean Squared Error} (RMSE). Infatti la radice quadrata dell'errore quadratico medio, è una metrica molto utilizzata per la raccomandazione di film.
 
 \[ RMSE=\sqrt{\frac{1}{n}\sum_{{i,j}}(p_{i,j}-r_{i,j})^2} \]
