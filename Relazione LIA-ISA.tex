@@ -440,8 +440,8 @@ Le applicazioni Spark sono eseguite come un set di processi indipendenti sul clu
 
 Alcune considerazioni riguardo tale architettura sono: 
 \begin{itemize}
-	\item Ogni applicazione gestisce i propri workers, i quali restano attivi durante tutto il ciclo di vita, ed eseguono task multipli in thread multipli. Questo implica un isolamento tra le applicazioni, sia lato scheduling (ogni driver schedula i propri tasks) sia lato executor (tasks relativi ad applicazioni differenti risiedono in JVM differenti). Tuttavia ciò implica che non è possibile condividere nativamente i dati tra applicazioni diverse, a meno di utilizzare uno storage system esterno (ad esempio mediante \textit{Apache Hadoop}).
-	\item Il driver deve poter gestire le connessioni con i workers durante l'intero ciclo di vita dell'applicazione. Per questo motivo dev'essere sempre garantita la visibilità a livello di rete tra driver e workers durante l'esecuzione.
+	\item Ogni applicazione gestisce i propri worker, i quali restano attivi durante tutto il ciclo di vita, ed eseguono task multipli in thread multipli. Questo implica un isolamento tra le applicazioni, sia lato scheduling (ogni driver schedula i propri tasks) sia lato executor (tasks relativi ad applicazioni differenti risiedono in JVM differenti). Tuttavia ciò implica che non è possibile condividere nativamente i dati tra applicazioni diverse, a meno di utilizzare uno storage system esterno (ad esempio mediante \textit{Apache Hadoop}).
+	\item Il driver deve poter gestire le connessioni con i worker durante l'intero ciclo di vita dell'applicazione. Per questo motivo dev'essere sempre garantita la visibilità a livello di rete tra driver e worker durante l'esecuzione.
 	\item \`E necessario che driver e worker abbiano, a livello di rete, una distanza relativamente breve, preferibilmente nella stessa LAN, affinché lo scheduling sia rapidamente eseguito \cite{spark}. 
 \end{itemize}
 
@@ -489,12 +489,12 @@ Un \textbf{Dataset} invece è un'interfaccia sperimentale introdotta nella versi
 
 \begin{itemize}
 	\item Kafka organizza i flussi dei messaggi in categorie chiamate \textit{topics}.
-	\item I processi che si occupano di pubblicare i messaggi in Kafka sono chiamati \textit{producers}.
-	\item I processi che effettuano una sottoscrizione ad un topic ed elaborano i messaggi pubblicati sullo stesso sono chiamati \textit{consumers}.
-	\item I nodi all'interno del cluster(producers e consumers) sono coordinati da uno o più server chiamati \textit{brokers} \cite{kafka}.
+	\item I processi che si occupano di pubblicare i messaggi in Kafka sono chiamati \textit{producer}.
+	\item I processi che effettuano una sottoscrizione ad un topic ed elaborano i messaggi pubblicati sullo stesso sono chiamati \textit{consumer}.
+	\item I nodi all'interno del cluster(producer e consumer) sono coordinati da uno o più server chiamati \textit{brokers} \cite{kafka}.
 \end{itemize}
 
-A livello concettuale il funzionamento di Kafka è riassunto in Figura \ref{kafka}. La comunicazione tra client e server avviene tramite protocollo TCP. Sono presenti varie implementazioni del client Kafka, disponibili in vari linguaggi tra cui Java, Javascript e PHP \cite{kafka}. 
+A livello concettuale il funzionamento di Kafka è riassunto in Figura \ref{kafka}. La comunicazione tra client e server avviene tramite protocollo TCP. Inoltre, sono presenti varie implementazioni del client Kafka, disponibili in vari linguaggi tra cui Java, Javascript e PHP \cite{kafka}. 
 
 \begin{figure}[H]
 	\centering
@@ -504,7 +504,7 @@ A livello concettuale il funzionamento di Kafka è riassunto in Figura \ref{kafk
 \end{figure}
 
 
-Di seguito viene mostrata nel dettaglio la struttura di un topic in Figura \ref{kafka-topic}. Per ogni topic Kafka effettua un partizionamento dei messaggi in arrivo, tenendo traccia dell'ordine di arrivo con un sistema di log \cite{kafka}. 
+Di seguito viene mostrata nel dettaglio la struttura di un topic in Figura \ref{kafka-topic}. Per ogni topic, Kafka effettua un partizionamento dei messaggi in arrivo, tenendo traccia del loro ordine mediante un sistema di log \cite{kafka}. 
 
 \begin{figure}[H]
 	\centering
@@ -513,9 +513,9 @@ Di seguito viene mostrata nel dettaglio la struttura di un topic in Figura \ref{
 	\label{kafka-topic}
 \end{figure}
 
-Ogni partizione è una sequenza immutabile di messaggi, registrata e ordinata in un commit log. Ad ogni messaggio presente viene assegnato un id sequenziale, detto \textit{offset}, che identifica univocamente un messaggio nella relativa partizione \cite{kafka}.
+Ogni partizione è una sequenza immutabile di messaggi, registrata e ordinata in un \textit{commit log}. Ad ogni messaggio presente, viene assegnato un \textit{id} sequenziale, detto \textit{offset}, che identifica univocamente un messaggio nella relativa partizione \cite{kafka}.
 
-Il cluster di Kafka conserva in memoria tutti i messaggi pubblicati, letti o non dai consumers, per un periodo di tempo configurabile. In pratica, il server registra dei metadati relativi ad ogni posizione del consumer nel log, chiamato appunto offset. Tale offset è fissato dal consumer, il quale può leggere i messaggi nell'ordine preferito \cite{kafka}. 
+Il cluster di Kafka conserva in memoria tutti i messaggi pubblicati, letti o non dai consumer, per un periodo di tempo configurabile. In pratica, il server registra dei metadati relativi ad ogni posizione del consumer nel log, chiamato appunto offset. Tale offset è fissato dal consumer, il quale può leggere i messaggi nell'ordine preferito \cite{kafka}. 
 
 
 \subsubsection{Integrazione con Spark Streaming}
@@ -637,7 +637,7 @@ In questa sezione viene descritta l'organizzazione fisica dell'architettura di s
 
 All'interno della web dashboard sono presenti due pagine, dalle quali è possibile rispettivamente effettuare le votazioni e visualizzare i risultati della raccomandazione. Esse interagiscono esclusivamente con Kafka tramite pubblicazione/sottoscrizione ai relativi topics, rendendo di fatto \textbf{trasparente} il flusso d'esecuzione sottostante. \\
 
-Il modulo di Kafka, dunque, svolge effettivamente la funzione di \textbf{middleware} tra il livello applicativo ed la parte di gestione dello stream. La sorgente di stream pubblica i dati ricevuti verso il master di Spark, il quale smista l'elaborazione (funzionalità CEP e ALS) verso i workers disponibili. 
+Il modulo di Kafka, dunque, svolge effettivamente la funzione di \textbf{middleware} tra il livello applicativo ed la parte di gestione dello stream. La sorgente di stream pubblica i dati ricevuti verso il master di Spark, il quale smista l'elaborazione (funzionalità CEP e ALS) verso i worker disponibili. 
 
 L'ultimo passaggio riguarda la pubblicazione dei film raccomandati verso il topic sul quale è collegata la pagina web in formato JSON, opportunamente monitorato da quest'ultima grazie alle Websocket. \\
 
