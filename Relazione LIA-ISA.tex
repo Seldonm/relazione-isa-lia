@@ -447,7 +447,7 @@ Alcune considerazioni riguardo tale architettura sono:
 
 Il principio di funzionamento di Spark, si basa sostanzialmente sul concetto di \textit{Resilient Distributed Dataset} (\textbf{RDD}). Un RDD è una collezione di dati su cui è possibile operare parallelamente, ed è distribuita su tutti i nodi del cluster come file system Hadoop oppure è generata da una collezione esistente in Java o Scala \cite{spark}. \\
 
-Una seconda astrazione è rappresentata dalle variabili condivise (\textit{shared variables}), utilizzate nelle computazioni parallele. Di default Spark tiene traccia delle variabili istanziate nei vari task, e consente se necessario di condividerle fra task, o fra task e driver. Le variabili condivise possono essere di due tipi: di tipo \textit{broadcast}, il cui valore viene salvato nella cache per ogni nodo, e di tipo \textit{accumulatore}, per esempio contatori o sommatori \cite{spark}.
+Una seconda astrazione è rappresentata dalle variabili condivise (\textit{shared variables}), utilizzate nelle computazioni parallele. Di default Spark tiene traccia delle variabili istanziate nei vari task, e consente se necessario di condividerle fra task, o fra task e driver. Le variabili condivise possono essere di due tipi: di tipo \textbf{broadcast}, il cui valore viene salvato nella cache per ogni nodo, e di tipo \textbf{accumulatore}, per esempio contatori o sommatori \cite{spark}.
 
 \subsubsection{Spark Streaming}
 
