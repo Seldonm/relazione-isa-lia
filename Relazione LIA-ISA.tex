@@ -637,14 +637,14 @@ In questa sezione viene descritta l'organizzazione fisica dell'architettura di s
 
 All'interno della web dashboard sono presenti due pagine, dalle quali è possibile rispettivamente effettuare le votazioni e visualizzare i risultati della raccomandazione. Esse interagiscono esclusivamente con Kafka tramite pubblicazione/sottoscrizione ai relativi topics, rendendo di fatto \textbf{trasparente} il flusso d'esecuzione sottostante. \\
 
-Il modulo di Kafka, dunque, svolge effettivamente la funzione di \textbf{middleware} tra il livello applicativo ed la parte di gestione dello stream. La sorgente di stream pubblica i dati ricevuti verso il master di Spark, il quale smista l'elaborazione (funzionalità CEP e ALS) verso i worker disponibili. 
+Il modulo di Kafka, dunque, svolge effettivamente la funzione di \textbf{middleware} tra il livello applicativo e la parte di gestione dello stream. La sorgente di stream, pubblica i dati ricevuti verso il master di Spark, il quale smista l'elaborazione (funzionalità CEP e ALS) verso i worker disponibili. 
 
-L'ultimo passaggio riguarda la pubblicazione dei film raccomandati verso il topic sul quale è collegata la pagina web in formato JSON, opportunamente monitorato da quest'ultima grazie alle Websocket. \\
+L'ultimo passaggio riguarda la pubblicazione dei film raccomandati, verso il topic sul quale è collegata la pagina web in formato JSON, opportunamente monitorato da quest'ultima grazie alle Websocket. \\
 
 
-Il sistema operativo utilizzato per l'implementazione della soluzione è \textbf{Ubuntu 15.10}. I nodi per testare la soluzione, sono dotati di configurazioni hardware eterogenee.
+Il sistema operativo utilizzato per l'implementazione della soluzione è stato \textbf{Ubuntu 15.10}. I nodi per testare la soluzione, sono dotati di configurazioni hardware eterogenee.
 
-Suddividiamo in 3 parti la configurazione relativa all'architettura del sistema.
+Suddividiamo in tre parti la configurazione relativa all'architettura del sistema.
 \begin{itemize}
 \item {\textbf{Configurazione di Apache Spark in Cluster Mode}}\\\\
 In primis occorre scaricare \textbf{Apache Spark} ( \href{http://spark.apache.org/downloads.html}{http://spark.apache.org/downloads.html}). La versione utilizzata è stata la "\textbf{Pre-built for Hadoop 2.6 and later}".
