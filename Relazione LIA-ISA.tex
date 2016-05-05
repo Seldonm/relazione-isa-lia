@@ -522,12 +522,12 @@ Il cluster di Kafka conserva in memoria tutti i messaggi pubblicati, letti o non
 
 Le API di Spark Streaming offrono la possibilità di configurare Kafka come sorgente di data stream, attraverso due possibili approcci \cite{spark}. 
 
-Il primo approccio è detto \textbf{Receiver-based}, e consiste nell'implementazione di un Receiver tramite le API di Kafka. I dati ricevuti attraverso tale oggetto vengono memorizzati e processati nei worker node. Tuttavia, tale approccio potrebbe non garantire la consistenza in caso di data loss, ed è dunque necessario abilitare un meccanismo di integrità chiamato \textit{Ahead Logs} \cite{spark}. \\
+Il primo approccio è detto \textbf{Receiver-based}, e consiste nell'implementazione di un Receiver tramite le API di Kafka. I dati ricevuti attraverso tale oggetto vengono memorizzati e processati nei worker node. Tuttavia, tale approccio potrebbe non garantire la consistenza in caso di \textit{data loss}, ed è dunque necessario abilitare un meccanismo di integrità chiamato \textit{Ahead Logs} \cite{spark}. \\
 
-Il secondo approccio, detto \textit{Direct Approch} o \textit{Receivers less}, non prevede l'uso di Receivers ma interroga periodicamente il server Kafka per rilevare il topic e la partizione aggiornata di recente, definendo in automatico la dimensione del batch di dati da processare. I vantaggi di questa tecnica sono: 
+Il secondo approccio, detto \textit{Direct Approch} o \textit{Receivers Less}, non prevede l'uso di Receiver, ma interroga periodicamente il server Kafka per rilevare il topic e la partizione aggiornata di recente, definendo in automatico la dimensione del batch di dati da processare. I vantaggi di questa tecnica sono: 
 \begin{itemize}
-	\item \textit{Parallelismo semplificato: } Non è necessario creare ed unificare stream multipli di Kafka. Tramite la funzione \textit{directStream}, Spark Streaming effettua un mapping tra le partizioni di Kafka in RDD, semplificandone l'elaborazione in parallelo;
-	\item \textit{Efficienza: } Il meccanismo Write Ahead Logs potrebbe generare problemi di duplicazione dei dati e relativi conflitti, nel momento in cui entrambe le istanze di Spark e Kafka tentino di risolvere una perdita di informazioni. Con un approccio diretto senza Receivers tale problema non sussiste \cite{spark}.
+	\item \textit{Parallelismo semplificato: } Non è necessario creare ed unificare stream multipli di Kafka. Tramite la funzione \textit{directStream}, Spark Streaming effettua un mapping tra le partizioni di Kafka in RDD, semplificandone l'elaborazione in parallelo.
+	\item \textit{Efficienza: } Il meccanismo Write Ahead Logs potrebbe generare problemi di duplicazione dei dati e relativi conflitti, nel momento in cui entrambe le istanze di Spark e Kafka tentino di risolvere una perdita di informazioni. Con un approccio diretto senza Receiver tale problema non sussiste \cite{spark}.
 \end{itemize}
 
 \subsection{Il framework Node.js}
