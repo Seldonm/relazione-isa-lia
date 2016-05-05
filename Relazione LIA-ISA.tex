@@ -611,7 +611,7 @@ Tali attributi e funzioni sono accessibili globalmente importando tale oggetto e
 Di seguito sono descritte nel dettaglio le classi, i relativi attributi e metodi
 
 \begin{itemize}
-	\item \textbf{classe SparkCommons} : si occupa di inizializzare a livello globale il driver di Spark, settando l'indirizzo del master, il contesto per lo Streaming ed SQL, ed effettua il linking del JAR dell'applicazione nei nodi worker.
+	\item \textbf{classe SparkCommons} : Si occupa di inizializzare a livello globale il driver di Spark, settando l'indirizzo del master, il contesto per lo Streaming ed SQL, ed effettua il linking del JAR dell'applicazione nei nodi worker.
 	\item \textbf{classe KafkaCommons}: Configura l'interfaccia verso il server Kafka, definendo la lista dei brokers, dei topic ed inizializzando il Producer per la notifica delle raccomandazioni effettuate. Inoltre inizializza lo stream attraverso il metodo \textit{createDirectStream}, il quale preleva preleva i batches forniti da Spark Streaming ogni 30 secondi, aggiornati da una finestra di osservazione totale di 60 secondi.
 	\item \textbf{classe CEP}: La classe CEP implementa il metodo \textit{hasEnoughVotes}, il quale effettua pattern matching sul DataFrame dall'aggregazione dei voti ricevuti nella finestra temporale. A seconda del numero di voti validi inseriti dall'utente e delle \textit{rules} prestabilite verrà visualizzata la relativa notifica sul driver di Spark, e in caso di pattern positivo verrà eseguito il filtro collaborativo.
 	\item \textbf{classe CollaborativeFiltering}: Questo oggetto si occupa di eseguire l'algoritmo ALS sul set di dati ricevuti. 
