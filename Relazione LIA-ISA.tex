@@ -657,14 +657,14 @@ export SPARK_MASTER_PORT=7077
 export MASTER=spark://${SPARK_MASTER_IP}:${SPARK_MASTER_PORT}
 \end{lstlisting}
 La variabile \texttt{SPARK\_WORKER\_CORES}, serve per poter configurare il numero di core da utilizzare sulla macchina (nel nostro caso settiamo il numero massimo di core che vogliamo utilizzare relativi ai nodi di tipo worker).
-La variabile \texttt{SPARK\_WORKER\_MEMORY}, consente di specificare quanta memoria dei rispettivi Workers si desidera allocare per l'esecuzione del software (ad esempio 1000m, 2g).
+La variabile \texttt{SPARK\_WORKER\_MEMORY}, consente di specificare quanta memoria dei rispettivi worker si desidera allocare per l'esecuzione del software (ad esempio 1000m, 2g).
 La variabile \texttt{SPARK\_MASTER\_PORT}, consente di specificare la porta sulla quale avviare il nodo Master.
 La variabile \texttt{SPARK\_MASTER\_IP}, per impostare l'indirizzo IP o l'hostname del nodo Master.
 
 Dopo aver configurato il nodo Master, avviamolo dal terminale mediante \texttt{/sbin/start-master.sh}.
 Successivamente, avviamo i nodi Worker mediante \texttt{/sbin/start-slave.sh spark://SPARK\_MASTER\_IP:SPARK\_MASTER\_PORT}.
 Dal nodo Master, possiamo aprire il browser, digitando \texttt{http://localhost:SPARK\_MASTER\_PORT} in modo da visualizzare dalla Dashboard i Worker connessi ed i Job avviati nel sistema.
-Infine se il sistema non è configurato con \texttt{hadoop}, configurare i percorsi ed i relativi file anche sui Worker.
+Infine se il sistema non è configurato con \texttt{hadoop}, configurare i percorsi ed i relativi file anche sui worker.
 
 \item {\textbf{Configurazione di Apache Kafka}}\\\\
 Come prima cosa occorre scaricare \textbf{Apache Kafka} ( \href{http://kafka.apache.org/downloads.html}{http://kafka.apache.org/downloads.html}). La versione utilizzata è la \textbf{0.9.0.1} per \textbf{Scala 2.10}, quindi \textbf{kafka\_2.10-0.9.0.1}. Dopo aver effettuato il download ed aver estratto il contenuto nella propria \texttt{/home}, apriamo il \texttt{server.properties} all'interno della directory \texttt{config} della \texttt{root} di Spark.
